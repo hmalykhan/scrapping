@@ -19,3 +19,9 @@ djangorestframework-simplejwt
 dj_database_url
 psycopg
 argon2-cffi
+python-dotenv
+django-environ
+psycopg2-binary
+beautifulsoup4
+lxml
+cloudinary
