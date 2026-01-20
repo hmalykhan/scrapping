@@ -1,6 +1,7 @@
 # job/scrapper/ncs.py
 from __future__ import annotations
 
+import os
 import re
 import time
 from dataclasses import dataclass
@@ -63,6 +64,16 @@ APOSTROPHE_FIXES = {
     "\u201b": "'",  # single high-reversed-9
     "\u2032": "'",  # prime
 }
+
+
+def _proxy_url_from_env() -> Optional[str]:
+    host = (os.getenv("PROXY_HOST") or "").strip()
+    port = (os.getenv("PROXY_PORT") or "").strip()
+    user = (os.getenv("PROXY_USER") or "").strip()
+    pwd = os.getenv("PROXY_PASS") or ""
+    if not (host and port and user and pwd):
+        return None
+    return f"http://{user}:{pwd}@{host}:{port}"
 
 
 def _norm_apostrophes(s: str) -> str:
@@ -154,7 +165,13 @@ class DwpJobClient:
         self.timeout = timeout
 
         self.sess = requests.Session()
+        self.sess.trust_env = True  # safe; allows env proxy too if set
         self.sess.headers.update({"User-Agent": "Mozilla/5.0 (compatible; DjangoScraper/1.0)"})
+
+        # ✅ PROXY (only change)
+        proxy = _proxy_url_from_env()
+        if proxy:
+            self.sess.proxies.update({"http": proxy, "https": proxy})
 
         retry = Retry(
             total=5,

@@ -62,8 +62,8 @@ class CareerJob(models.Model):
     last_scrape_message = models.TextField(blank=True, default="")  # error message or notes
     last_scrape_run_id = models.UUIDField(null=True, blank=True, db_index=True)  # ties rows to a run
 
-    class Meta:
-        unique_together = ("career_type", "sub_type", "job_slug")
+    # class Meta:
+    #     # unique_together = ("career_type", "sub_type", "job_slug")
 
     def __str__(self) -> str:
         return f"{self.career_type}:{self.sub_type} - {self.jobname}"

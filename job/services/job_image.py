@@ -12,12 +12,6 @@ from google import genai
 from google.genai import types
 
 
-GEMINI_NATIVE_IMAGE_ENDPOINT = (
-    "https://generativelanguage.googleapis.com/v1beta/"
-    "models/gemini-2.5-flash-image:generateContent"
-)
-
-
 def _prompt_for_title(title: str) -> str:
     title = " ".join((title or "").split())[:220]
     return (
@@ -27,7 +21,6 @@ def _prompt_for_title(title: str) -> str:
         "Look: natural lighting, neutral white balance, true-to-life colors, NO color filter, NO tint, NO heavy color grading. "
         "Composition: square 1:1, centered subject, shallow depth of field, softly blurred background, high quality, crisp details. "
         "AVOID: text, words, letters, captions, UI overlay, icons, watermark, logo, badge, location pin, pink/red tint, gradient overlay, heavy color grading, posterized, cartoon, illustration."
-
     )
 
 
@@ -38,13 +31,18 @@ def _get_api_key() -> str:
     return key
 
 
+def _get_image_model() -> str:
+    # Your env: GEMINI_IMAGE_MODEL="gemini-2.5-flash-image"
+    return (os.getenv("GEMINI_IMAGE_MODEL") or "gemini-2.5-flash-image").strip()
+
+
 def _generate_with_imagen(title: str) -> bytes:
     """
-    Try Imagen via google-genai SDK (may require access depending on your account).
+    Imagen via google-genai SDK (requires billed access on many accounts).
     Returns raw PNG bytes.
     """
     api_key = _get_api_key()
-    model = os.getenv("GEMINI_IMAGE_MODEL", "imagen-4.0-generate-001")
+    model = _get_image_model()
 
     client = genai.Client(api_key=api_key)
 
@@ -74,67 +72,69 @@ def _generate_with_imagen(title: str) -> bytes:
 
 def _generate_with_gemini_native(title: str) -> bytes:
     """
-    Fallback: Gemini native image endpoint (same one you tested with curl).
-    Returns raw PNG bytes.
+    Gemini native image endpoint:
+      POST https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent
+    Returns raw image bytes.
     """
     api_key = _get_api_key()
+    model = _get_image_model()
 
-    payload = {
-        "contents": [
-            {
-                "parts": [
-                    {"text": _prompt_for_title(title)}
-                ]
-            }
-        ]
-    }
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
-    r = requests.post(
-        GEMINI_NATIVE_IMAGE_ENDPOINT,
-        headers={
-            "x-goog-api-key": api_key,
-            "Content-Type": "application/json",
+    # Try IMAGE-only first, then TEXT+IMAGE (same pattern you used in course module)
+    payloads = [
+        {
+            "contents": [{"parts": [{"text": _prompt_for_title(title)}]}],
+            "generationConfig": {"responseModalities": ["IMAGE"]},
         },
-        json=payload,
-        timeout=60,
-    )
+        {
+            "contents": [{"parts": [{"text": _prompt_for_title(title)}]}],
+            "generationConfig": {"responseModalities": ["TEXT", "IMAGE"]},
+        },
+    ]
 
-    if r.status_code != 200:
-        raise RuntimeError(f"Gemini native image error {r.status_code}: {r.text}")
+    headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
 
-    data = r.json()
-    parts = (
-        (data.get("candidates") or [{}])[0]
-        .get("content", {})
-        .get("parts", [])
-        or []
-    )
+    last_err: Optional[str] = None
+    for payload in payloads:
+        r = requests.post(url, headers=headers, json=payload, timeout=60)
+        if r.status_code != 200:
+            last_err = f"Gemini native image error {r.status_code}: {r.text}"
+            continue
 
-    for part in parts:
-        inline = part.get("inlineData") or part.get("inline_data")  # be tolerant
-        if inline and inline.get("data"):
-            return base64.b64decode(inline["data"])
+        data = r.json()
+        parts = (
+            (data.get("candidates") or [{}])[0]
+            .get("content", {})
+            .get("parts", [])
+            or []
+        )
 
-    raise RuntimeError(f"No image bytes found in Gemini response: {data}")
+        for part in parts:
+            inline = part.get("inlineData") or part.get("inline_data")
+            if inline and inline.get("data"):
+                return base64.b64decode(inline["data"])
+
+        raise RuntimeError(f"Gemini returned 200 but no inline image data found: {data}")
+
+    raise RuntimeError(last_err or "Gemini native image request failed")
 
 
 def generate_image_png_bytes(title: str) -> bytes:
     """
-    Primary: Imagen SDK
-    Fallback: Gemini native image endpoint
+    If model is gemini-* -> use Gemini native (no Imagen SDK)
+    If model is imagen-* -> use Imagen SDK
     """
-    try:
+    model = _get_image_model().lower()
+
+    if model.startswith("imagen-"):
         return _generate_with_imagen(title)
-    except Exception:
-        return _generate_with_gemini_native(title)
+
+    # gemini-* path
+    return _generate_with_gemini_native(title)
 
 
 def upload_png_to_cloudinary(png_bytes: bytes, *, job_id: str) -> str:
-    """
-    Uploads to Cloudinary and returns secure_url.
-    Overwrites the same public_id each scrape (so DB URL stays stable).
-    """
-    # Uses CLOUDINARY_URL from env automatically
     cloudinary.config(secure=True)
 
     data_uri = "data:image/png;base64," + base64.b64encode(png_bytes).decode("ascii")
@@ -143,8 +143,8 @@ def upload_png_to_cloudinary(png_bytes: bytes, *, job_id: str) -> str:
         data_uri,
         folder="career-roadmap/jobs",
         public_id=f"dwp_{job_id}",
-        overwrite=True,     # overwrite every scrape
-        invalidate=True,    # bust CDN cache
+        overwrite=True,
+        invalidate=True,
         resource_type="image",
     )
 

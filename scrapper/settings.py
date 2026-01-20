@@ -24,8 +24,8 @@ SECRET_KEY = 'django-insecure-6yk(_sk-u^4)n^t_ck5jr*#(3in8_%&q76z1^m#k2(oy0rlym^
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 100000
+ALLOWED_HOSTS = ["206.189.18.64", "localhost", "127.0.0.1"]
 import environ
 from pathlib import Path
 
@@ -97,8 +97,9 @@ import dj_database_url
 
 DATABASES = {
     "default": dj_database_url.parse(
-        os.environ["DATABASE_URL"],
-        conn_max_age=60,      # keep connections open (good for non-serverless)
+        # os.environ["DATABASE_URL"],
+        env("DATABASE_URL"),
+        conn_max_age=600,      # keep connections open (good for non-serverless)
         ssl_require=True,
     )
 }
