@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import json
+import time
 import uuid
 from pathlib import Path
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from django.db import transaction
+from django.db import transaction, close_old_connections
+from django.db.utils import OperationalError, InterfaceError
 from django.utils import timezone
 
 from apprenticeship.models import ApprenticeshipVacancy, ApprenticeshipScrapeLog
@@ -44,6 +46,25 @@ def _load_categories_file(path: Path) -> dict[str, list[str]]:
         raise ValueError("categories.json has no usable categories/subcategories")
 
     return out
+
+
+def db_retry(fn, retries: int = 4, sleep: float = 1.5):
+    """
+    Neon/SSL can drop long-lived connections.
+    This wrapper closes old conns, retries on OperationalError/InterfaceError,
+    and helps keep long scrapes stable.
+    """
+    last_exc = None
+    for i in range(retries):
+        try:
+            close_old_connections()
+            return fn()
+        except (OperationalError, InterfaceError) as e:
+            last_exc = e
+            if i == retries - 1:
+                raise
+            time.sleep(sleep)
+    raise last_exc  # pragma: no cover
 
 
 class Command(BaseCommand):
@@ -88,12 +109,11 @@ class Command(BaseCommand):
             help='Optional: scrape only this category key from categories.json (case-insensitive match).',
         )
 
-        # ✅ Title-based dedupe
         parser.add_argument(
             "--allow-duplicate-title",
             action="store_true",
-            help="By default, skip saving if another vacancy already exists with the same title (case-insensitive). "
-                 "Use this flag to allow duplicates by title.",
+            help="By default we skip saving if another vacancy already exists with the same title "
+                 "(case-insensitive). Use this flag to allow duplicates by title.",
         )
 
     def handle(self, *args, **opts):
@@ -106,7 +126,6 @@ class Command(BaseCommand):
         skip_featured = bool(opts["skip_featured"])
         skip_promoted = bool(opts["skip_promoted"])
         only_category = (opts.get("only_category") or "").strip().lower()
-
         allow_duplicate_title = bool(opts.get("allow_duplicate_title"))
 
         run_id = uuid.uuid4()
@@ -160,19 +179,39 @@ class Command(BaseCommand):
                         break
 
                     q_idx += 1
+                    close_old_connections()  # important between long selenium operations
+
                     start_url = client.build_search_url(subcategory)
-                    self.stdout.write(
-                        f"\n[{q_idx}/{total_queries}] category={category_name!r}, subcategory={subcategory!r}"
-                    )
+                    self.stdout.write(f"\n[{q_idx}/{total_queries}] category={category_name!r}, subcategory={subcategory!r}")
                     self.stdout.write(f"  URL: {start_url}")
 
-                    for link in client.iter_all_vacancy_links(
-                        query=subcategory,
-                        max_pages=max_pages,
-                        skip_featured_first_row=skip_featured,
-                        featured_count=3,  # skip first row on page1
-                        skip_promoted=skip_promoted,
-                    ):
+                    try:
+                        links_iter = client.iter_all_vacancy_links(
+                            query=subcategory,
+                            max_pages=max_pages,
+                            skip_featured_first_row=skip_featured,
+                            featured_count=3,
+                            skip_promoted=skip_promoted,
+                        )
+                    except Exception as e:
+                        # Listing page failed; log and continue to next subcategory
+                        msg = f"listing_error: {type(e).__name__}: {e}"
+                        try:
+                            db_retry(lambda: ApprenticeshipScrapeLog.objects.create(
+                                run_id=run_id,
+                                category=category_name,
+                                keyword=subcategory,
+                                start_url=start_url,
+                                vacancy_ref="",
+                                status="error",
+                                message=msg,
+                            ))
+                        except Exception:
+                            pass
+                        error_count += 1
+                        continue
+
+                    for link in links_iter:
                         if should_stop():
                             break
 
@@ -214,118 +253,106 @@ class Command(BaseCommand):
             client.close()
 
     def _process_one(
-    self,
-    *,
-    client: UcasApprenticeshipClient,
-    vacancy_url: str,
-    run_id,
-    category: str,
-    subcategory: str,
-    start_url: str,
-    allow_duplicate_title: bool,
+        self,
+        *,
+        client: UcasApprenticeshipClient,
+        vacancy_url: str,
+        run_id,
+        category: str,
+        subcategory: str,
+        start_url: str,
+        allow_duplicate_title: bool,
     ) -> str:
-        from django.db import close_old_connections
-        from django.db.utils import OperationalError, InterfaceError
-
         try:
-            # ✅ keep DB connection fresh for long scraping runs
             close_old_connections()
 
             details = client.scrape_vacancy_detail(vacancy_url)
+
+            # If the client explicitly signals skip (timeout/hang), log and continue
+            if isinstance(details, dict) and details.get("__skip__"):
+                msg = f"detail_skip: {details.get('__skip__')}"
+                try:
+                    db_retry(lambda: ApprenticeshipScrapeLog.objects.create(
+                        run_id=run_id,
+                        category=category,
+                        keyword=subcategory,
+                        start_url=start_url,
+                        vacancy_ref=f"URL:{vacancy_url}"[:32],
+                        status="skipped",
+                        message=msg,
+                    ))
+                except Exception:
+                    pass
+                return "skipped"
+
             title = (details.get("title") or "").strip()
             vacancy_id = (details.get("vacancy_id") or "").strip()
 
             vacancy_ref = f"UCAS-{vacancy_id}" if vacancy_id else f"UCAS-{abs(hash(vacancy_url))}"
 
-            # ✅ Title dedupe with reconnect safety
+            # Duplicate title check (case-insensitive), unless user disables it
             if title and (not allow_duplicate_title):
-                try:
-                    close_old_connections()
-                    dup_qs = ApprenticeshipVacancy.objects.filter(title__iexact=title).exclude(vacancy_ref=vacancy_ref)
-                    if dup_qs.exists():
-                        existing_ref = dup_qs.values_list("vacancy_ref", flat=True).first() or ""
-                        msg = f"duplicate_title: already exists as {existing_ref}"
+                dup_exists = db_retry(lambda: ApprenticeshipVacancy.objects.filter(
+                    title__iexact=title
+                ).exclude(vacancy_ref=vacancy_ref).exists())
 
-                        close_old_connections()
-                        ApprenticeshipScrapeLog.objects.create(
-                            run_id=run_id,
-                            category=category,
-                            keyword=subcategory,
-                            start_url=start_url,
-                            vacancy_ref=vacancy_ref,
-                            status="skipped",
-                            message=msg,
-                        )
-                        return "skipped"
-                except (OperationalError, InterfaceError):
-                    # DB connection dropped mid-check -> reopen and continue (don't crash run)
-                    close_old_connections()
+                if dup_exists:
+                    existing_ref = db_retry(lambda: (
+                        ApprenticeshipVacancy.objects.filter(title__iexact=title)
+                        .exclude(vacancy_ref=vacancy_ref)
+                        .values_list("vacancy_ref", flat=True)
+                        .first()
+                    )) or ""
+                    msg = f"duplicate_title: already exists as {existing_ref}"
 
-            # ✅ Upsert (also protected)
-            try:
-                close_old_connections()
-                status, msg = self._upsert_ucas(
-                    vacancy_ref=vacancy_ref,
-                    vacancy_url=vacancy_url,
-                    category=category,
-                    subcategory=subcategory,
-                    run_id=run_id,
-                    details=details,
-                )
-            except (OperationalError, InterfaceError):
-                close_old_connections()
-                status, msg = self._upsert_ucas(
-                    vacancy_ref=vacancy_ref,
-                    vacancy_url=vacancy_url,
-                    category=category,
-                    subcategory=subcategory,
-                    run_id=run_id,
-                    details=details,
-                )
+                    db_retry(lambda: ApprenticeshipScrapeLog.objects.create(
+                        run_id=run_id,
+                        category=category,
+                        keyword=subcategory,
+                        start_url=start_url,
+                        vacancy_ref=vacancy_ref,
+                        status="skipped",
+                        message=msg,
+                    ))
+                    return "skipped"
 
-            # ✅ Write log (protected)
-            try:
-                close_old_connections()
-                ApprenticeshipScrapeLog.objects.create(
-                    run_id=run_id,
-                    category=category,
-                    keyword=subcategory,
-                    start_url=start_url,
-                    vacancy_ref=vacancy_ref,
-                    status=status,
-                    message=msg,
-                )
-            except (OperationalError, InterfaceError):
-                close_old_connections()
-                ApprenticeshipScrapeLog.objects.create(
-                    run_id=run_id,
-                    category=category,
-                    keyword=subcategory,
-                    start_url=start_url,
-                    vacancy_ref=vacancy_ref,
-                    status=status,
-                    message=msg,
-                )
+            status, msg = db_retry(lambda: self._upsert_ucas(
+                vacancy_ref=vacancy_ref,
+                vacancy_url=vacancy_url,
+                category=category,
+                subcategory=subcategory,
+                run_id=run_id,
+                details=details,
+            ))
+
+            db_retry(lambda: ApprenticeshipScrapeLog.objects.create(
+                run_id=run_id,
+                category=category,
+                keyword=subcategory,
+                start_url=start_url,
+                vacancy_ref=vacancy_ref,
+                status=status,
+                message=msg,
+            ))
 
             return status
 
         except Exception as e:
-            # if DB is down, even logging can fail; keep it best-effort
+            # Best-effort log; include url for debugging
+            msg = f"{type(e).__name__}: {e}"
             try:
-                close_old_connections()
-                ApprenticeshipScrapeLog.objects.create(
+                db_retry(lambda: ApprenticeshipScrapeLog.objects.create(
                     run_id=run_id,
                     category=category,
                     keyword=subcategory,
                     start_url=start_url,
-                    vacancy_ref="",
+                    vacancy_ref=f"URL:{vacancy_url}"[:32],
                     status="error",
-                    message=str(e),
-                )
+                    message=msg,
+                ))
             except Exception:
                 pass
             return "error"
-
 
     @transaction.atomic
     def _upsert_ucas(
@@ -342,6 +369,7 @@ class Command(BaseCommand):
 
         new_vals = {
             "vacancy_url": (vacancy_url or "")[:1000],
+
             "title": (details.get("title") or "")[:500],
             "employer_name": (details.get("employer_name") or "")[:500],
             "location_summary": (details.get("location_summary") or "")[:255],
@@ -392,6 +420,8 @@ class Command(BaseCommand):
             # Ask a question
             "contact_name": (details.get("contact_name") or "")[:500],
         }
+
+        close_old_connections()
 
         obj, created = ApprenticeshipVacancy.objects.get_or_create(
             vacancy_ref=vacancy_ref,
