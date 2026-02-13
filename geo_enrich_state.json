@@ -1,0 +1,458 @@
+{
+  "version": 1,
+  "categories": {
+    "Administration": {
+      "job": {
+        "last_pk": 35417,
+        "retry_pks": [
+          362,
+          534,
+          1057,
+          1063,
+          1086,
+          2921,
+          2923,
+          2924,
+          3183,
+          3184,
+          3570,
+          3571,
+          3671,
+          3673,
+          3685,
+          4884,
+          5379,
+          5955,
+          7593,
+          8027,
+          8048,
+          8101,
+          8102,
+          8103,
+          8105,
+          8106,
+          8107,
+          8108,
+          8109,
+          8398,
+          8399,
+          8458,
+          8663,
+          9113,
+          9821,
+          9823,
+          9824
+        ]
+      },
+      "course": {
+        "last_pk": 61216,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1847,
+        "retry_pks": []
+      }
+    },
+    "Animal Care": {
+      "job": {
+        "last_pk": 13700,
+        "retry_pks": [
+          12189,
+          12258,
+          13004,
+          13005,
+          13012,
+          13289,
+          13310,
+          13534
+        ]
+      },
+      "course": {
+        "last_pk": 50411,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1853,
+        "retry_pks": []
+      }
+    },
+    "Beauty and wellbeing": {
+      "job": {
+        "last_pk": 14007,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 50457,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 206,
+        "retry_pks": []
+      }
+    },
+    "Business and finance": {
+      "job": {
+        "last_pk": 16207,
+        "retry_pks": [
+          14496,
+          14806,
+          15485,
+          15502
+        ]
+      },
+      "course": {
+        "last_pk": 51750,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1861,
+        "retry_pks": []
+      }
+    },
+    "Computing, technology and digital": {
+      "job": {
+        "last_pk": 17101,
+        "retry_pks": [
+          16262,
+          16334
+        ]
+      },
+      "course": {
+        "last_pk": 54490,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1895,
+        "retry_pks": []
+      }
+    },
+    "Construction and trades": {
+      "job": {
+        "last_pk": 20173,
+        "retry_pks": [
+          18905
+        ]
+      },
+      "course": {
+        "last_pk": 55368,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1980,
+        "retry_pks": [
+          1911,
+          1937
+        ]
+      }
+    },
+    "Creative and media": {
+      "job": {
+        "last_pk": 24321,
+        "retry_pks": [
+          21021,
+          21022,
+          21123,
+          22072,
+          22088,
+          22844,
+          22874,
+          22967,
+          23238,
+          23307,
+          23326,
+          23484,
+          23676
+        ]
+      },
+      "course": {
+        "last_pk": 57557,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1989,
+        "retry_pks": []
+      }
+    },
+    "Delivery and storage": {
+      "job": {
+        "last_pk": 26236,
+        "retry_pks": [
+          24803,
+          25651,
+          25677,
+          25863,
+          25874
+        ]
+      },
+      "course": {
+        "last_pk": 57594,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 1998,
+        "retry_pks": []
+      }
+    },
+    "Emergency and uniform services": {
+      "job": {
+        "last_pk": 26901,
+        "retry_pks": [
+          26579,
+          26787,
+          26857,
+          26883
+        ]
+      },
+      "course": {
+        "last_pk": 57702,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2001,
+        "retry_pks": []
+      }
+    },
+    "Engineering and maintenance": {
+      "job": {
+        "last_pk": 27678,
+        "retry_pks": [
+          26992,
+          26999,
+          27102,
+          27591
+        ]
+      },
+      "course": {
+        "last_pk": 59227,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2119,
+        "retry_pks": []
+      }
+    },
+    "Environment and land": {
+      "job": {
+        "last_pk": 28456,
+        "retry_pks": [
+          28186
+        ]
+      },
+      "course": {
+        "last_pk": 59238,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2121,
+        "retry_pks": []
+      }
+    },
+    "Government services": {
+      "job": {
+        "last_pk": 28575,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 48430,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2125,
+        "retry_pks": []
+      }
+    },
+    "Healthcare": {
+      "job": {
+        "last_pk": 35406,
+        "retry_pks": [
+          29230,
+          29232,
+          29926,
+          30835,
+          30943,
+          30954,
+          30955,
+          31933,
+          32858,
+          32930
+        ]
+      },
+      "course": {
+        "last_pk": 59977,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2181,
+        "retry_pks": []
+      }
+    },
+    "Home services": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 59980,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2182,
+        "retry_pks": []
+      }
+    },
+    "Hospitality and food": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60043,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2196,
+        "retry_pks": []
+      }
+    },
+    "Law and legal": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60081,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2211,
+        "retry_pks": []
+      }
+    },
+    "Managerial": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60262,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2214,
+        "retry_pks": []
+      }
+    },
+    "Manufacturing": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60269,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 0,
+        "retry_pks": []
+      }
+    },
+    "Retail and sales": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2223,
+        "retry_pks": []
+      }
+    },
+    "Science and research": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60281,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2232,
+        "retry_pks": []
+      }
+    },
+    "Social care": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60348,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2239,
+        "retry_pks": []
+      }
+    },
+    "Sports and leisure": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60906,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2250,
+        "retry_pks": []
+      }
+    },
+    "Teaching and education": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60966,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 2269,
+        "retry_pks": []
+      }
+    },
+    "Transport": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 60969,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 0,
+        "retry_pks": []
+      }
+    },
+    "Travel and tourism": {
+      "job": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "course": {
+        "last_pk": 0,
+        "retry_pks": []
+      },
+      "apprenticeship": {
+        "last_pk": 0,
+        "retry_pks": []
+      }
+    }
+  }
+}

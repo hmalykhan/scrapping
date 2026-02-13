@@ -144,3 +144,28 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import environ
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+config = environ.Env()
+environ.Env.read_env(BASE_DIR / ".env")
+
+# Geoapify keys
+GEOAPIFY_KEYS = [
+    config("key1", default=""),
+    config("key2", default=""),
+    config("key3", default=""),
+    config("key4", default=""),
+    config("key5", default=""),
+    config("key6", default=""),
+    config("key7", default=""),
+    config("key8", default=""),
+    config("key9", default=""),
+    config("key10", default=""),
+]
+
+GEOAPIFY_API_KEY = [k.strip() for k in GEOAPIFY_KEYS if k and k.strip()]
+

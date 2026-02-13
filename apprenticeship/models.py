@@ -36,6 +36,7 @@ class ApprenticeshipVacancy(models.Model):
     vacancy_ref = models.CharField(max_length=32, unique=True, db_index=True)  # VAC2000006379
     vacancy_url = models.URLField(max_length=1000)
     image_url = models.URLField(max_length=1000, blank=True, default="")
+    requirement_summery = models.TextField(blank=True, default="")
 
 
     # ✅ requested
@@ -93,6 +94,13 @@ class ApprenticeshipVacancy(models.Model):
 
     # Scrape meta
     scraped_at = models.DateTimeField(auto_now=True)
+
+    city = models.CharField(max_length=100, blank=True, default="")
+    state = models.CharField(max_length=100, blank=True, default="")
+    zip_code = models.CharField(max_length=20, blank=True, default="")
+
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True)
 
     last_checked_at = models.DateTimeField(null=True, blank=True)
     last_scrape_status = models.CharField(max_length=20, blank=True, default="")

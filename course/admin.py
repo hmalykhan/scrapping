@@ -30,6 +30,7 @@ class NcsCourseAdmin(admin.ModelAdmin):
         "course_id",
         "category",
         "subcategory",
+        "requirement_summery",
         "course_type",
         "learning_method",
         "duration",
@@ -39,6 +40,11 @@ class NcsCourseAdmin(admin.ModelAdmin):
         "scraped_at",
         "last_scrape_status",
         "last_checked_at",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
 
     list_filter = (
@@ -49,6 +55,11 @@ class NcsCourseAdmin(admin.ModelAdmin):
         "course_qualification_level",
         "scraped_at",
         "last_scrape_status",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
 
     search_fields = (
@@ -69,6 +80,11 @@ class NcsCourseAdmin(admin.ModelAdmin):
         "phone",
         "website",
         "cost_description",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
 
     readonly_fields = (
@@ -134,6 +150,11 @@ class NcsCourseAdmin(admin.ModelAdmin):
                     "email",
                     "phone",
                     "website",
+                    "city",
+                    "state",
+                    "zip_code",
+                    "latitude",
+                    "longitude",
                 )
             },
         ),

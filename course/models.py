@@ -36,6 +36,7 @@ class NcsCourse(models.Model):
 
     category = models.CharField(max_length=255, blank=True, default="", db_index=True)
     subcategory = models.CharField(max_length=255, blank=True, default="", db_index=True)
+    requirement_summery = models.TextField(blank=True, default="")
 
     course_url = models.URLField(max_length=1000)
     image_url = models.URLField(max_length=1000, blank=True, default="")
@@ -75,6 +76,13 @@ class NcsCourse(models.Model):
     last_scrape_status = models.CharField(max_length=20, blank=True, default="")
     last_scrape_message = models.TextField(blank=True, default="")
     last_scrape_run_id = models.UUIDField(null=True, blank=True, db_index=True)
+
+    city = models.CharField(max_length=100, blank=True, default="")
+    state = models.CharField(max_length=100, blank=True, default="")
+    zip_code = models.CharField(max_length=20, blank=True, default="")
+
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
 
     def __str__(self) -> str:
         return f"{self.course_name} ({self.course_id})"

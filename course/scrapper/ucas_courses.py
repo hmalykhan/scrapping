@@ -1,450 +1,1234 @@
-# course/scrapper/ucas_courses.py
+# from __future__ import annotations
+
+# import re
+# import time
+# from dataclasses import dataclass
+# from typing import Dict, Iterable, List, Optional
+# from urllib.parse import urlencode, urljoin, urlparse
+
+# import requests
+# from bs4 import BeautifulSoup, Tag
+# from requests.adapters import HTTPAdapter
+# from urllib3.util.retry import Retry
+
+# BASE_RESULTS_URL = "https://digital.ucas.com/coursedisplay/results/courses"
+# BASE_COURSE_URL = "https://digital.ucas.com"
+
+# PUNCT_ONLY_RE = re.compile(r"^[\s,.;:–—-]+$")
+# EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+# PHONE_RE = re.compile(r"\+?\d[\d\s().+-]{6,}")
+
+
+# def clean(s: str) -> str:
+#     return re.sub(r"\s+", " ", (s or "").strip())
+
+
+# def cleanup_lines(text: str) -> str:
+#     lines = [ln.strip() for ln in (text or "").splitlines()]
+#     out: List[str] = []
+#     for ln in lines:
+#         if not ln:
+#             if out and out[-1] != "":
+#                 out.append("")
+#             continue
+#         if PUNCT_ONLY_RE.match(ln):
+#             continue
+#         out.append(ln)
+#     return "\n".join(out).strip()
+
+
+# @dataclass(frozen=True)
+# class UcasCourseListing:
+#     course_id: str
+#     url: str
+#     course_name: str = ""
+#     provider_name: str = ""
+
+
+# class UcasCourseClient:
+#     """
+#     UCAS scraper using only `digital.ucas.com` (no Selenium).
+
+#     Flow:
+#       searchTerm -> results cards -> course detail page
+#     """
+
+#     def __init__(self, *, delay: float = 0.7, timeout: int = 30, study_year: int = 2026) -> None:
+#         self.delay = delay
+#         self.timeout = timeout
+#         self.study_year = study_year
+
+#         self.sess = requests.Session()
+#         self.sess.headers.update({"User-Agent": "Mozilla/5.0 (compatible; DjangoScraper/1.0)"})
+
+#         retry = Retry(
+#             total=5,
+#             backoff_factor=0.6,
+#             status_forcelist=(429, 500, 502, 503, 504),
+#             allowed_methods=("GET",),
+#         )
+#         adapter = HTTPAdapter(max_retries=retry)
+#         self.sess.mount("https://", adapter)
+#         self.sess.mount("http://", adapter)
+
+#     # ------------- HTTP helpers -------------
+
+#     def soup(self, url: str) -> BeautifulSoup:
+#         """GET a page and return BeautifulSoup."""
+#         resp = self.sess.get(url, timeout=self.timeout)
+#         resp.raise_for_status()
+#         time.sleep(self.delay)
+#         return BeautifulSoup(resp.text, "lxml")
+
+#     def build_results_url(self, search_term: str, page_number: int = 1) -> str:
+#         """Build the `results/courses` URL from a search term."""
+#         qs = urlencode(
+#             {
+#                 "searchTerm": search_term,
+#                 "studyYear": self.study_year,
+#                 "destination": "Undergraduate",
+#                 "postcodeDistanceSystem": "imperial",
+#                 "pageNumber": page_number,
+#                 "sort": "MostRelevant",
+#                 "clearingPreference": "None",
+#             }
+#         )
+#         return f"{BASE_RESULTS_URL}?{qs}"
+
+#     # ------------- Listing scraping -------------
+
+#     def iter_all_course_links(self, *, query: str, max_pages: int = 0) -> Iterable[UcasCourseListing]:
+#         """
+#         Iterate all course links for a given search query across result pages.
+
+#         Stops when:
+#           - max_pages is reached (if > 0), OR
+#           - a page yields no new course ids.
+#         """
+#         seen_ids: set[str] = set()
+#         page = 1
+
+#         while True:
+#             if max_pages and page > max_pages:
+#                 return
+
+#             results_url = self.build_results_url(query, page_number=page)
+
+#             try:
+#                 doc = self.soup(results_url)
+#             except Exception as e:
+#                 # Network / parsing issue -> abort this query gracefully.
+#                 print(f"[UCAS] ERROR fetching results for {query!r} page {page}: {e}")
+#                 return
+
+#             page_courses = self._extract_courses_from_results(doc)
+#             new_courses: List[UcasCourseListing] = []
+#             for c in page_courses:
+#                 if c.course_id in seen_ids:
+#                     continue
+#                 seen_ids.add(c.course_id)
+#                 new_courses.append(c)
+
+#             if not new_courses:
+#                 return
+
+#             for c in new_courses:
+#                 yield c
+
+#             page += 1
+
+#     def _extract_courses_from_results(self, soup: BeautifulSoup) -> List[UcasCourseListing]:
+#         """Parse the results page and extract all course cards."""
+#         main = soup.find("main") or soup
+
+#         out: List[UcasCourseListing] = []
+#         for a in main.select('a[href*="/coursedisplay/courses/"]'):
+#             href = a.get("href") or ""
+#             if not href:
+#                 continue
+
+#             url = urljoin(BASE_COURSE_URL, href)
+#             parsed = urlparse(url)
+#             parts = [p for p in parsed.path.split("/") if p]
+#             course_id = ""
+#             for i, part in enumerate(parts):
+#                 if part == "courses" and i + 1 < len(parts):
+#                     course_id = parts[i + 1]
+#                     break
+#             if not course_id:
+#                 continue
+
+#             card = self._find_course_card(a, course_id=course_id)
+#             course_name = self._extract_course_name(card) if card else ""
+#             provider_name = self._extract_provider_name(card) if card else ""
+
+#             out.append(
+#                 UcasCourseListing(
+#                     course_id=course_id,
+#                     url=url,
+#                     course_name=course_name,
+#                     provider_name=provider_name,
+#                 )
+#             )
+
+#         # Deduplicate by course_id
+#         seen: set[str] = set()
+#         dedup: List[UcasCourseListing] = []
+#         for c in out:
+#             if c.course_id not in seen:
+#                 seen.add(c.course_id)
+#                 dedup.append(c)
+#         return dedup
+
+#     def _find_course_card(self, link: Tag, *, course_id: str) -> Optional[Tag]:
+#         """
+#         Walk up ancestors to find a reasonably small container that looks like a single card.
+#         """
+#         node: Optional[Tag] = link
+#         for _ in range(10):
+#             if not isinstance(node, Tag):
+#                 return None
+
+#             # Heuristic: card should contain this course link only once
+#             same_links = node.select(f'a[href*="{course_id}"]')
+#             if len(same_links) == 1:
+#                 # Avoid entire <body> or <main>
+#                 if node.name in {"article", "li", "section", "div"}:
+#                     text = node.get_text(" ", strip=True)
+#                     if text and len(text) < 800:
+#                         return node
+
+#             node = node.parent if isinstance(node.parent, Tag) else None
+#         return None
+
+#     def _extract_course_name(self, card: Tag) -> str:
+#         # Prefer headings inside the card
+#         for h in card.find_all(["h3", "h2", "h4"]):
+#             t = clean(h.get_text(" ", strip=True))
+#             low = t.lower()
+#             if not t:
+#                 continue
+#             if "search" in low:
+#                 continue
+#             if "view course" in low:
+#                 continue
+#             return t
+
+#         # Fallback: first “normal looking” line in the card
+#         text = card.get_text("\n", strip=True)
+#         for ln in text.splitlines():
+#             t = clean(ln)
+#             low = t.lower()
+#             if not t:
+#                 continue
+#             if "search" in low:
+#                 continue
+#             if any(
+#                 low.startswith(x)
+#                 for x in (
+#                     "location",
+#                     "start date",
+#                     "study mode",
+#                     "duration",
+#                     "qualification type",
+#                 )
+#             ):
+#                 continue
+#             if "£" in t:
+#                 continue
+#             return t
+#         return ""
+
+#     def _extract_provider_name(self, card: Tag) -> str:
+#         text = card.get_text("\n", strip=True)
+#         lines = [clean(ln) for ln in text.splitlines() if clean(ln)]
+#         if not lines:
+#             return ""
+#         bad_prefixes = ("search", "course options", "apply", "favourites", "favorite")
+#         for ln in lines:
+#             low = ln.lower()
+#             if any(low.startswith(p) for p in bad_prefixes):
+#                 continue
+#             if "£" in ln:
+#                 continue
+#             return ln
+#         return ""
+
+#     # ------------- Details scraping -------------
+
+#     def scrape_course_detail(self, course_url: str) -> Dict[str, str]:
+#         """
+#         Scrape one UCAS course detail page on digital.ucas.com.
+#         Returns a dict that maps clean fields ready for NcsCourse.
+#         """
+#         soup = self.soup(course_url)
+#         main = soup.find("main") or soup
+
+#         header = self._parse_header(main)
+#         degree_level = header.get("degree_level", "")
+#         course_name = header.get("course_name", "")
+#         provider_name = header.get("provider_name", "")
+#         location = header.get("location", "")
+#         start_date = header.get("start_date", "")
+#         study_mode = header.get("study_mode", "")
+#         duration = header.get("duration", "")
+#         qualification_type = header.get("qualification_type", "")
+
+#         summary_text = self._section_text_any(main, ["Course summary"])
+#         modules_text = self._section_text_any(main, ["Modules"])
+#         assessment_text = self._section_text_any(main, ["Assessment method"])
+#         entry_req_text = self._section_text_any(main, ["Entry requirements"])
+#         fees_text = self._section_text_any(main, ["Fees and funding"])
+#         provider_info_text = self._section_text_any(main, ["Provider information"])
+#         contact_text = self._section_text_any(main, ["Course contact details", "Course contact"])
+
+#         # Build description as Course summary + Modules + Assessment
+#         description_parts = [summary_text]
+#         if modules_text:
+#             description_parts.append("\n\nModules\n" + modules_text)
+#         if assessment_text:
+#             description_parts.append("\n\nAssessment\n" + assessment_text)
+#         course_description = cleanup_lines("\n\n".join(p for p in description_parts if p))
+
+#         combined_contact = "\n".join([provider_info_text or "", contact_text or ""])
+
+#         email_match = EMAIL_RE.search(combined_contact)
+#         phone_match = PHONE_RE.search(combined_contact)
+
+#         email = email_match.group(0) if email_match else ""
+#         phone = phone_match.group(0) if phone_match else ""
+
+#         # Provider name + address from Provider information block
+#         address = ""
+#         if provider_info_text:
+#             raw_lines = [ln.strip() for ln in provider_info_text.splitlines() if ln.strip()]
+#             if raw_lines:
+#                 provider_candidate = None
+#                 for ln in raw_lines:
+#                     if "website" in ln.lower():
+#                         continue
+#                     provider_candidate = ln
+#                     break
+
+#                 if provider_candidate:
+#                     if not provider_name:
+#                         provider_name = provider_candidate
+#                     try:
+#                         idx = raw_lines.index(provider_candidate)
+#                     except ValueError:
+#                         idx = 0
+#                     addr_lines = raw_lines[idx + 1 :]
+#                 else:
+#                     addr_lines = raw_lines
+
+#                 if addr_lines:
+#                     address = "\n".join(addr_lines).strip()
+
+#         # Cost and cost description from Fees section
+#         cost = ""
+#         for ln in fees_text.splitlines():
+#             t = ln.strip()
+#             if "£" in t:
+#                 cost = clean(t)
+#                 break
+#         cost_description = cleanup_lines(fees_text) if fees_text else ""
+
+#         # Website: first absolute URL on the page (usually provider/course page)
+#         website = ""
+#         for a in main.find_all("a", href=True):
+#             href = a["href"]
+#             if href.startswith("http"):
+#                 website = href
+#                 break
+
+#         return {
+#             "course_name": course_name,
+#             "course_type": degree_level or "",
+#             "learning_method": study_mode,
+#             "course_hours": "",
+#             "course_stryd_time": start_date,
+#             "course_qualification_level": qualification_type or degree_level or "",
+#             "course_description": course_description,
+#             "attendance_pattern": study_mode,
+#             "awarding_organization": provider_name,
+#             "who_this_course_is_for": "",
+#             "entry_reeq": entry_req_text,
+#             "college_name": provider_name,
+#             "address": address,
+#             "email": email,
+#             "phone": phone,
+#             "duration": duration,
+#             "cost": cost,
+#             "cost_description": cost_description,
+#             "website": website,
+#         }
+
+#     def _parse_header(self, main: Tag) -> Dict[str, str]:
+#         """Parse the header block for provider, course name, level, etc."""
+#         raw = main.get_text("\n", strip=True)
+#         lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
+
+#         provider_name = ""
+#         course_name = ""
+#         degree_level = ""
+#         qualification_type = ""
+#         location = ""
+#         start_date = ""
+#         study_mode = ""
+#         duration = ""
+
+#         def val_after(label: str) -> str:
+#             """Return the value after 'Label:' either on same line or the next line."""
+#             base = label.lower()
+#             for i, ln in enumerate(lines):
+#                 low = ln.lower()
+#                 if base in low:
+#                     m = re.search(rf"{re.escape(label)}\s*:\s*(.+)$", ln, flags=re.I)
+#                     if m and m.group(1).strip():
+#                         return clean(m.group(1))
+#                     if i + 1 < len(lines):
+#                         nxt = clean(lines[i + 1])
+#                         if nxt:
+#                             return nxt
+#             return ""
+
+#         # ---- Degree level + provider + course name cluster ----
+#         deg_idx = -1
+#         for i, ln in enumerate(lines):
+#             if ln.lower().startswith("degree level"):
+#                 deg_idx = i
+#                 m = re.search(r":\s*(.+)$", ln, flags=re.I)
+#                 if m and m.group(1).strip():
+#                     degree_level = clean(m.group(1))
+#                 elif i + 1 < len(lines):
+#                     degree_level = clean(lines[i + 1])
+#                 break
+
+#         if deg_idx != -1:
+#             # Provider is usually just above "Degree level"
+#             if deg_idx > 0:
+#                 provider_name = clean(lines[deg_idx - 1])
+
+#             # Course name is the first non-label, non-degree-level line after that
+#             for j in range(deg_idx + 1, min(len(lines), deg_idx + 10)):
+#                 t = clean(lines[j])
+#                 low = t.lower()
+#                 if not t:
+#                     continue
+#                 # skip obvious non-names
+#                 if ":" in t:
+#                     continue
+#                 # DO NOT treat the degree level as course name
+#                 if degree_level and low == degree_level.lower():
+#                     continue
+#                 if low in {"undergraduate", "postgraduate", "postgraduate taught"}:
+#                     continue
+#                 if any(
+#                     low.startswith(x)
+#                     for x in (
+#                         "course options",
+#                         "course summary",
+#                         "how to apply",
+#                         "entry requirements",
+#                         "fees and funding",
+#                         "provider information",
+#                         "modules",
+#                         "assessment method",
+#                     )
+#                 ):
+#                     continue
+#                 course_name = t
+#                 break
+
+#         # Other header fields
+#         qualification_type = val_after("Qualification type")
+#         location = val_after("Location")
+#         start_date = val_after("Start date")
+#         study_mode = val_after("Study mode")
+#         duration = val_after("Duration")
+
+#         # ---- Fallback: use headings for course name if still empty ----
+#         if not course_name:
+#             for h in main.find_all(["h1", "h2", "h3"]):
+#                 t = clean(h.get_text(" ", strip=True))
+#                 low = t.lower()
+#                 if not t:
+#                     continue
+#                 # skip obvious provider headings
+#                 if any(word in low for word in ("university", "college", "institute")):
+#                     continue
+#                 if any(
+#                     low.startswith(x)
+#                     for x in (
+#                         "course options",
+#                         "course summary",
+#                         "how to apply",
+#                         "entry requirements",
+#                         "fees and funding",
+#                         "provider information",
+#                     )
+#                 ):
+#                     continue
+#                 course_name = t
+#                 break
+
+#         return {
+#             "provider_name": provider_name,
+#             "course_name": course_name,
+#             "degree_level": degree_level,
+#             "qualification_type": qualification_type,
+#             "location": location,
+#             "start_date": start_date,
+#             "study_mode": study_mode,
+#             "duration": duration,
+#         }
+
+
+#     # ------------- Section helpers -------------
+
+#     def _section_text_any(self, root: Tag, titles: List[str]) -> str:
+#         sec = self._section_scope_any(root, titles)
+#         if not sec:
+#             return ""
+#         if sec.name in ("h2", "h3"):
+#             scope = self._collect_until_next_heading(sec)
+#         else:
+#             scope = sec
+#         raw = scope.get_text("\n", strip=True)
+#         return cleanup_lines(raw)
+
+#     def _section_scope_any(self, root: Tag, titles: List[str]) -> Optional[Tag]:
+#         wanted = [t.lower() for t in titles]
+#         for tag_name in ("h2", "h3"):
+#             for h in root.find_all(tag_name):
+#                 t = clean(h.get_text(" ", strip=True)).lower()
+#                 if any(w in t for w in wanted):
+#                     return h
+#         return None
+
+#     def _collect_until_next_heading(self, start_h: Tag) -> Tag:
+#         tmp = BeautifulSoup("<div></div>", "lxml").div  # type: ignore
+#         for sib in start_h.next_siblings:
+#             if isinstance(sib, Tag) and sib.name in ("h2", "h3"):
+#                 break
+#             if isinstance(sib, Tag):
+#                 tmp.append(sib)
+#         return tmp  # type: ignore
+
+#     # ------------- Cleanup -------------
+
+#     def close(self) -> None:
+#         try:
+#             self.sess.close()
+#         except Exception:
+#             pass
+
+
+
+
+
+
+
+
+
+
+
+
 from __future__ import annotations
 
-import os
 import re
 import time
-import tempfile
-import shutil
 from dataclasses import dataclass
-from typing import Iterable, Optional
-from urllib.parse import quote_plus, urljoin, urlparse, parse_qs
+from typing import Dict, Iterable, List, Optional
+from urllib.parse import urlencode, urljoin, urlparse
 
+import requests
 from bs4 import BeautifulSoup, Tag
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
+BASE_RESULTS_URL = "https://digital.ucas.com/coursedisplay/results/courses"
+BASE_COURSE_URL = "https://digital.ucas.com"
+
+PUNCT_ONLY_RE = re.compile(r"^[\s,.;:–—-]+$")
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+PHONE_RE = re.compile(r"\+?\d[\d\s().+-]{6,}")
+
+MONTH_RE = re.compile(
+    r"\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}\b",
+    re.I,
+)
+DURATION_RE = re.compile(r"\b\d+\s+(?:year|years|month|months|week|weeks)\b", re.I)
+
+HEADER_LABELS = {
+    "qualification type",
+    "location",
+    "start date",
+    "study mode",
+    "duration",
+}
 
 
-UCAS_ALL_SEARCH_BASE = "https://www.ucas.com/explore/search/all"
-
-COURSE_LINK_RE = re.compile(r"/coursedisplay/courses/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})", re.I)
-DIGITAL_UCAS_HOST = "digital.ucas.com"
-
-
-def _clean(s: str) -> str:
+def clean(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").strip())
 
 
-def _normalize_url(href: str, base: str) -> str:
-    href = (href or "").strip()
-    if not href:
-        return ""
-    return urljoin(base, href)
+def cleanup_lines(text: str) -> str:
+    lines = [ln.strip() for ln in (text or "").splitlines()]
+    out: List[str] = []
+    for ln in lines:
+        if not ln:
+            if out and out[-1] != "":
+                out.append("")
+            continue
+        if PUNCT_ONLY_RE.match(ln):
+            continue
+        out.append(ln)
+    return "\n".join(out).strip()
 
 
-def _text_lines(soup: BeautifulSoup) -> list[str]:
-    raw = soup.get_text("\n", strip=True)
-    out: list[str] = []
-    for ln in raw.splitlines():
-        t = _clean(ln)
-        if t:
-            out.append(t)
-    return out
+def is_header_label_value(s: str) -> bool:
+    return clean(s).lower() in HEADER_LABELS
 
 
-def _find_heading(soup: BeautifulSoup, heading_text: str) -> Optional[Tag]:
-    want = _clean(heading_text).lower()
-    for h in soup.find_all(["h1", "h2", "h3", "h4"]):
-        if _clean(h.get_text(" ", strip=True)).lower() == want:
-            return h
-    return None
-
-
-def _collect_until_next_heading(start_h: Tag, *, stop_tags: tuple[str, ...] = ("h2", "h3")) -> str:
-    out_parts: list[str] = []
-    for sib in start_h.next_siblings:
-        if isinstance(sib, Tag) and sib.name in stop_tags:
-            break
-        if isinstance(sib, Tag):
-            txt = sib.get_text("\n", strip=True).strip()
-            if txt:
-                out_parts.append(txt)
-    return "\n\n".join(out_parts).strip()
-
-
-def _extract_first_money(text: str) -> str:
-    # pull first £ amount if present
-    m = re.search(r"(£\s?\d[\d,]*(?:\.\d+)?)", text or "")
-    return _clean(m.group(1)) if m else ""
+def looks_like_provider(text: str) -> bool:
+    t = clean(text).lower()
+    if not t:
+        return False
+    return any(k in t for k in ("university", "college", "institute", "academy", "trading as"))
 
 
 @dataclass(frozen=True)
-class UcasCourseLink:
+class UcasCourseListing:
+    course_id: str
     url: str
+    course_name: str = ""
+    provider_name: str = ""
 
 
 class UcasCourseClient:
     """
-    UCAS Courses scraper:
-      - Listings are on ucas.com (JS)
-      - Details are on digital.ucas.com (JS)
-    Uses Selenium for both.
+    UCAS scraper using only `digital.ucas.com` (no Selenium).
+
+    Flow:
+      searchTerm -> results cards -> course detail page
     """
 
-    def __init__(
-        self,
-        *,
-        delay: float = 1.5,
-        timeout: int = 35,
-        headless: bool = True,
-        user_agent: str = "Mozilla/5.0 (compatible; DjangoScraper/1.0)",
-        chrome_binary: str = "/opt/google/chrome/chrome",
-        chromedriver_path: str = "",
-    ) -> None:
-        self.delay = float(delay)
-        self.timeout = int(timeout)
+    def __init__(self, *, delay: float = 0.7, timeout: int = 30, study_year: int = 2026) -> None:
+        self.delay = delay
+        self.timeout = timeout
+        self.study_year = study_year
 
-        os.environ.setdefault("XDG_RUNTIME_DIR", "/tmp")
+        self.sess = requests.Session()
+        self.sess.headers.update({"User-Agent": "Mozilla/5.0 (compatible; DjangoScraper/1.0)"})
 
-        self._tmp_profile_dir = tempfile.mkdtemp(prefix="ucas_courses_profile_")
+        retry = Retry(
+            total=5,
+            backoff_factor=0.6,
+            status_forcelist=(429, 500, 502, 503, 504),
+            allowed_methods=("GET",),
+        )
+        adapter = HTTPAdapter(max_retries=retry)
+        self.sess.mount("https://", adapter)
+        self.sess.mount("http://", adapter)
 
-        opts = Options()
-        if chrome_binary:
-            opts.binary_location = chrome_binary
+    # ------------- HTTP helpers -------------
 
-        if headless:
-            opts.add_argument("--headless=new")
+    def soup(self, url: str) -> BeautifulSoup:
+        """GET a page and return BeautifulSoup."""
+        resp = self.sess.get(url, timeout=self.timeout)
+        resp.raise_for_status()
+        time.sleep(self.delay)
+        return BeautifulSoup(resp.text, "lxml")
 
-        # stability flags
-        opts.add_argument("--no-sandbox")
-        opts.add_argument("--disable-dev-shm-usage")
-        opts.add_argument("--disable-gpu")
-        opts.add_argument("--window-size=1920,1080")
-        opts.add_argument("--no-first-run")
-        opts.add_argument("--no-default-browser-check")
-        opts.add_argument("--noerrdialogs")
-        opts.add_argument("--disable-background-networking")
-        opts.add_argument("--disable-background-timer-throttling")
-        opts.add_argument("--disable-renderer-backgrounding")
+    def build_results_url(self, search_term: str, page_number: int = 1) -> str:
+        """Build the `results/courses` URL from a search term."""
+        qs = urlencode(
+            {
+                "searchTerm": search_term,
+                "studyYear": self.study_year,
+                "destination": "Undergraduate",
+                "postcodeDistanceSystem": "imperial",
+                "pageNumber": page_number,
+                "sort": "MostRelevant",
+                "clearingPreference": "None",
+            }
+        )
+        return f"{BASE_RESULTS_URL}?{qs}"
 
-        opts.add_argument(f"--user-agent={user_agent}")
-        opts.add_argument(f"--user-data-dir={self._tmp_profile_dir}")
+    # ------------- Listing scraping -------------
 
-        # If you want to force a system chromedriver, pass chromedriver_path.
-        # Otherwise Selenium Manager will be used.
-        service = Service(chromedriver_path) if chromedriver_path else None
+    def iter_all_course_links(self, *, query: str, max_pages: int = 0) -> Iterable[UcasCourseListing]:
+        """
+        Iterate all course links for a given search query across result pages.
 
-        try:
-            if service:
-                self.driver = webdriver.Chrome(service=service, options=opts)
+        Stops when:
+          - max_pages is reached (if > 0), OR
+          - a page yields no new course ids.
+        """
+        seen_ids: set[str] = set()
+        page = 1
+
+        while True:
+            if max_pages and page > max_pages:
+                return
+
+            results_url = self.build_results_url(query, page_number=page)
+
+            try:
+                doc = self.soup(results_url)
+            except Exception as e:
+                # Network / parsing issue -> abort this query gracefully.
+                print(f"[UCAS] ERROR fetching results for {query!r} page {page}: {e}")
+                return
+
+            page_courses = self._extract_courses_from_results(doc)
+            new_courses: List[UcasCourseListing] = []
+            for c in page_courses:
+                if c.course_id in seen_ids:
+                    continue
+                seen_ids.add(c.course_id)
+                new_courses.append(c)
+
+            if not new_courses:
+                return
+
+            for c in new_courses:
+                yield c
+
+            page += 1
+
+    def _extract_courses_from_results(self, soup: BeautifulSoup) -> List[UcasCourseListing]:
+        """Parse the results page and extract all course cards."""
+        main = soup.find("main") or soup
+
+        out: List[UcasCourseListing] = []
+        for a in main.select('a[href*="/coursedisplay/courses/"]'):
+            href = a.get("href") or ""
+            if not href:
+                continue
+
+            url = urljoin(BASE_COURSE_URL, href)
+            parsed = urlparse(url)
+            parts = [p for p in parsed.path.split("/") if p]
+            course_id = ""
+            for i, part in enumerate(parts):
+                if part == "courses" and i + 1 < len(parts):
+                    course_id = parts[i + 1]
+                    break
+            if not course_id:
+                continue
+
+            card = self._find_course_card(a, course_id=course_id)
+            course_name = self._extract_course_name(card) if card else ""
+            provider_name = self._extract_provider_name(card) if card else ""
+
+            # Extra safety: if course_name looks like provider, drop it (detail page will fill it)
+            if looks_like_provider(course_name):
+                course_name = ""
+
+            out.append(
+                UcasCourseListing(
+                    course_id=course_id,
+                    url=url,
+                    course_name=course_name,
+                    provider_name=provider_name,
+                )
+            )
+
+        # Deduplicate by course_id
+        seen: set[str] = set()
+        dedup: List[UcasCourseListing] = []
+        for c in out:
+            if c.course_id not in seen:
+                seen.add(c.course_id)
+                dedup.append(c)
+        return dedup
+
+    def _find_course_card(self, link: Tag, *, course_id: str) -> Optional[Tag]:
+        """
+        Walk up ancestors to find a reasonably small container that looks like a single card.
+        """
+        node: Optional[Tag] = link
+        for _ in range(10):
+            if not isinstance(node, Tag):
+                return None
+
+            # Heuristic: card should contain this course link only once
+            same_links = node.select(f'a[href*="{course_id}"]')
+            if len(same_links) == 1:
+                # Avoid entire <body> or <main>
+                if node.name in {"article", "li", "section", "div"}:
+                    text = node.get_text(" ", strip=True)
+                    if text and len(text) < 800:
+                        return node
+
+            node = node.parent if isinstance(node.parent, Tag) else None
+        return None
+
+    def _extract_course_name(self, card: Tag) -> str:
+        # Prefer headings inside the card
+        for h in card.find_all(["h3", "h2", "h4"]):
+            t = clean(h.get_text(" ", strip=True))
+            low = t.lower()
+            if not t:
+                continue
+            if "search" in low:
+                continue
+            if "view course" in low:
+                continue
+            if looks_like_provider(t):
+                continue
+            return t
+
+        # Fallback: first “normal looking” line in the card
+        text = card.get_text("\n", strip=True)
+        for ln in text.splitlines():
+            t = clean(ln)
+            low = t.lower()
+            if not t:
+                continue
+            if "search" in low:
+                continue
+            if looks_like_provider(t):
+                continue
+            if any(
+                low.startswith(x)
+                for x in (
+                    "location",
+                    "start date",
+                    "study mode",
+                    "duration",
+                    "qualification type",
+                )
+            ):
+                continue
+            if "£" in t:
+                continue
+            return t
+        return ""
+
+    def _extract_provider_name(self, card: Tag) -> str:
+        text = card.get_text("\n", strip=True)
+        lines = [clean(ln) for ln in text.splitlines() if clean(ln)]
+        if not lines:
+            return ""
+        bad_prefixes = ("search", "course options", "apply", "favourites", "favorite")
+        for ln in lines:
+            low = ln.lower()
+            if any(low.startswith(p) for p in bad_prefixes):
+                continue
+            # prefer provider-ish lines
+            if looks_like_provider(ln):
+                return ln
+        # fallback: first reasonable line
+        for ln in lines:
+            low = ln.lower()
+            if any(low.startswith(p) for p in bad_prefixes):
+                continue
+            if "£" in ln:
+                continue
+            return ln
+        return ""
+
+    # ------------- Details scraping -------------
+
+    def scrape_course_detail(self, course_url: str) -> Dict[str, str]:
+        """
+        Scrape one UCAS course detail page on digital.ucas.com.
+        Returns a dict that maps clean fields ready for NcsCourse.
+        """
+        soup = self.soup(course_url)
+        main = soup.find("main") or soup
+
+        header = self._parse_header(main)
+
+        # Fill option fields from Course options block (text) when header has no values
+        opt = self._parse_first_course_option_fields(main)
+
+        degree_level = header.get("degree_level", "")
+        course_name = header.get("course_name", "")
+        provider_name = header.get("provider_name", "")
+
+        location = header.get("location", "")
+        start_date = header.get("start_date", "")
+        study_mode = header.get("study_mode", "")
+        duration = header.get("duration", "")
+        qualification_type = header.get("qualification_type", "")
+
+        if (not qualification_type) or is_header_label_value(qualification_type):
+            qualification_type = opt.get("qualification_type", qualification_type)
+        if (not location) or is_header_label_value(location):
+            location = opt.get("location", location)
+        if (not start_date) or is_header_label_value(start_date):
+            start_date = opt.get("start_date", start_date)
+        if (not study_mode) or is_header_label_value(study_mode):
+            study_mode = opt.get("study_mode", study_mode)
+        if (not duration) or is_header_label_value(duration):
+            duration = opt.get("duration", duration)
+
+        summary_text = self._section_text_any(main, ["Course summary"])
+        modules_text = self._section_text_any(main, ["Modules"])
+        assessment_text = self._section_text_any(main, ["Assessment method"])
+        entry_req_text = self._section_text_any(main, ["Entry requirements"])
+        fees_text = self._section_text_any(main, ["Fees and funding"])
+        provider_info_text = self._section_text_any(main, ["Provider information"])
+        contact_text = self._section_text_any(main, ["Course contact details", "Course contact"])
+
+        # Build description as Course summary + Modules + Assessment
+        description_parts = [summary_text]
+        if modules_text:
+            description_parts.append("\n\nModules\n" + modules_text)
+        if assessment_text:
+            description_parts.append("\n\nAssessment\n" + assessment_text)
+        course_description = cleanup_lines("\n\n".join(p for p in description_parts if p))
+
+        combined_contact = "\n".join([provider_info_text or "", contact_text or ""])
+
+        email_match = EMAIL_RE.search(combined_contact)
+        phone_match = PHONE_RE.search(combined_contact)
+
+        email = email_match.group(0) if email_match else ""
+        phone = phone_match.group(0) if phone_match else ""
+
+        # Website: must be provider course page link ("Visit our course page")
+        website = self._extract_visit_course_page_link(main)
+
+        # Address: extract only provider address lines (avoid contact details)
+        address = self._extract_provider_address(provider_info_text)
+
+        # Cost and cost description from Fees section
+        cost = ""
+        for ln in fees_text.splitlines():
+            t = ln.strip()
+            if "£" in t:
+                cost = clean(t)
+                break
+        cost_description = cleanup_lines(fees_text) if fees_text else ""
+
+        return {
+            "course_name": course_name,
+            "course_type": degree_level or "",
+            "learning_method": study_mode,
+            "course_hours": "",
+            "course_stryd_time": start_date,
+            "course_qualification_level": qualification_type or degree_level or "",
+            "course_description": course_description,
+            "attendance_pattern": study_mode,
+            "awarding_organization": provider_name,
+            "who_this_course_is_for": "",
+            "entry_reeq": entry_req_text,
+            "college_name": provider_name,
+            "address": address,
+            "email": email,
+            "phone": phone,
+            "duration": duration,
+            "cost": cost,
+            "cost_description": cost_description,
+            "website": website,
+        }
+
+    def _extract_provider_address(self, provider_info_text: str) -> str:
+        if not provider_info_text:
+            return ""
+
+        raw_lines = [ln.strip() for ln in provider_info_text.splitlines() if ln.strip()]
+        out: List[str] = []
+
+        stop_markers = (
+            "course contact",
+            "visit our course page",
+            "admissions",
+            "applicant enquiries",
+            "view address on google maps",
+        )
+
+        for ln in raw_lines:
+            low = ln.lower()
+            if any(m in low for m in stop_markers):
+                break
+            if "visit our website" in low:
+                continue
+            if EMAIL_RE.search(ln):
+                continue
+            if PHONE_RE.search(ln):
+                continue
+            out.append(ln)
+
+        # If the first line is the provider name repeated, keep it (address field in your admin includes provider name)
+        return "\n".join(out).strip()
+
+    def _extract_visit_course_page_link(self, root: Tag) -> str:
+        # 1) Exact target link on UCAS pages
+        for a in root.find_all("a", href=True):
+            label = clean(a.get_text(" ", strip=True)).lower()
+            if "visit our course page" in label:
+                href = (a.get("href") or "").strip()
+                if href.startswith("/"):
+                    href = urljoin(BASE_COURSE_URL, href)
+                return href
+
+        # 2) Fallback: first external (non-UCAS) link
+        for a in root.find_all("a", href=True):
+            href = (a.get("href") or "").strip()
+            if href.startswith("/"):
+                href = urljoin(BASE_COURSE_URL, href)
+            if href.startswith("http") and ("ucas.com" not in href and "digital.ucas.com" not in href):
+                return href
+
+        return ""
+
+    def _parse_first_course_option_fields(self, main: Tag) -> Dict[str, str]:
+        """
+        When the page URL has no courseOptionId, the top "icon row" labels
+        have no values. The actual values appear in the "Course options" list.
+
+        We parse the FIRST option row block:
+          Location Qualification Study mode Duration Start date Apply
+          Main Site
+          BSc (Hons)
+          -
+          Bachelor of Science (with Honours)
+          Full-time 3 years September 2026 Available to Apply
+        """
+        lines = [clean(x) for x in main.get_text("\n", strip=True).splitlines()]
+        header_idx = -1
+
+        def has_all_keywords(s: str) -> bool:
+            low = s.lower()
+            return all(k in low for k in ("location", "qualification", "study mode", "duration", "start date"))
+
+        for i, ln in enumerate(lines):
+            if has_all_keywords(ln):
+                header_idx = i
+                break
+
+        if header_idx == -1:
+            return {}
+
+        # grab a small window after header
+        chunk: List[str] = []
+        for ln in lines[header_idx + 1 : header_idx + 40]:
+            if not ln:
+                continue
+            low = ln.lower()
+
+            # Stop when we hit course option id or UI controls
+            if low.startswith("course option ") or low in {"update cancel", "update", "cancel"}:
+                break
+            chunk.append(ln)
+
+        if not chunk:
+            return {}
+
+        # location is usually first line
+        location = chunk[0] if chunk else ""
+
+        # qualification parts come next until we hit combined line
+        qual_parts: List[str] = []
+        combined = ""
+
+        for ln in chunk[1:]:
+            low = ln.lower()
+            if low in {"available to apply", "apply"}:
+                continue
+
+            # combined line with duration + month-year OR with "Available to Apply"
+            if ("available to apply" in low) or (MONTH_RE.search(ln) and DURATION_RE.search(ln)):
+                combined = ln
+                break
+
+            if ln == "-":
+                continue
+
+            qual_parts.append(ln)
+
+        qualification_type = ""
+        if len(qual_parts) >= 2:
+            # Prefer "Full name - Short name" style if it looks like that
+            qualification_type = f"{qual_parts[-1]} - {qual_parts[0]}"
+            # But on the UCAS page it appears as: ["BSc (Hons)", "Bachelor of Science (with Honours)"]
+            # We want: "Bachelor... - BSc (Hons)"
+            qualification_type = f"{qual_parts[-1]} - {qual_parts[0]}"
+        elif len(qual_parts) == 1:
+            qualification_type = qual_parts[0]
+
+        start_date = ""
+        duration = ""
+        study_mode = ""
+
+        if combined:
+            m_sd = MONTH_RE.search(combined)
+            if m_sd:
+                start_date = clean(m_sd.group(0))
+            m_d = DURATION_RE.search(combined)
+            if m_d:
+                duration = clean(m_d.group(0))
+
+            tmp = combined
+            if start_date:
+                tmp = tmp.replace(start_date, "")
+            if duration:
+                tmp = tmp.replace(duration, "")
+            tmp = tmp.replace("Available to Apply", "").strip()
+            study_mode = clean(tmp)
+
+        return {
+            "location": location,
+            "qualification_type": qualification_type,
+            "study_mode": study_mode,
+            "duration": duration,
+            "start_date": start_date,
+        }
+
+    def _parse_header(self, main: Tag) -> Dict[str, str]:
+        """Parse the header block for provider, course name, level, etc."""
+        raw = main.get_text("\n", strip=True)
+        lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
+
+        provider_name = ""
+        course_name = ""
+        degree_level = ""
+        qualification_type = ""
+        location = ""
+        start_date = ""
+        study_mode = ""
+        duration = ""
+
+        h1_text = ""
+        h1 = main.find("h1")
+        if h1:
+            h1_text = clean(h1.get_text(" ", strip=True))
+
+        def val_after(label: str) -> str:
+            """Return the value after 'Label:' either on same line or the next line."""
+            base = label.lower()
+            for i, ln in enumerate(lines):
+                low = ln.lower()
+                if base in low:
+                    m = re.search(rf"{re.escape(label)}\s*:\s*(.+)$", ln, flags=re.I)
+                    if m and m.group(1).strip():
+                        v = clean(m.group(1))
+                        if not is_header_label_value(v):
+                            return v
+                    if i + 1 < len(lines):
+                        nxt = clean(lines[i + 1])
+                        if nxt and (not is_header_label_value(nxt)):
+                            return nxt
+            return ""
+
+        # ---- Degree level + provider + course name cluster ----
+        deg_idx = -1
+        for i, ln in enumerate(lines):
+            if ln.lower().startswith("degree level"):
+                deg_idx = i
+                m = re.search(r":\s*(.+)$", ln, flags=re.I)
+                if m and m.group(1).strip():
+                    degree_level = clean(m.group(1))
+                elif i + 1 < len(lines):
+                    degree_level = clean(lines[i + 1])
+                break
+
+        if deg_idx != -1:
+            # Provider is usually just above "Degree level"
+            if deg_idx > 0:
+                provider_name = clean(lines[deg_idx - 1])
+
+            # Course name is the first non-label, non-degree-level line after that
+            for j in range(deg_idx + 1, min(len(lines), deg_idx + 10)):
+                t = clean(lines[j])
+                low = t.lower()
+                if not t:
+                    continue
+                if ":" in t:
+                    continue
+                if degree_level and low == degree_level.lower():
+                    continue
+                if low in {"undergraduate", "postgraduate", "postgraduate taught"}:
+                    continue
+                if any(
+                    low.startswith(x)
+                    for x in (
+                        "course options",
+                        "course summary",
+                        "how to apply",
+                        "entry requirements",
+                        "fees and funding",
+                        "provider information",
+                        "modules",
+                        "assessment method",
+                    )
+                ):
+                    continue
+                if looks_like_provider(t):
+                    continue
+                course_name = t
+                break
+
+        # Other header fields (often empty on pages without courseOptionId)
+        qualification_type = val_after("Qualification type")
+        location = val_after("Location")
+        start_date = val_after("Start date")
+        study_mode = val_after("Study mode")
+        duration = val_after("Duration")
+
+        # Prefer <h1> for course name if available (most reliable)
+        if h1_text and (not course_name or looks_like_provider(course_name)) and not looks_like_provider(h1_text):
+            course_name = h1_text
+
+        # Avoid course_name == provider_name
+        if provider_name and course_name and clean(course_name).lower() == clean(provider_name).lower():
+            if h1_text and clean(h1_text).lower() != clean(provider_name).lower():
+                course_name = h1_text
             else:
-                self.driver = webdriver.Chrome(options=opts)
-        except Exception:
-            shutil.rmtree(self._tmp_profile_dir, ignore_errors=True)
-            raise
+                course_name = ""
 
-        # hard page-load timeout so it can't hang forever
-        try:
-            self.driver.set_page_load_timeout(self.timeout)
-        except Exception:
-            pass
+        return {
+            "provider_name": provider_name,
+            "course_name": course_name,
+            "degree_level": degree_level,
+            "qualification_type": qualification_type,
+            "location": location,
+            "start_date": start_date,
+            "study_mode": study_mode,
+            "duration": duration,
+        }
 
-        self.wait = WebDriverWait(self.driver, self.timeout)
+    # ------------- Section helpers -------------
+
+    def _section_text_any(self, root: Tag, titles: List[str]) -> str:
+        sec = self._section_scope_any(root, titles)
+        if not sec:
+            return ""
+        if sec.name in ("h2", "h3"):
+            scope = self._collect_until_next_heading(sec)
+        else:
+            scope = sec
+        raw = scope.get_text("\n", strip=True)
+        return cleanup_lines(raw)
+
+    def _section_scope_any(self, root: Tag, titles: List[str]) -> Optional[Tag]:
+        wanted = [t.lower() for t in titles]
+        for tag_name in ("h2", "h3", "h4"):
+            for h in root.find_all(tag_name):
+                t = clean(h.get_text(" ", strip=True)).lower()
+                if any(w in t for w in wanted):
+                    return h
+        return None
+
+    def _collect_until_next_heading(self, start_h: Tag) -> Tag:
+        tmp = BeautifulSoup("<div></div>", "lxml").div  # type: ignore
+        for sib in start_h.next_siblings:
+            if isinstance(sib, Tag) and sib.name in ("h2", "h3", "h4"):
+                break
+            if isinstance(sib, Tag):
+                tmp.append(sib)
+        return tmp  # type: ignore
+
+    # ------------- Cleanup -------------
 
     def close(self) -> None:
         try:
-            self.driver.quit()
+            self.sess.close()
         except Exception:
             pass
-        try:
-            shutil.rmtree(self._tmp_profile_dir, ignore_errors=True)
-        except Exception:
-            pass
-
-    # ---------------- Listings ----------------
-    def build_search_url(self, query: str) -> str:
-        q = quote_plus((query or "").strip())
-        return f"{UCAS_ALL_SEARCH_BASE}?query={q}"
-
-    def iter_all_course_links(
-        self,
-        *,
-        query: str,
-        max_pages: int = 0,
-    ) -> Iterable[UcasCourseLink]:
-        start_url = self.build_search_url(query)
-
-        self._safe_get(start_url)
-
-        self._accept_cookies_if_present()
-        self._ensure_courses_tab()
-        self._wait_courses_loaded()
-
-        seen: set[str] = set()
-        page_idx = 1
-
-        while True:
-            for href in self._extract_course_urls_on_page():
-                if href not in seen:
-                    seen.add(href)
-                    yield UcasCourseLink(url=href)
-
-            if max_pages > 0 and page_idx >= max_pages:
-                break
-
-            if not self._go_next_page():
-                break
-
-            page_idx += 1
-            time.sleep(self.delay)
-            self._wait_courses_loaded()
-
-    def _safe_get(self, url: str, *, retries: int = 2) -> None:
-        last_err: Exception | None = None
-        for _ in range(retries + 1):
-            try:
-                self.driver.get(url)
-                return
-            except Exception as e:
-                last_err = e
-                time.sleep(1.0)
-        raise last_err  # type: ignore
-
-    def _accept_cookies_if_present(self) -> None:
-        try:
-            candidates = []
-            candidates += self.driver.find_elements(By.CSS_SELECTOR, 'button[id*="accept"]')
-            candidates += self.driver.find_elements(By.CSS_SELECTOR, 'button[aria-label*="Accept"]')
-            candidates += self.driver.find_elements(By.XPATH, "//*[self::button][contains(translate(., 'ACEPT', 'acept'), 'accept')]")
-            for b in candidates:
-                try:
-                    if b.is_displayed() and b.is_enabled():
-                        b.click()
-                        time.sleep(0.5)
-                        return
-                except Exception:
-                    continue
-        except Exception:
-            return
-
-    def _ensure_courses_tab(self) -> None:
-        """
-        Click the "Courses" tab on /explore/search/all page.
-        """
-        try:
-            # If already showing digital.ucas course links, we're good
-            if self.driver.find_elements(By.CSS_SELECTOR, 'a[href*="digital.ucas.com/coursedisplay/courses/"], a[href*="/coursedisplay/courses/"]'):
-                return
-
-            # Try any element with text "Courses"
-            tabs = self.driver.find_elements(By.XPATH, "//*[self::a or self::button][contains(., 'Courses')]")
-            for t in tabs:
-                try:
-                    if t.is_displayed() and t.is_enabled():
-                        self.driver.execute_script("arguments[0].click();", t)
-                        time.sleep(0.7)
-                        return
-                except Exception:
-                    continue
-        except Exception:
-            return
-
-    def _wait_courses_loaded(self) -> None:
-        # Wait until at least one course link appears
-        self.wait.until(
-            EC.presence_of_element_located(
-                (By.CSS_SELECTOR, 'a[href*="digital.ucas.com/coursedisplay/courses/"], a[href*="/coursedisplay/courses/"]')
-            )
-        )
-
-    def _extract_course_urls_on_page(self) -> list[str]:
-        urls: list[str] = []
-        anchors = self.driver.find_elements(By.CSS_SELECTOR, 'a[href*="digital.ucas.com/coursedisplay/courses/"], a[href*="/coursedisplay/courses/"]')
-        for a in anchors:
-            try:
-                href = (a.get_attribute("href") or "").strip()
-                if not href:
-                    continue
-                # normalize relative
-                if href.startswith("/"):
-                    href = "https://digital.ucas.com" + href
-                if DIGITAL_UCAS_HOST not in href and "/coursedisplay/courses/" in href:
-                    # still accept; normalize later
-                    href = href
-                if "/coursedisplay/courses/" not in href:
-                    continue
-                urls.append(href)
-            except Exception:
-                continue
-
-        # dedup preserve order
-        seen: set[str] = set()
-        out: list[str] = []
-        for u in urls:
-            if u not in seen:
-                seen.add(u)
-                out.append(u)
-        return out
-
-    def _go_next_page(self) -> bool:
-        candidates = []
-        try:
-            candidates += self.driver.find_elements(By.CSS_SELECTOR, 'a[rel="next"]')
-            candidates += self.driver.find_elements(By.CSS_SELECTOR, 'button[rel="next"]')
-            candidates += self.driver.find_elements(By.CSS_SELECTOR, 'a[aria-label*="Next"]')
-            candidates += self.driver.find_elements(By.CSS_SELECTOR, 'button[aria-label*="Next"]')
-            if not candidates:
-                candidates = self.driver.find_elements(By.XPATH, "//*[self::a or self::button][contains(., 'Next')]")
-        except Exception:
-            candidates = []
-
-        for el in candidates:
-            try:
-                if not el.is_displayed() or not el.is_enabled():
-                    continue
-                old_url = self.driver.current_url
-                self.driver.execute_script("arguments[0].click();", el)
-                try:
-                    self.wait.until(lambda d: d.current_url != old_url)
-                except Exception:
-                    pass
-                return True
-            except Exception:
-                continue
-        return False
-
-    # ---------------- Details ----------------
-    def parse_course_id(self, course_url: str) -> str:
-        m = COURSE_LINK_RE.search(course_url or "")
-        return m.group(1) if m else ""
-
-    def scrape_course_detail(self, course_url: str) -> dict[str, str]:
-        """
-        Returns dict mapped to NcsCourse fields (best-effort).
-        """
-        self._safe_get(course_url)
-
-        # Wait for the H1 (course title) to appear
-        try:
-            self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1")))
-        except Exception:
-            pass
-
-        time.sleep(max(0.4, self.delay))
-        html = self.driver.page_source or ""
-        soup = BeautifulSoup(html, "lxml")
-        lines = _text_lines(soup)
-
-        h1 = soup.find("h1")
-        course_name = _clean(h1.get_text(" ", strip=True)) if h1 else ""
-
-        # Provider/University: often appears near top; best-effort
-        provider = ""
-        # Many pages show provider text near top multiple times; pick first meaningful line after title
-        if course_name and course_name in lines:
-            i = lines.index(course_name)
-            # scan next 1..6 lines for provider-like (university/college)
-            for j in range(i + 1, min(i + 8, len(lines))):
-                t = lines[j]
-                if len(t) >= 3 and "degree level" not in t.lower() and "qualification type" not in t.lower():
-                    provider = t
-                    break
-
-        # Extract key facts by labels (Qualification type, Location, Start date, Study mode, Duration)
-        def after_label(label: str) -> str:
-            want = label.lower()
-            for idx, ln in enumerate(lines):
-                if _clean(ln).lower() == want:
-                    return lines[idx + 1] if idx + 1 < len(lines) else ""
-            return ""
-
-        qualification_type = after_label("Qualification type")
-        location = after_label("Location")
-        start_date = after_label("Start date")
-        study_mode = after_label("Study mode")
-        duration = after_label("Duration")
-        degree_level = after_label("Degree level")
-
-        # Apply link: look for anchor/button with "Apply"
-        apply_url = ""
-        for a in soup.select("a[href]"):
-            t = _clean(a.get_text(" ", strip=True)).lower()
-            if t == "apply" or t.startswith("apply"):
-                apply_url = _normalize_url(a.get("href") or "", course_url)
-                if apply_url:
-                    break
-
-        # Course summary section
-        course_summary = ""
-        h_sum = _find_heading(soup, "Course summary")
-        if h_sum:
-            course_summary = _collect_until_next_heading(h_sum, stop_tags=("h2", "h3"))
-        else:
-            # fallback: first ~250 lines as big blob (still useful)
-            course_summary = "\n".join(lines[:250]).strip()
-
-        # Entry requirements section
-        entry_req = ""
-        h_entry = _find_heading(soup, "Entry requirements")
-        if h_entry:
-            entry_req = _collect_until_next_heading(h_entry, stop_tags=("h2", "h3"))
-
-        # Fees and funding section
-        fees_text = ""
-        h_fees = _find_heading(soup, "Fees and funding")
-        if h_fees:
-            fees_text = _collect_until_next_heading(h_fees, stop_tags=("h2", "h3"))
-
-        cost = _extract_first_money(fees_text)
-        cost_description = fees_text
-
-        # Provider information section
-        provider_info = ""
-        h_provider = _find_heading(soup, "Provider information")
-        if h_provider:
-            provider_info = _collect_until_next_heading(h_provider, stop_tags=("h2", "h3"))
-
-        # Try to find a provider website link on page (often exists)
-        website = ""
-        for a in soup.select("a[href]"):
-            href = (a.get("href") or "").strip()
-            if not href:
-                continue
-            if href.startswith("mailto:") or href.startswith("tel:"):
-                continue
-            # prefer non-ucas external links as provider website
-            if "ucas.com" not in href and "digital.ucas.com" not in href and href.startswith(("http://", "https://")):
-                website = href
-                break
-
-        # email/phone
-        email = ""
-        phone = ""
-        for a in soup.select("a[href]"):
-            href = (a.get("href") or "").strip()
-            if href.startswith("mailto:") and not email:
-                email = href.replace("mailto:", "").strip()
-            if href.startswith("tel:") and not phone:
-                phone = href.replace("tel:", "").strip()
-            if email and phone:
-                break
-
-        # fill NcsCourse fields
-        # NOTE: some names are NCS-ish, but we map UCAS data best-effort.
-        return {
-            "course_id": self.parse_course_id(course_url),
-            "course_url": course_url,
-            "course_name": course_name,
-            "college_name": provider,
-            "course_type": _clean(", ".join([x for x in [degree_level, study_mode] if x])),
-            "learning_method": study_mode,
-            "course_qualification_level": qualification_type,
-            "address": location,
-            "course_stryd_time": start_date,
-            "duration": duration,
-            "course_description": course_summary,
-            "who_this_course_is_for": "",  # UCAS doesn’t have a direct matching section always
-            "entry_reeq": entry_req,
-            "attendance_pattern": study_mode,
-            "awarding_organization": provider,
-            "email": email,
-            "phone": phone,
-            "website": website or apply_url,  # keep something useful
-            "cost": cost,
-            "cost_description": cost_description,
-        }

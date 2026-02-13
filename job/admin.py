@@ -31,6 +31,7 @@ class DwpJobAdmin(admin.ModelAdmin):
         "subcategory",
         "image_link",          # ✅ show clickable link
         "posting_date",
+        "requirement_summery",
         "closing_date",
         "job_type",
         "hours",
@@ -38,6 +39,11 @@ class DwpJobAdmin(admin.ModelAdmin):
         "remote_working",
         "disability_confident",
         "last_scrape_status",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
 
     list_filter = (
@@ -50,6 +56,11 @@ class DwpJobAdmin(admin.ModelAdmin):
         "disability_confident",
         "posting_date",
         "closing_date",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
 
     search_fields = (
@@ -64,6 +75,11 @@ class DwpJobAdmin(admin.ModelAdmin):
         "apply_url",
         "image_url",
         "raw_text",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
 
     readonly_fields = (
@@ -88,6 +104,18 @@ class DwpJobAdmin(admin.ModelAdmin):
                     "location",
                     "image_url",       # ✅ show url in form
                     "image_preview",   # ✅ show preview in form
+                )
+            },
+        ),
+        (
+            "Geo",
+            {
+                "fields": (
+                    "city",
+                    "state",
+                    "zip_code",
+                    "latitude",
+                    "longitude",
                 )
             },
         ),

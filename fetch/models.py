@@ -1,6 +1,6 @@
 import uuid
 from django.db import models
-
+from pgvector.django import VectorField
 
 class JobScrapeLog(models.Model):
     run_id = models.UUIDField(default=uuid.uuid4, db_index=True)
@@ -35,10 +35,16 @@ class CareerJob(models.Model):
 
     career_type = models.CharField(max_length=20, choices=CareerType.choices)
     sub_type = models.CharField(max_length=255)  # sector name OR category name
+    # embedding = VectorField(dimensions=1536, null=True, blank=True)  # text-embedding-3-small
+    # embedding_model = models.CharField(max_length=100, blank=True, default="text-embedding-3-small")
+    # embedding_updated_at = models.DateTimeField(null=True, blank=True)
+    # embedding_text = models.TextField(blank=True, default="")
 
     job_slug = models.SlugField(max_length=255)
     job_url = models.URLField()
     image_url = models.URLField(max_length=1000, blank=True, default="")
+    dg_image_url = models.URLField(max_length=1000, blank=True, default="")
+
 
 
     jobname = models.CharField(max_length=255)

@@ -20,6 +20,11 @@ class ApprenticeshipVacancyAdmin(admin.ModelAdmin):
         "last_checked_at",
         "last_scrape_status",
         "scraped_at",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
     list_filter = (
         "last_scrape_status",
@@ -27,6 +32,11 @@ class ApprenticeshipVacancyAdmin(admin.ModelAdmin):
         "subcategory",
         "scraped_at",
         "last_checked_at",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
     search_fields = (
         "vacancy_ref",
@@ -38,6 +48,12 @@ class ApprenticeshipVacancyAdmin(admin.ModelAdmin):
         "training_course",
         "training_provider",
         "image_url",
+        "requirement_summery",
+        "city",
+        "state",
+        "zip_code",
+        "latitude",
+        "longitude",
     )
     readonly_fields = (
         "scraped_at",
@@ -80,6 +96,18 @@ class ApprenticeshipVacancyAdmin(admin.ModelAdmin):
                     "what_youll_do_items",
                     "where_youll_work_name",
                     "where_youll_work_address",
+                )
+            },
+        ),
+        (
+            "Geo",
+            {
+                "fields": (
+                    "city",
+                    "state",
+                    "zip_code",
+                    "latitude",
+                    "longitude",
                 )
             },
         ),
