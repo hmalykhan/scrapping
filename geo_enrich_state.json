@@ -4,45 +4,7 @@
     "Administration": {
       "job": {
         "last_pk": 35417,
-        "retry_pks": [
-          362,
-          534,
-          1057,
-          1063,
-          1086,
-          2921,
-          2923,
-          2924,
-          3183,
-          3184,
-          3570,
-          3571,
-          3671,
-          3673,
-          3685,
-          4884,
-          5379,
-          5955,
-          7593,
-          8027,
-          8048,
-          8101,
-          8102,
-          8103,
-          8105,
-          8106,
-          8107,
-          8108,
-          8109,
-          8398,
-          8399,
-          8458,
-          8663,
-          9113,
-          9821,
-          9823,
-          9824
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 61216,
@@ -56,16 +18,7 @@
     "Animal Care": {
       "job": {
         "last_pk": 13700,
-        "retry_pks": [
-          12189,
-          12258,
-          13004,
-          13005,
-          13012,
-          13289,
-          13310,
-          13534
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 50411,
@@ -93,12 +46,7 @@
     "Business and finance": {
       "job": {
         "last_pk": 16207,
-        "retry_pks": [
-          14496,
-          14806,
-          15485,
-          15502
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 51750,
@@ -112,10 +60,7 @@
     "Computing, technology and digital": {
       "job": {
         "last_pk": 17101,
-        "retry_pks": [
-          16262,
-          16334
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 54490,
@@ -129,9 +74,7 @@
     "Construction and trades": {
       "job": {
         "last_pk": 20173,
-        "retry_pks": [
-          18905
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 55368,
@@ -139,30 +82,13 @@
       },
       "apprenticeship": {
         "last_pk": 1980,
-        "retry_pks": [
-          1911,
-          1937
-        ]
+        "retry_pks": []
       }
     },
     "Creative and media": {
       "job": {
         "last_pk": 24321,
-        "retry_pks": [
-          21021,
-          21022,
-          21123,
-          22072,
-          22088,
-          22844,
-          22874,
-          22967,
-          23238,
-          23307,
-          23326,
-          23484,
-          23676
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 57557,
@@ -176,13 +102,7 @@
     "Delivery and storage": {
       "job": {
         "last_pk": 26236,
-        "retry_pks": [
-          24803,
-          25651,
-          25677,
-          25863,
-          25874
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 57594,
@@ -196,12 +116,7 @@
     "Emergency and uniform services": {
       "job": {
         "last_pk": 26901,
-        "retry_pks": [
-          26579,
-          26787,
-          26857,
-          26883
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 57702,
@@ -215,12 +130,7 @@
     "Engineering and maintenance": {
       "job": {
         "last_pk": 27678,
-        "retry_pks": [
-          26992,
-          26999,
-          27102,
-          27591
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 59227,
@@ -234,9 +144,7 @@
     "Environment and land": {
       "job": {
         "last_pk": 28456,
-        "retry_pks": [
-          28186
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 59238,
@@ -264,18 +172,7 @@
     "Healthcare": {
       "job": {
         "last_pk": 35406,
-        "retry_pks": [
-          29230,
-          29232,
-          29926,
-          30835,
-          30943,
-          30954,
-          30955,
-          31933,
-          32858,
-          32930
-        ]
+        "retry_pks": []
       },
       "course": {
         "last_pk": 59977,

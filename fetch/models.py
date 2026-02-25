@@ -46,7 +46,6 @@ class CareerJob(models.Model):
     dg_image_url = models.URLField(max_length=1000, blank=True, default="")
 
 
-
     jobname = models.CharField(max_length=255)
     job_description = models.TextField(blank=True, default="")
 
