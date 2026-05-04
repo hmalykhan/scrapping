@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'fetch',
     'course',
     'apprenticeship',
-    'job'
+    'job',
+    'ml_service'
 ]
 
 MIDDLEWARE = [

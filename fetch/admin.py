@@ -1,9 +1,7 @@
-# fetch/admin.py
-
 from django.contrib import admin
 from django.utils.html import format_html
 
-from fetch.models import CareerJob, JobScrapeLog
+from fetch.models import CareerJob, JobScrapeLog, CareerEmbedding
 
 
 @admin.register(JobScrapeLog)
@@ -20,22 +18,22 @@ class CareerJobAdmin(admin.ModelAdmin):
     list_display = (
         "career_type",
         "sub_type",
+        "normalized_sub_type",
         "jobname",
         "salary",
         "hours",
+        "has_embedding",
         "image_open_link",
         "image_preview_thumb",
         "scraped_at",
         "last_scrape_status",
         "last_checked_at",
     )
-
-    # keep image_url searchable too
-    search_fields = ("jobname", "sub_type", "job_slug", "job_url", "image_url", "dg_image_url")
-    list_filter = ("career_type", "sub_type", "last_scrape_status")
-
+    search_fields = ("jobname", "sub_type","normalized_sub_type", "job_slug", "job_url", "image_url", "dg_image_url")
+    list_filter = ("career_type", "sub_type", "normalized_sub_type", "last_scrape_status")
     readonly_fields = (
         "scraped_at",
+        "normalized_sub_type",
         "last_checked_at",
         "last_scrape_status",
         "last_scrape_message",
@@ -44,23 +42,46 @@ class CareerJobAdmin(admin.ModelAdmin):
     )
 
     fieldsets = (
-        ("Identity", {"fields": ("career_type", "sub_type", "job_slug", "job_url")}),
-        # show both fields, but preview/open prefer dg_image_url
+        ("Identity", {"fields": ("career_type", "sub_type","normalized_sub_type", "job_slug", "job_url")}),
         ("Image", {"fields": ("image_url", "dg_image_url", "image_preview_large")}),
         ("Profile", {"fields": ("jobname", "job_description", "salary", "hours", "timings")}),
-        ("How to become", {"fields": ("how_to_become", "college", "college_entry_req", "apprenticeship", "apprenticeship_entry_req")}),
-        ("Meta", {"fields": ("scraped_at", "last_checked_at", "last_scrape_status", "last_scrape_message", "last_scrape_run_id")}),
+        (
+            "How to become",
+            {
+                "fields": (
+                    "how_to_become",
+                    "college",
+                    "college_entry_req",
+                    "apprenticeship",
+                    "apprenticeship_entry_req",
+                )
+            },
+        ),
+        (
+            "Meta",
+            {
+                "fields": (
+                    "scraped_at",
+                    "last_checked_at",
+                    "last_scrape_status",
+                    "last_scrape_message",
+                    "last_scrape_run_id",
+                )
+            },
+        ),
     )
 
     def _display_image_url(self, obj: CareerJob) -> str:
-        """
-        IMPORTANT: This does not modify anything.
-        It only chooses which URL to DISPLAY.
-        """
         dg = (getattr(obj, "dg_image_url", "") or "").strip()
         if dg:
             return dg
         return (getattr(obj, "image_url", "") or "").strip()
+
+    def has_embedding(self, obj: CareerJob):
+        return hasattr(obj, "embedding_record")
+
+    has_embedding.boolean = True
+    has_embedding.short_description = "embedded"
 
     def image_open_link(self, obj: CareerJob):
         url = self._display_image_url(obj)
@@ -94,3 +115,51 @@ class CareerJobAdmin(admin.ModelAdmin):
         )
 
     image_preview_large.short_description = "Preview"
+
+
+@admin.register(CareerEmbedding)
+class CareerEmbeddingAdmin(admin.ModelAdmin):
+    list_display = (
+        "career",
+        "career_type",
+        "sub_type",
+        "model_name",
+        "updated_at",
+        "embedding_dimension",
+        "source_text_preview",
+    )
+    search_fields = (
+        "career__jobname",
+        "career__job_slug",
+        "career__sub_type",
+        "model_name",
+        "source_text",
+    )
+    list_filter = ("model_name", "career__career_type", "career__sub_type")
+    readonly_fields = ("updated_at", "source_text", "embedding_dimension")
+    exclude = ("embedding",)
+    autocomplete_fields = ("career",)
+    ordering = ("-updated_at",)
+
+    def career_type(self, obj: CareerEmbedding):
+        return obj.career.career_type
+
+    career_type.short_description = "career type"
+
+    def sub_type(self, obj: CareerEmbedding):
+        return obj.career.sub_type
+
+    sub_type.short_description = "sub type"
+
+    def embedding_dimension(self, obj: CareerEmbedding):
+        return len(obj.embedding) if obj.embedding is not None else 0
+
+    embedding_dimension.short_description = "dim"
+
+    def source_text_preview(self, obj: CareerEmbedding):
+        if not obj.source_text:
+            return "-"
+        text = obj.source_text.strip()
+        return text[:120] + "..." if len(text) > 120 else text
+
+    source_text_preview.short_description = "source text"

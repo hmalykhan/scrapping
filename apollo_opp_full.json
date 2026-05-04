@@ -1,0 +1,161 @@
+{
+  "__typename": "Opportunity",
+  "id": "496290",
+  "groupContentID": "47478056",
+  "url": null,
+  "title": "Software Engineer Graduate",
+  "applyByUrl": "https://careers.uk.leonardo.com/gb/en/job/R0022160/Graduate-Software-Engineer",
+  "expired": false,
+  "overview": {
+    "__typename": "TextWithSummary",
+    "summary": ""
+  },
+  "opportunityTypes": [
+    {
+      "__ref": "LabeledResource:1"
+    }
+  ],
+  "locationDescription": null,
+  "applicationsOpenDate": null,
+  "applicationsCloseDate": null,
+  "applicationsCloseDateDescription": null,
+  "startDate": {
+    "__typename": "OpportunityStartDateCategory",
+    "category": {
+      "__ref": "LabeledResource:8"
+    }
+  },
+  "timeZone": "Europe/London",
+  "studyFields": [
+    {
+      "__typename": "LabeledStudyFields",
+      "id": "502",
+      "label": "IT & Computer Science",
+      "children": [
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "503",
+          "label": "Artificial Intelligence"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "505",
+          "label": "Computer Graphics & Animation"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "506",
+          "label": "Computer Science"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "507",
+          "label": "Computer Systems and Networks"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "508",
+          "label": "Cyber Security"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "509",
+          "label": "Data Science"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "512",
+          "label": "Design & User Experience"
+        },
+        {
+          "__typename": "LabeledStudyFields",
+          "id": "510",
+          "label": "Software Engineering"
+        }
+      ],
+      "color": "#F47430"
+    }
+  ],
+  "detailPageURL": "/graduate-employers/leonardo-uk/jobs-internships/software-engineer-graduate-0",
+  "sponsored": false,
+  "workMode": "HYBRID",
+  "remoteCountries": null,
+  "geoAddresses": [
+    {
+      "__typename": "GeoAddress",
+      "gid": "whosonfirst:locality:101750629",
+      "label": "Edinburgh, Scotland, United Kingdom",
+      "country": "United Kingdom",
+      "countryGID": "whosonfirst:country:85633159",
+      "streetAddress": "Edinburgh",
+      "postalCode": "",
+      "locality": "Edinburgh",
+      "localityGID": "whosonfirst:locality:101750629",
+      "macrocounty": "City of Edinburgh",
+      "macrocountyGID": "whosonfirst:macrocounty:1880762089",
+      "region": "Edinburgh",
+      "regionGID": "whosonfirst:region:1880772893",
+      "hideStreetAddress": false,
+      "targetingOnly": false,
+      "macroregion": "Scotland",
+      "continent": "Europe",
+      "continentGID": "whosonfirst:continent:102191581",
+      "macroregionGID": "whosonfirst:macroregion:404227471",
+      "coordinates": {
+        "__typename": "Coordinates",
+        "lat": 55.944321,
+        "lon": -3.242511
+      }
+    }
+  ],
+  "physicalLocations": [],
+  "remoteWorkLocations": [],
+  "remoteAvailable": false,
+  "parentEmployer": {
+    "__ref": "Employer:158035"
+  },
+  "minSalary": 34000,
+  "maxSalary": 34000,
+  "salary": {
+    "__typename": "Salary",
+    "type": "exact",
+    "value": 34000,
+    "range": null,
+    "currency": {
+      "__ref": "Currency:28955"
+    },
+    "rate": "annually"
+  },
+  "additionalBenefits": null,
+  "salaryDescription": null,
+  "hideSalary": false,
+  "salaryCurrency": {
+    "__ref": "LabeledResource:28955"
+  },
+  "flexibleCTAs": null,
+  "minNumberVacancies": null,
+  "maxNumberVacancies": null,
+  "acceptsPreRegisters": false,
+  "externalTalentPool": null,
+  "applicationsOpen": true,
+  "applicationProcess": {
+    "__typename": "JobApplicationProcess",
+    "processType": "Link"
+  },
+  "degreeTypes": [
+    {
+      "__ref": "LabeledResource:733"
+    }
+  ],
+  "institutionLocations": [],
+  "minimumGrades": [
+    {
+      "__typename": "Grade",
+      "value": "50",
+      "type": {
+        "__ref": "LabeledResource:24439"
+      }
+    }
+  ],
+  "experienceRequired": false
+}

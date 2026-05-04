@@ -1,0 +1,120 @@
+{
+  "id": "496290",
+  "title": "Software Engineer Graduate",
+  "overview": {
+    "summary": ""
+  },
+  "applyByUrl": "https://careers.uk.leonardo.com/gb/en/job/R0022160/Graduate-Software-Engineer",
+  "expired": false,
+  "locationDescription": null,
+  "applicationsOpenDate": null,
+  "applicationsCloseDate": null,
+  "applicationsCloseDateDescription": null,
+  "workMode": "HYBRID",
+  "remoteAvailable": false,
+  "minSalary": 34000,
+  "maxSalary": 34000,
+  "hideSalary": false,
+  "salaryDescription": null,
+  "minNumberVacancies": null,
+  "maxNumberVacancies": null,
+  "acceptsPreRegisters": false,
+  "applicationsOpen": true,
+  "experienceRequired": false,
+  "salary": {
+    "type": "exact",
+    "value": 34000,
+    "rate": "annually",
+    "range": null,
+    "currency": {
+      "label": "GBP"
+    }
+  },
+  "salaryCurrency": {
+    "label": "GBP"
+  },
+  "startDate": {
+    "category": {
+      "label": "ASAP"
+    }
+  },
+  "degreeTypes": [
+    {
+      "label": "Bachelor"
+    }
+  ],
+  "studyFields": [
+    {
+      "id": "502",
+      "label": "IT & Computer Science",
+      "children": [
+        {
+          "id": "503",
+          "label": "Artificial Intelligence"
+        },
+        {
+          "id": "505",
+          "label": "Computer Graphics & Animation"
+        },
+        {
+          "id": "506",
+          "label": "Computer Science"
+        },
+        {
+          "id": "507",
+          "label": "Computer Systems and Networks"
+        },
+        {
+          "id": "508",
+          "label": "Cyber Security"
+        },
+        {
+          "id": "509",
+          "label": "Data Science"
+        },
+        {
+          "id": "512",
+          "label": "Design & User Experience"
+        },
+        {
+          "id": "510",
+          "label": "Software Engineering"
+        }
+      ]
+    }
+  ],
+  "opportunityTypes": [
+    {
+      "id": "1",
+      "label": "Graduate Job or Program"
+    }
+  ],
+  "geoAddresses": [
+    {
+      "locality": "Edinburgh",
+      "streetAddress": "Edinburgh",
+      "postalCode": "",
+      "region": "Edinburgh",
+      "country": "United Kingdom",
+      "coordinates": {
+        "lat": 55.944321,
+        "lon": -3.242511
+      }
+    }
+  ],
+  "additionalBenefits": null,
+  "parentEmployer": {
+    "id": "158035",
+    "title": "Leonardo UK",
+    "advertiserName": "Leonardo UK",
+    "websiteUrl": "https://uk.leonardo.com/en/people-careers",
+    "logo": {
+      "thumbnail": {
+        "url": "https://connect-assets.prosple.com/cdn/ff/VhXve2yrZGaMVLSyiHqkhCfM6AmfgICX-s-X_dNzSlA/1669403647/public/styles/scale_and_crop_center_80x80/public/2022-11/logo-leonardo-uk-450x450-2022.jpg"
+      }
+    },
+    "overview": {
+      "summary": "Leonardo UK is a world-class engineering and manufacturing company offering diverse career opportunities and a strong commitment to inclusion and professional development."
+    }
+  }
+}

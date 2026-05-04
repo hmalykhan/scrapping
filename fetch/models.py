@@ -1,4 +1,4 @@
-import uuid
+import uuid, re
 from django.db import models
 from pgvector.django import VectorField
 
@@ -27,6 +27,11 @@ class JobScrapeLog(models.Model):
         return f"{self.created_at} {self.status} {self.job_slug}"
 
 
+def normalize_sub_type(value: str) -> str:
+    value = value or ""
+    value = value.strip().lower()
+    value = re.sub(r"[ _-]+", "", value)
+    return value
 
 class CareerJob(models.Model):
     class CareerType(models.TextChoices):
@@ -35,10 +40,12 @@ class CareerJob(models.Model):
 
     career_type = models.CharField(max_length=20, choices=CareerType.choices)
     sub_type = models.CharField(max_length=255)  # sector name OR category name
-    # embedding = VectorField(dimensions=1536, null=True, blank=True)  # text-embedding-3-small
-    # embedding_model = models.CharField(max_length=100, blank=True, default="text-embedding-3-small")
-    # embedding_updated_at = models.DateTimeField(null=True, blank=True)
-    # embedding_text = models.TextField(blank=True, default="")
+    normalized_sub_type = models.CharField(
+        max_length=255,
+        db_index=True,   # VERY IMPORTANT
+        blank=True,
+        default=""
+    )
 
     job_slug = models.SlugField(max_length=255)
     job_url = models.URLField()
@@ -70,5 +77,29 @@ class CareerJob(models.Model):
     # class Meta:
     #     # unique_together = ("career_type", "sub_type", "job_slug")
 
+    def save(self, *args, **kwargs):
+        self.normalized_sub_type = normalize_sub_type(self.sub_type)
+        super().save(*args, **kwargs)
+
     def __str__(self) -> str:
         return f"{self.career_type}:{self.sub_type} - {self.jobname}"
+
+
+class CareerEmbedding(models.Model):
+    career = models.OneToOneField(
+        CareerJob,
+        on_delete=models.CASCADE,
+        related_name="embedding_record",
+    )
+    embedding = VectorField(dimensions=384)
+    source_text = models.TextField(blank=True, default="")
+    model_name = models.CharField(max_length=100, blank=True, default="all-MiniLM-L6-v2")
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["updated_at"]),
+        ]
+
+    def __str__(self):
+        return f"Embedding<{self.career_id}>"

@@ -11,7 +11,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1847,
+        "last_pk": 5452,
         "retry_pks": []
       }
     },
@@ -25,7 +25,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1853,
+        "last_pk": 7204,
         "retry_pks": []
       }
     },
@@ -39,7 +39,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 206,
+        "last_pk": 7220,
         "retry_pks": []
       }
     },
@@ -53,7 +53,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1861,
+        "last_pk": 7747,
         "retry_pks": []
       }
     },
@@ -67,7 +67,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1895,
+        "last_pk": 8453,
         "retry_pks": []
       }
     },
@@ -81,7 +81,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1980,
+        "last_pk": 8706,
         "retry_pks": []
       }
     },
@@ -95,7 +95,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1989,
+        "last_pk": 8958,
         "retry_pks": []
       }
     },
@@ -109,7 +109,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 1998,
+        "last_pk": 8966,
         "retry_pks": []
       }
     },
@@ -123,7 +123,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2001,
+        "last_pk": 9000,
         "retry_pks": []
       }
     },
@@ -137,7 +137,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2119,
+        "last_pk": 9045,
         "retry_pks": []
       }
     },
@@ -151,7 +151,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2121,
+        "last_pk": 9063,
         "retry_pks": []
       }
     },
@@ -179,13 +179,13 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2181,
+        "last_pk": 9079,
         "retry_pks": []
       }
     },
     "Home services": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3554,
         "retry_pks": []
       },
       "course": {
@@ -193,13 +193,16 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2182,
-        "retry_pks": []
+        "last_pk": 9089,
+        "retry_pks": [
+          9080,
+          9087
+        ]
       }
     },
     "Hospitality and food": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3555,
         "retry_pks": []
       },
       "course": {
@@ -207,7 +210,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2196,
+        "last_pk": 9108,
         "retry_pks": []
       }
     },
@@ -221,13 +224,13 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2211,
+        "last_pk": 9109,
         "retry_pks": []
       }
     },
     "Managerial": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3556,
         "retry_pks": []
       },
       "course": {
@@ -235,7 +238,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2214,
+        "last_pk": 9120,
         "retry_pks": []
       }
     },
@@ -255,7 +258,7 @@
     },
     "Retail and sales": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3569,
         "retry_pks": []
       },
       "course": {
@@ -263,27 +266,33 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2223,
+        "last_pk": 9122,
         "retry_pks": []
       }
     },
     "Science and research": {
       "job": {
-        "last_pk": 0,
-        "retry_pks": []
+        "last_pk": 3577,
+        "retry_pks": [
+          3576
+        ]
       },
       "course": {
         "last_pk": 60281,
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2232,
-        "retry_pks": []
+        "last_pk": 9130,
+        "retry_pks": [
+          9128,
+          9129,
+          9130
+        ]
       }
     },
     "Social care": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3579,
         "retry_pks": []
       },
       "course": {
@@ -291,13 +300,13 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2239,
+        "last_pk": 9131,
         "retry_pks": []
       }
     },
     "Sports and leisure": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3584,
         "retry_pks": []
       },
       "course": {
@@ -305,13 +314,13 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2250,
+        "last_pk": 9134,
         "retry_pks": []
       }
     },
     "Teaching and education": {
       "job": {
-        "last_pk": 0,
+        "last_pk": 3588,
         "retry_pks": []
       },
       "course": {
@@ -319,7 +328,7 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 2269,
+        "last_pk": 9153,
         "retry_pks": []
       }
     },
@@ -333,8 +342,10 @@
         "retry_pks": []
       },
       "apprenticeship": {
-        "last_pk": 0,
-        "retry_pks": []
+        "last_pk": 9157,
+        "retry_pks": [
+          9155
+        ]
       }
     },
     "Travel and tourism": {
