@@ -55,6 +55,14 @@ def _build_search_url(subcategory: str) -> str:
     return f"{BASE_SEARCH_URL}?{qs}"
 
 
+def _is_acronym_search_term(term: str) -> bool:
+    """Bare short acronyms (AI, ML, DL) are poor *search* queries (flood with
+    retAIl/trAIning/etc). Kept in the keyword file for post-scrape filtering, but
+    never sent to the site search."""
+    t = (term or "").strip()
+    return len(t) <= 3 and t.isupper()
+
+
 def _is_emptyish(val: str) -> bool:
     v = (val or "").strip().lower()
     if not v:
@@ -96,6 +104,13 @@ class Command(BaseCommand):
             type=str,
             default="",
             help="Optional: override with a single listing start URL (if provided, categories.json is ignored).",
+        )
+        parser.add_argument(
+            "--categories-file",
+            type=str,
+            default="",
+            help="Optional: path to an alternate categories JSON (e.g. ai_ml_categories.json). "
+                 "Same {category: [subcategories...]} format. Defaults to the app's categories.json.",
         )
         parser.add_argument(
             "--no-images",
@@ -176,8 +191,9 @@ class Command(BaseCommand):
             )
             return
 
-        # MODE B: categories.json
-        json_path = _categories_json_path()
+        # MODE B: categories.json (or an override file, e.g. ai_ml_categories.json)
+        categories_file_override = str(opts.get("categories_file") or "").strip()
+        json_path = Path(categories_file_override) if categories_file_override else _categories_json_path()
         categories = _load_categories_file(json_path)
 
         total_queries = sum(len(v) for v in categories.values())
@@ -197,6 +213,10 @@ class Command(BaseCommand):
             for sub in subcats:
                 if should_stop():
                     break
+
+                if _is_acronym_search_term(sub):
+                    self.stdout.write(f"  (skipping acronym search term {sub!r} — used for filtering, not search)")
+                    continue
 
                 q_idx += 1
                 start_url = _build_search_url(sub)

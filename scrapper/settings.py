@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'course',
     'apprenticeship',
     'job',
-    'ml_service'
+    'ml_service',
+    'scrapers',
 ]
 
 MIDDLEWARE = [
