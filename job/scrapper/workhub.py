@@ -84,19 +84,42 @@ class WorkHubClient(DwpJobClient):
                 return href
         return None
 
-    def iter_all_jobs(self, *, keyword: str) -> Iterable[WorkHubListedJob]:
-        """Yield every listed job for a keyword search, following Next to the end."""
+    def iter_all_jobs(self, *, keyword: str, relevant_fn=None,
+                      max_barren_pages: int = 3) -> Iterable[WorkHubListedJob]:
+        """
+        Yield listed jobs for a keyword search, following Next.
+
+        The site's search is very loose (a term can return 100s of pages, almost
+        all irrelevant), so when `relevant_fn` is given we STOP a term after
+        `max_barren_pages` consecutive pages with zero relevant titles — real
+        AI/ML results cluster on the first pages. Page-fetch errors (e.g. 503
+        rate-limiting) end the term gracefully instead of crashing the run.
+        """
         page_url = self.build_search_url(keyword, 1)
         visited: set[str] = set()
         pages = 0
+        barren = 0
         while page_url and page_url not in visited and pages < _MAX_PAGES:
             visited.add(page_url)
             pages += 1
-            soup = self.soup(page_url)
+            try:
+                soup = self.soup(page_url)
+            except Exception:
+                break  # server error / rate limit — stop this term, move on
             listed = self._listed_jobs_on_page(soup)
             if not listed:
                 break
+
+            page_has_relevant = relevant_fn is None
             for job in listed:
+                if relevant_fn is not None and job.title and relevant_fn(job.title):
+                    page_has_relevant = True
                 yield job
+
+            if relevant_fn is not None:
+                barren = 0 if page_has_relevant else barren + 1
+                if barren >= max_barren_pages:
+                    break
+
             nxt = self._next_page_href(soup)
             page_url = urljoin(WORKHUB_BASE, nxt) if nxt else None

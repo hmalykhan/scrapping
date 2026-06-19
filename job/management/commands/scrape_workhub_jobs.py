@@ -141,7 +141,7 @@ class Command(BaseCommand):
                 self.stdout.write(f"\n[{q_idx}/{total_subcats}] subcategory={subcategory!r}")
                 self.stdout.write(f"  URL: {start_url}")
 
-                for listed in client.iter_all_jobs(keyword=subcategory):
+                for listed in client.iter_all_jobs(keyword=subcategory, relevant_fn=_is_relevant_aiml):
                     if should_stop():
                         break
                     job_id = str(listed.job_id)

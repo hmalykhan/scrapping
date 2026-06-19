@@ -361,6 +361,24 @@
         "last_pk": 0,
         "retry_pks": []
       }
+    },
+    "AI and Machine Learning": {
+      "job": {
+        "last_pk": 704,
+        "retry_pks": [
+          677
+        ]
+      },
+      "course": {
+        "last_pk": 3973,
+        "retry_pks": [
+          1224
+        ]
+      },
+      "apprenticeship": {
+        "last_pk": 34,
+        "retry_pks": []
+      }
     }
   }
 }
