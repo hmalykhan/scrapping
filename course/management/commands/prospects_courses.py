@@ -123,6 +123,8 @@ class Command(BaseCommand):
         parser.add_argument("--classify", choices=["embed", "keyword", "none"], default="embed")
         parser.add_argument("--verbose-fields", action="store_true")
         parser.add_argument("--start-page", type=int, default=1, help="API page to start from (resume).")
+        parser.add_argument("--skip-existing", action="store_true",
+                            help="Skip course_ids already saved in the DB (fast, hands-off resume after a stop).")
 
     # -- http with retries --------------------------------------------------
     def _get(self, url, retries=4, want_json=False):
@@ -213,9 +215,18 @@ class Command(BaseCommand):
         model_fields = {f.name for f in NcsCourse._meta.fields}
         n = created = updated = skipped = errors = 0
 
+        skip_existing = opts["skip_existing"]
+        existing = set()
+        if skip_existing:
+            existing = set(str(x) for x in NcsCourse.objects.values_list("course_id", flat=True))
+            self.stdout.write(self.style.WARNING(f"skip-existing ON: {len(existing)} courses already in DB will be skipped"))
+
         for c in self._api_courses(start_page):
             if limit and n >= limit:
                 break
+            if skip_existing and str(uuid.uuid5(uuid.NAMESPACE_URL, f"prospects:{c.get('id')}")) in existing:
+                skipped += 1
+                continue
             url = self._course_url(c)
             data = self._parse(url, c)
             if delay:

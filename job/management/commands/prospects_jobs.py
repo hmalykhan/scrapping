@@ -89,6 +89,8 @@ class Command(BaseCommand):
         parser.add_argument("--write", action="store_true", help="Persist (default: dry-run).")
         parser.add_argument("--delay", type=float, default=0.3)
         parser.add_argument("--classify", choices=["embed", "keyword", "none"], default="embed")
+        parser.add_argument("--skip-existing", action="store_true",
+                            help="Skip job_ids already saved in the DB (fast resume after a stop).")
 
     # -- data sources -------------------------------------------------------
     def _get(self, url, retries=4, accept_json=False):
@@ -166,10 +168,18 @@ class Command(BaseCommand):
 
         created = updated = skipped = 0
         fields = {f.name for f in DwpJob._meta.fields}
+        skip_existing = opts["skip_existing"]
+        existing = set()
+        if skip_existing:
+            existing = set(DwpJob.objects.filter(job_id__startswith="prospects_").values_list("job_id", flat=True))
+            self.stdout.write(self.style.WARNING(f"skip-existing ON: {len(existing)} jobs already in DB will be skipped"))
         for i, j in enumerate(self._api_jobs(), 1):
             if limit and (created + updated) >= limit:
                 break
             jid = str(j["id"])
+            if skip_existing and f"prospects_{jid}" in existing:
+                skipped += 1
+                continue
             etnr = (j.get("employerKeyword") or {}).get("tnr")
             eslug = j.get("employerSlug", "")
             eseg = f"{eslug}-{etnr}" if etnr else eslug
