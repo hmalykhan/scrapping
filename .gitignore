@@ -8,3 +8,6 @@ __pycache__/
 .DS_Store
 media/
 staticfiles/
+
+# Discover Uni raw dataset (457MB, download separately from HESA)
+discover_uni/
