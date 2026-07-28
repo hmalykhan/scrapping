@@ -1,0 +1,745 @@
+category,subcategory,jobs,courses,apprenticeships,status
+Manufacturing,3D printing technician,0,106,0,PARTIAL
+Social care,Accommodation warden,0,1,0,PARTIAL
+Business and finance,Accounting technician,41,827,19,ALL_THREE
+Science and research,Acoustics consultant,4,47,0,PARTIAL
+Creative and media,Actor,5,80,0,PARTIAL
+Business and finance,Actuary,39,93,0,PARTIAL
+Healthcare,Acupuncturist,0,7,0,PARTIAL
+Administration,Admin assistant,615,608,48,ALL_THREE
+Retail and sales,Advertising account executive,7,0,2,PARTIAL
+Retail and sales,Advertising account planner,2,3,0,PARTIAL
+Creative and media,Advertising art director,5,264,0,PARTIAL
+Creative and media,Advertising copywriter,2,1,0,PARTIAL
+Retail and sales,Advertising media buyer,3,98,0,PARTIAL
+Managerial,Advertising media planner,6,6,0,PARTIAL
+Social care,Advocacy worker,1,5,0,PARTIAL
+Manufacturing,Aerospace engineer,61,432,20,ALL_THREE
+Manufacturing,Aerospace engineering technician,11,13,0,PARTIAL
+Environment and land,Agricultural contractor,0,21,0,PARTIAL
+Manufacturing,Agricultural engineer,8,90,4,ALL_THREE
+Manufacturing,Agricultural engineering technician,1,41,0,PARTIAL
+Environment and land,Agricultural inspector,0,7,0,PARTIAL
+Science and research,Agronomist,2,2,0,PARTIAL
+Social care,Aid worker,4,51,0,PARTIAL
+Transport,Air accident investigator,0,23,0,PARTIAL
+Transport,Air traffic controller,0,0,0,NONE
+Travel and tourism,Airline customer service agent,0,0,0,NONE
+Travel and tourism,Airline pilot,0,12,0,PARTIAL
+Transport,Airport baggage handler,1,3,0,PARTIAL
+Travel and tourism,Airport information assistant,4,5,0,PARTIAL
+Transport,Ambulance care assistant,3,3,0,PARTIAL
+Healthcare,Anaesthetist,53,4,0,PARTIAL
+Healthcare,Anatomical pathology technician,6,69,0,PARTIAL
+Retail and sales,Animal care worker,8,199,0,PARTIAL
+Science and research,Animal technician,8,59,0,PARTIAL
+Creative and media,Animator,26,367,0,PARTIAL
+Retail and sales,Antique dealer,1,9,0,PARTIAL
+"Computing, technology and digital",App developer,21,336,3,ALL_THREE
+Science and research,Arboricultural officer,3,1,0,PARTIAL
+Science and research,Archaeologist,1,897,0,PARTIAL
+Creative and media,Architect,112,98,9,ALL_THREE
+Creative and media,Architectural technician,10,41,0,PARTIAL
+Creative and media,Architectural technologist,8,260,0,PARTIAL
+Creative and media,Archivist,12,69,0,PARTIAL
+Government services,Army officer,13,2,0,PARTIAL
+Beauty and wellbeing,Aromatherapist,1,1,0,PARTIAL
+Creative and media,Art editor,0,33,0,PARTIAL
+Social care,Art therapist,22,1244,0,PARTIAL
+Retail and sales,Art valuer,2,73,0,PARTIAL
+"Computing, technology and digital",Artificial intelligence (AI) engineer,97,1821,10,ALL_THREE
+Creative and media,Arts administrator,14,3091,0,PARTIAL
+Animal Care,Assistance dog trainer,0,35,0,PARTIAL
+Government services,Assistant immigration officer,1,72,0,PARTIAL
+Science and research,Astronaut,0,17,0,PARTIAL
+Science and research,Astronomer,0,182,0,PARTIAL
+Sports and leisure,Athlete,0,11,0,PARTIAL
+Teaching and education,Audio visual technician,2,46,1,ALL_THREE
+Science and research,Audiologist,41,108,0,PARTIAL
+Business and finance,Auditor,532,8,1,ALL_THREE
+Engineering and maintenance,Auto electrician,2,13,0,PARTIAL
+Manufacturing,Automotive engineer,16,171,2,ALL_THREE
+Transport,Automotive parts advisor,12,109,11,ALL_THREE
+Law and legal,Bailiff,1,2,0,PARTIAL
+Hospitality and food,Baker,2,1,5,ALL_THREE
+Managerial,Bank manager,32,233,3,ALL_THREE
+Retail and sales,Bar person,1,0,0,PARTIAL
+Retail and sales,Barista,2,1,0,PARTIAL
+Law and legal,Barrister,17,183,1,ALL_THREE
+Law and legal,Barrister's clerk,2,53,0,PARTIAL
+Retail and sales,Beauty consultant,2,675,0,PARTIAL
+Beauty and wellbeing,Beauty therapist,15,18,9,ALL_THREE
+Animal Care,Beekeeper,0,0,0,NONE
+Managerial,Bid writer,21,101,0,PARTIAL
+Administration,Bilingual secretary,0,240,0,PARTIAL
+Home services,Bin worker,6,2,0,PARTIAL
+Science and research,Biochemist,1,233,0,PARTIAL
+Science and research,Biologist,14,256,0,PARTIAL
+Science and research,Biomedical scientist,69,823,1,ALL_THREE
+Science and research,Biotechnologist,4,289,0,PARTIAL
+Manufacturing,Blacksmith,0,17,0,PARTIAL
+Engineering and maintenance,Boat builder,1,19,0,PARTIAL
+Home services,Bodyguard,0,0,0,NONE
+Business and finance,Bookkeeper,70,53,4,ALL_THREE
+Government services,Border Force officer,0,11,0,PARTIAL
+Construction and trades,Bricklayer,32,1,9,ALL_THREE
+Social care,British Sign Language interpreter,0,19,0,PARTIAL
+Teaching and education,British Sign Language teacher,0,22,0,PARTIAL
+Engineering and maintenance,Broadcast engineer,11,60,0,PARTIAL
+Creative and media,Broadcast journalist,1,157,0,PARTIAL
+Retail and sales,Builders' merchant,20,1,0,PARTIAL
+Managerial,Building control officer,2,196,0,PARTIAL
+Manufacturing,Building services engineer,97,124,29,ALL_THREE
+Engineering and maintenance,Building site inspector,3,22,0,PARTIAL
+Construction and trades,Building surveyor,56,62,13,ALL_THREE
+Environment and land,Building technician,15,22,16,ALL_THREE
+Transport,Bus or coach driver,3,1,0,PARTIAL
+Managerial,Business adviser,176,271,0,PARTIAL
+Retail and sales,Business analyst,157,392,10,ALL_THREE
+Retail and sales,Business development manager,245,1536,1,ALL_THREE
+Managerial,Business project manager,162,960,2,ALL_THREE
+Retail and sales,Butcher,1,14,4,ALL_THREE
+Engineering and maintenance,CAD technician,15,10,4,ALL_THREE
+Manufacturing,CNC machinist,11,3,2,ALL_THREE
+Travel and tourism,Cabin crew,1,0,0,PARTIAL
+Hospitality and food,Cake decorator,0,10,0,PARTIAL
+Manufacturing,Car manufacturing worker,1,0,0,PARTIAL
+Transport,Car rental agent,2,3943,0,PARTIAL
+Transport,Care escort,2,0,0,PARTIAL
+Social care,Care home manager,18,1,0,PARTIAL
+Social care,Care worker,4680,24,81,ALL_THREE
+Teaching and education,Careers adviser,44,87,0,PARTIAL
+Home services,Caretaker,98,5,3,ALL_THREE
+Construction and trades,Carpenter,85,0,5,PARTIAL
+Construction and trades,Carpet fitter and floor layer,0,13,0,PARTIAL
+Science and research,Cartographer,2,45,0,PARTIAL
+Hospitality and food,Catering manager,9,17,0,PARTIAL
+Construction and trades,Cavity insulation installer,0,1,0,PARTIAL
+Construction and trades,Ceiling fixer,2,0,1,PARTIAL
+Home services,Celebrant,1,0,0,PARTIAL
+Government services,Cemetery worker,3,0,0,PARTIAL
+Creative and media,Ceramics designer-maker,0,64,0,PARTIAL
+Managerial,Charity fundraiser,76,10,0,PARTIAL
+Hospitality and food,Chef,36,10,89,ALL_THREE
+Science and research,Chemical engineer,30,526,0,PARTIAL
+Science and research,Chemical engineering technician,1,33,0,PARTIAL
+Science and research,Chemical plant process operator,1,8,0,PARTIAL
+Science and research,Chemist,19,240,0,PARTIAL
+Managerial,Chief inspector,10,2,0,PARTIAL
+Teaching and education,Child protection officer,2,159,0,PARTIAL
+Social care,Childminder,0,9,1,PARTIAL
+Healthcare,Children's nurse,92,350,14,ALL_THREE
+Healthcare,Chiropractor,25,10,0,PARTIAL
+Creative and media,Choreographer,1,5,0,PARTIAL
+Sports and leisure,Cinema or theatre attendant,0,60,0,PARTIAL
+Government services,Civil Service administrative officer,66,765,0,PARTIAL
+Managerial,Civil Service executive officer,27,86,0,PARTIAL
+Managerial,Civil Service manager,89,2,0,PARTIAL
+Government services,Civil enforcement officer,1,1,0,PARTIAL
+Engineering and maintenance,Civil engineer,461,810,112,ALL_THREE
+Engineering and maintenance,Civil engineering technician,3,47,1,ALL_THREE
+Home services,Cleaner,33,0,0,PARTIAL
+Science and research,Climate scientist,2,114,0,PARTIAL
+Science and research,Clinical engineer,24,504,0,PARTIAL
+Social care,Clinical psychologist,329,408,0,PARTIAL
+Healthcare,Clinical scientist,55,158,1,ALL_THREE
+Government services,Coastguard,22,0,0,PARTIAL
+Social care,Cognitive behavioural therapist,6,94,0,PARTIAL
+Environment and land,Commercial energy assessor,0,58,0,PARTIAL
+Teaching and education,Communication support worker,1,16,0,PARTIAL
+Creative and media,Community arts worker,0,310,0,PARTIAL
+Social care,Community development worker,2,68,0,PARTIAL
+Teaching and education,Community education co-ordinator,5,49,0,PARTIAL
+Healthcare,Community matron,45,0,0,PARTIAL
+Transport,Community transport driver,2,0,0,PARTIAL
+Managerial,Company secretary,21,68,0,PARTIAL
+"Computing, technology and digital",Computer games developer,0,2137,0,PARTIAL
+Creative and media,Computer games tester,4,108,0,PARTIAL
+Creative and media,Conservator,71,367,0,PARTIAL
+Managerial,Construction contracts manager,17,488,0,PARTIAL
+Construction and trades,Construction labourer,32,31,0,PARTIAL
+Managerial,Construction manager,161,370,6,ALL_THREE
+Construction and trades,Construction plant mechanic,2,53,0,PARTIAL
+Construction and trades,Construction plant operator,11,8,0,PARTIAL
+Construction and trades,Construction site supervisor,6,0,0,PARTIAL
+Science and research,Consumer scientist,5,31,0,PARTIAL
+Creative and media,Copy editor,1,2,0,PARTIAL
+Law and legal,Coroner,0,0,0,NONE
+Environment and land,Corporate responsibility and sustainability practitioner,22,700,2,ALL_THREE
+Creative and media,Costume designer,0,83,0,PARTIAL
+Social care,Counsellor,82,218,0,PARTIAL
+Hospitality and food,Counter service assistant,31,1,0,PARTIAL
+Science and research,Countryside officer,1,86,0,PARTIAL
+Environment and land,Countryside ranger,1,34,0,PARTIAL
+Law and legal,Court administrative assistant,0,0,0,NONE
+Law and legal,Court legal adviser,9,501,0,PARTIAL
+Law and legal,Court usher,0,1,0,PARTIAL
+Manufacturing,Crane driver,1,7,0,PARTIAL
+Law and legal,Credit controller,131,89,1,ALL_THREE
+Home services,Crematorium technician,3,0,0,PARTIAL
+Teaching and education,Criminologist,0,380,0,PARTIAL
+Healthcare,Critical care technologist,0,39,0,PARTIAL
+Law and legal,Crown prosecutor,1,2,0,PARTIAL
+Travel and tourism,Cruise ship steward,0,0,0,NONE
+Retail and sales,Customer service assistant,335,523,9,ALL_THREE
+Retail and sales,Customer services manager,13,8,0,PARTIAL
+"Computing, technology and digital",Cyber intelligence officer,10,218,0,PARTIAL
+Engineering and maintenance,Cycle mechanic,0,8,0,PARTIAL
+Teaching and education,Cycling coach,1,0,0,PARTIAL
+Creative and media,DJ,1,11,0,PARTIAL
+Healthcare,Dance movement psychotherapist,0,226,0,PARTIAL
+Teaching and education,Dance teacher,5,90,0,PARTIAL
+Creative and media,Dancer,2,18,0,PARTIAL
+Science and research,Data analyst-statistician,5,178,0,PARTIAL
+Law and legal,Data protection officer,20,173,2,ALL_THREE
+Science and research,Data scientist,155,933,9,ALL_THREE
+"Computing, technology and digital",Database administrator,31,9,0,PARTIAL
+Transport,Delivery van driver,29,0,0,PARTIAL
+Construction and trades,Demolition operative,1,14,0,PARTIAL
+Healthcare,Dental hygienist,14,3,0,PARTIAL
+Healthcare,Dental nurse,92,19,251,ALL_THREE
+Healthcare,Dental technician,3,19,0,PARTIAL
+Healthcare,Dental therapist,3,120,0,PARTIAL
+Healthcare,Dentist,912,52,0,PARTIAL
+Manufacturing,Design and development engineer,67,391,15,ALL_THREE
+Healthcare,Dietitian,122,69,0,PARTIAL
+Managerial,Digital delivery manager,8,460,0,PARTIAL
+"Computing, technology and digital",Digital product owner,3,533,0,PARTIAL
+Managerial,Diplomatic Service officer,1,534,0,PARTIAL
+Creative and media,Director of photography,0,309,0,PARTIAL
+Healthcare,Dispensing optician,37,26,0,PARTIAL
+Healthcare,District nurse,107,60,0,PARTIAL
+Travel and tourism,Diver,5,18,0,PARTIAL
+Animal Care,Dog groomer,1,0,5,PARTIAL
+Government services,Dog handler,3,3,0,PARTIAL
+Engineering and maintenance,Domestic appliance service engineer,3,1,0,PARTIAL
+Home services,Domestic energy assessor,2,44,0,PARTIAL
+Emergency and uniform services,Door supervisor,0,3,0,PARTIAL
+Social care,Dramatherapist,0,146,0,PARTIAL
+Manufacturing,Dressmaker,0,35,0,PARTIAL
+Transport,Driving instructor,0,5,0,PARTIAL
+Environment and land,Drone pilot,0,10,0,PARTIAL
+Construction and trades,Dryliner,1,0,0,PARTIAL
+Retail and sales,E-commerce manager,13,37,0,PARTIAL
+Teaching and education,E-learning developer,12,103,0,PARTIAL
+Teaching and education,Early years teacher,21,310,1,ALL_THREE
+Science and research,Ecologist,41,456,2,ALL_THREE
+Science and research,Economist,11,983,1,ALL_THREE
+Creative and media,Editorial assistant,5,5,1,ALL_THREE
+Teaching and education,Education technician,2,74,13,ALL_THREE
+Teaching and education,Education welfare officer,7,23,0,PARTIAL
+Engineering and maintenance,Electrical engineer,254,814,46,ALL_THREE
+Engineering and maintenance,Electrical engineering technician,1,2,0,PARTIAL
+Engineering and maintenance,Electrician,228,29,18,ALL_THREE
+Engineering and maintenance,Electricity distribution worker,2,4,0,PARTIAL
+Engineering and maintenance,Electricity generation worker,2,1,0,PARTIAL
+Science and research,Electronics engineer,82,520,6,ALL_THREE
+Engineering and maintenance,Electronics engineering technician,1,2,0,PARTIAL
+Home services,Embalmer,0,0,0,NONE
+Healthcare,Emergency care assistant,4,6,0,PARTIAL
+Retail and sales,Emergency medical dispatcher,2,0,0,PARTIAL
+Engineering and maintenance,Engineering construction craftworker,0,7,0,PARTIAL
+Manufacturing,Engineering construction technician,1,4,0,PARTIAL
+Manufacturing,Engineering maintenance technician,99,184,68,ALL_THREE
+Manufacturing,Engineering operative,40,9,29,ALL_THREE
+Teaching and education,English as a foreign language (EFL) teacher,26,444,0,PARTIAL
+Science and research,Environmental consultant,62,427,2,ALL_THREE
+Government services,Environmental health practitioner,11,134,0,PARTIAL
+Teaching and education,Equalities officer,1,61,0,PARTIAL
+Engineering and maintenance,Ergonomist,3,3,0,PARTIAL
+Sports and leisure,Esports gamer,1,162,0,PARTIAL
+Retail and sales,Estate agent,9,2,12,ALL_THREE
+Managerial,Estates officer,91,6,2,ALL_THREE
+Managerial,Estimator,639,12,3,ALL_THREE
+Sports and leisure,Events manager,300,174,0,PARTIAL
+Administration,Executive assistant,97,4,2,ALL_THREE
+Creative and media,Exhibition designer,1,153,0,PARTIAL
+Managerial,Facilities manager,519,28,2,ALL_THREE
+Social care,Family mediator,0,3,0,PARTIAL
+Social care,Family support worker,4,2,0,PARTIAL
+Environment and land,Farm secretary,1,10,0,PARTIAL
+Environment and land,Farm worker,20,0,3,PARTIAL
+Managerial,Farmer,35,15,0,PARTIAL
+Engineering and maintenance,Farrier,1,0,0,PARTIAL
+Creative and media,Fashion design assistant,4,132,0,PARTIAL
+Creative and media,Fashion designer,4,360,0,PARTIAL
+Creative and media,Fashion model,1,102,0,PARTIAL
+Engineering and maintenance,Fast fit technician,2,113,0,PARTIAL
+Environment and land,Fence installer,1,0,0,PARTIAL
+Creative and media,Film critic,0,544,0,PARTIAL
+Business and finance,Finance officer,199,241,0,PARTIAL
+Business and finance,Financial adviser,29,95,1,ALL_THREE
+Business and finance,Financial services customer adviser,60,55,0,PARTIAL
+Creative and media,Fine artist,0,184,0,PARTIAL
+Science and research,Fingerprint officer,1,0,0,PARTIAL
+Engineering and maintenance,Fire safety engineer,18,29,2,ALL_THREE
+Emergency and uniform services,Firefighter,8,5,0,PARTIAL
+Environment and land,Fish farmer,3,12,0,PARTIAL
+Environment and land,Fishing boat deckhand,0,0,0,NONE
+Sports and leisure,Fitness instructor,0,29,0,PARTIAL
+Retail and sales,Florist,5,61,0,PARTIAL
+Hospitality and food,Food factory worker,0,1,0,PARTIAL
+Manufacturing,Food manufacturing inspector,10,14,0,PARTIAL
+Manufacturing,Food packaging operative,1,51,0,PARTIAL
+Science and research,Food scientist,8,69,0,PARTIAL
+Sports and leisure,Football coach,0,83,1,PARTIAL
+Sports and leisure,Football referee,0,0,0,NONE
+Manufacturing,Footwear designer-maker,0,5,0,PARTIAL
+Transport,Forensic collision investigator,0,5,0,PARTIAL
+"Computing, technology and digital",Forensic computer analyst,1,1284,0,PARTIAL
+Social care,Forensic psychologist,18,287,0,PARTIAL
+Science and research,Forensic scientist,0,247,0,PARTIAL
+Environment and land,Forestry worker,1,22,0,PARTIAL
+Transport,Forklift driver,286,3,0,PARTIAL
+Construction and trades,Formworker,1,0,0,PARTIAL
+Social care,Foster carer,0,0,0,NONE
+Manufacturing,Foundry moulder,0,0,0,NONE
+Social care,Funeral director,0,2,0,PARTIAL
+Creative and media,Furniture designer,2,69,0,PARTIAL
+Engineering and maintenance,Furniture maker,4,4,2,ALL_THREE
+Creative and media,Furniture restorer,0,0,0,NONE
+Teaching and education,Further education teacher,17,140,1,ALL_THREE
+Healthcare,GP,16,41,1,ALL_THREE
+Managerial,GP practice manager,25,819,0,PARTIAL
+Environment and land,Gamekeeper,1,6,0,PARTIAL
+Environment and land,Gardener,406,15,5,ALL_THREE
+Science and research,Garment technologist,1,37,0,PARTIAL
+Engineering and maintenance,Gas mains layer,0,0,0,NONE
+Engineering and maintenance,Gas service technician,3,63,0,PARTIAL
+Managerial,General practice surveyor,4,38,0,PARTIAL
+Science and research,Geneticist,1,103,0,PARTIAL
+Science and research,Geoscientist,12,395,0,PARTIAL
+Science and research,Geospatial technician,6,76,2,ALL_THREE
+Science and research,Geotechnician,3,356,0,PARTIAL
+Manufacturing,Glassmaker,1,4,0,PARTIAL
+Engineering and maintenance,Glazier,4,4,0,PARTIAL
+Creative and media,Graphic designer,71,592,1,ALL_THREE
+Environment and land,Groundsperson,3,0,0,PARTIAL
+Transport,HGV driver,1347,27,4,ALL_THREE
+Beauty and wellbeing,Hairdresser,105,31,0,PARTIAL
+Teaching and education,Headteacher,9,8,0,PARTIAL
+Managerial,Health and safety adviser,20,6582,0,PARTIAL
+Healthcare,Health play specialist,5,96,0,PARTIAL
+Teaching and education,Health promotion specialist,4,95,0,PARTIAL
+Healthcare,Health records clerk,41,212,0,PARTIAL
+Managerial,Health service manager,101,165,0,PARTIAL
+Sports and leisure,Health trainer,1,79,0,PARTIAL
+Healthcare,Health visitor,0,66,0,PARTIAL
+Healthcare,Healthcare assistant,58,14,8,ALL_THREE
+Science and research,Healthcare science assistant,14,54,0,PARTIAL
+Engineering and maintenance,Heat pump engineer,25,20,1,ALL_THREE
+Engineering and maintenance,Heating and ventilation engineer,3,15,0,PARTIAL
+Transport,Heavy vehicle technician,39,61,56,ALL_THREE
+Transport,Helicopter engineer,2,4,0,PARTIAL
+Transport,Helicopter pilot,0,0,0,NONE
+Travel and tourism,Heritage officer,11,128,0,PARTIAL
+Teaching and education,Higher education lecturer,42,100,0,PARTIAL
+Healthcare,Homeopath,0,7,0,PARTIAL
+Animal Care,Horse groom,6,9,18,ALL_THREE
+Sports and leisure,Horse riding instructor,0,22,0,PARTIAL
+Retail and sales,Horticultural manager,9,35,0,PARTIAL
+Social care,Horticultural therapist,0,12,0,PARTIAL
+Environment and land,Horticultural worker,3,0,0,PARTIAL
+Healthcare,Hospital doctor,20,24,0,PARTIAL
+Healthcare,Hospital porter,3,0,0,PARTIAL
+Travel and tourism,Hotel housekeeper,8,0,0,PARTIAL
+Travel and tourism,Hotel manager,87,111,0,PARTIAL
+Travel and tourism,Hotel porter,6,1,0,PARTIAL
+Social care,Housing officer,123,14,1,ALL_THREE
+Managerial,Human resources officer,70,1136,0,PARTIAL
+Science and research,Hydrologist,20,43,0,PARTIAL
+Healthcare,Hypnotherapist,0,3,0,PARTIAL
+"Computing, technology and digital",IT project manager,14,426,1,ALL_THREE
+"Computing, technology and digital",IT security co-ordinator,28,73,0,PARTIAL
+"Computing, technology and digital",IT support technician,74,48,27,ALL_THREE
+Creative and media,Illustrator,24,174,0,PARTIAL
+Law and legal,Immigration adviser (non-government),2,8,0,PARTIAL
+Government services,Immigration officer,80,7,0,PARTIAL
+Transport,Import-export clerk,2,0,0,PARTIAL
+Creative and media,Indexer,56,1,0,PARTIAL
+Home services,Industrial cleaner,0,1,0,PARTIAL
+"Computing, technology and digital",Information scientist,5,689,0,PARTIAL
+Retail and sales,Insurance account manager,8,18,0,PARTIAL
+Business and finance,Insurance broker,52,3,4,ALL_THREE
+Business and finance,Insurance claims handler,8,0,0,PARTIAL
+Business and finance,Insurance loss adjuster,3,13,0,PARTIAL
+Business and finance,Insurance risk surveyor,10,30,0,PARTIAL
+Business and finance,Insurance technician,16,14,0,PARTIAL
+Business and finance,Insurance underwriter,21,0,0,PARTIAL
+Science and research,Intelligence analyst,2,161,2,ALL_THREE
+Creative and media,Interior designer,8,238,0,PARTIAL
+Travel and tourism,Interpreter,2971,278,0,PARTIAL
+Business and finance,Investment analyst,208,176,0,PARTIAL
+Creative and media,Jewellery designer-maker,1,82,0,PARTIAL
+Sports and leisure,Jockey,5,0,1,PARTIAL
+Law and legal,Judge,0,40,0,PARTIAL
+Animal Care,Kennel worker,0,0,0,NONE
+Creative and media,Kitchen and bathroom designer,1,118,0,PARTIAL
+Construction and trades,Kitchen and bathroom fitter,2,20,0,PARTIAL
+Hospitality and food,Kitchen porter,9,0,0,PARTIAL
+Science and research,Laboratory technician,10,1,9,ALL_THREE
+Retail and sales,Land and property valuer and auctioneer,0,437,0,PARTIAL
+Science and research,Land surveyor,8,24,1,ALL_THREE
+Environment and land,Landscape architect,26,101,0,PARTIAL
+Environment and land,Landscaper,304,192,1,ALL_THREE
+Home services,Laundry worker,1,0,0,PARTIAL
+Healthcare,Learning disability nurse,4,158,0,PARTIAL
+Teaching and education,Learning mentor,14,65,1,ALL_THREE
+Manufacturing,Leather craftworker,0,7,0,PARTIAL
+Law and legal,Legal executive,0,156,0,PARTIAL
+Law and legal,Legal secretary,5,82,0,PARTIAL
+Sports and leisure,Leisure centre assistant,10,6,0,PARTIAL
+Sports and leisure,Leisure centre manager,6,14,0,PARTIAL
+Teaching and education,Librarian,237,39,0,PARTIAL
+Teaching and education,Library assistant,2,5,3,ALL_THREE
+Law and legal,Licensed conveyancer,2,11,0,PARTIAL
+Social care,Life coach,3,9,0,PARTIAL
+Sports and leisure,Lifeguard,6,0,0,PARTIAL
+Engineering and maintenance,Lift engineer,14,15,12,ALL_THREE
+Engineering and maintenance,Lighting technician,13,4,0,PARTIAL
+Engineering and maintenance,Live sound engineer,0,139,0,PARTIAL
+Administration,Local government officer,4,178,0,PARTIAL
+Business and finance,Local government revenues officer,2,1,0,PARTIAL
+Engineering and maintenance,Locksmith,0,0,0,NONE
+Managerial,MP,21,60,5,ALL_THREE
+Manufacturing,Maintenance fitter,12,0,1,PARTIAL
+Creative and media,Make-up artist,0,23,0,PARTIAL
+Managerial,Management accountant,105,1093,0,PARTIAL
+Managerial,Management consultant,39,169,0,PARTIAL
+Manufacturing,Manufacturing systems engineer,37,165,17,ALL_THREE
+Science and research,Marine engineer,22,165,7,ALL_THREE
+Engineering and maintenance,Marine engineering technician,0,6,0,PARTIAL
+Science and research,Market research data analyst,5,78,0,PARTIAL
+Retail and sales,Market research executive,24,130,0,PARTIAL
+Science and research,Market researcher,31,103,0,PARTIAL
+Retail and sales,Market trader,0,0,0,NONE
+Retail and sales,Marketing executive,42,6,6,ALL_THREE
+Retail and sales,Marketing manager,926,1622,7,ALL_THREE
+Teaching and education,Martial arts instructor,1,5,1,ALL_THREE
+Beauty and wellbeing,Massage therapist,2,47,0,PARTIAL
+Science and research,Materials engineer,17,237,4,ALL_THREE
+Science and research,Materials technician,5,24,3,ALL_THREE
+Healthcare,Maternity support worker,0,7,0,PARTIAL
+Engineering and maintenance,Mechanical engineer,191,736,26,ALL_THREE
+Manufacturing,Mechanical engineering technician,39,43,12,ALL_THREE
+Creative and media,Media researcher,3,1620,0,PARTIAL
+Healthcare,Medical herbalist,0,18,0,PARTIAL
+Healthcare,Medical illustrator,0,24,0,PARTIAL
+Science and research,Medical physicist,7,40,0,PARTIAL
+Healthcare,Medical secretary,192,94,0,PARTIAL
+Healthcare,Mental health nurse,7,383,0,PARTIAL
+Transport,Merchant Navy deck officer,2,2,0,PARTIAL
+Transport,Merchant Navy engineering officer,1,30,0,PARTIAL
+Transport,Merchant Navy rating,0,2,0,PARTIAL
+Science and research,Meteorologist,0,28,0,PARTIAL
+Science and research,Metrologist,1,76,0,PARTIAL
+Science and research,Microbiologist,2,227,0,PARTIAL
+Healthcare,Midwife,6,134,0,PARTIAL
+Engineering and maintenance,Model maker,0,13,0,PARTIAL
+Social care,Money adviser,8,51,0,PARTIAL
+Teaching and education,Montessori teacher,0,19,0,PARTIAL
+Business and finance,Mortgage adviser,9,0,0,PARTIAL
+Manufacturing,Motor mechanic,84,2,5,ALL_THREE
+Engineering and maintenance,Motorcycle mechanic,2,4,0,PARTIAL
+Sports and leisure,Motorsport engineer,11,85,0,PARTIAL
+Travel and tourism,Museum attendant,3,0,0,PARTIAL
+Teaching and education,Museum curator,1,256,0,PARTIAL
+Retail and sales,Music promotions manager,0,195,0,PARTIAL
+Teaching and education,Music teacher,40,380,0,PARTIAL
+Social care,Music therapist,3,1295,0,PARTIAL
+Manufacturing,Musical instrument maker and repairer,0,5,0,PARTIAL
+Creative and media,Musician,12,91,0,PARTIAL
+Beauty and wellbeing,Nail technician,1,78,0,PARTIAL
+Social care,Nanny,0,0,0,NONE
+Science and research,Nanotechnologist,0,33,0,PARTIAL
+Healthcare,Naturopath,0,20,0,PARTIAL
+Manufacturing,Naval architect,5,25,0,PARTIAL
+Government services,Neighbourhood warden,3,0,0,PARTIAL
+"Computing, technology and digital",Network engineer,73,200,40,ALL_THREE
+Managerial,Network manager,81,25,0,PARTIAL
+Creative and media,Newspaper or magazine editor,2,90,0,PARTIAL
+Creative and media,Newspaper or magazine journalist,3,128,0,PARTIAL
+Manufacturing,Non-destructive testing technician,0,5,1,PARTIAL
+Science and research,Nuclear engineer,22,57,12,ALL_THREE
+Engineering and maintenance,Nuclear technician,0,2,2,PARTIAL
+Healthcare,Nurse,149,319,344,ALL_THREE
+Social care,Nursery manager,4,5,1,ALL_THREE
+Teaching and education,Nursery worker,30,27,0,PARTIAL
+Healthcare,Nursing associate,4,235,0,PARTIAL
+Healthcare,Nutritional therapist,26,24,0,PARTIAL
+Healthcare,Nutritionist,1,112,0,PARTIAL
+Healthcare,Occupational health nurse,2,10,0,PARTIAL
+Social care,Occupational therapist,46,136,0,PARTIAL
+Social care,Occupational therapy support worker,1,5,0,PARTIAL
+Science and research,Oceanographer,1,74,0,PARTIAL
+Managerial,Office manager,288,39,0,PARTIAL
+Engineering and maintenance,Offshore drilling worker,1,4,0,PARTIAL
+Teaching and education,Ofsted inspector,8,20,0,PARTIAL
+Teaching and education,Online tutor,5,43,0,PARTIAL
+Healthcare,Operating department practitioner,13,82,0,PARTIAL
+Science and research,Operational researcher,33,204,0,PARTIAL
+Healthcare,Optometrist,0,28,0,PARTIAL
+Healthcare,Orthoptist,1,5,0,PARTIAL
+Healthcare,Osteopath,21,35,0,PARTIAL
+Teaching and education,Outdoor activities instructor,1,10,0,PARTIAL
+Teaching and education,PE teacher,17,362,0,PARTIAL
+Manufacturing,Packaging technologist,1,1,0,PARTIAL
+Manufacturing,Packer,59,0,0,PARTIAL
+Healthcare,Paediatrician,2,40,0,PARTIAL
+Manufacturing,Paint sprayer,20,138,0,PARTIAL
+Construction and trades,Painter and decorator,21,5,3,ALL_THREE
+Science and research,Palaeontologist,0,175,0,PARTIAL
+Social care,Palliative care assistant,0,18,0,PARTIAL
+Law and legal,Paralegal,21,35,5,ALL_THREE
+Healthcare,Paramedic,146,164,0,PARTIAL
+Business and finance,Paraplanner,4,1,4,ALL_THREE
+Teaching and education,Pastoral care worker,8,288,0,PARTIAL
+Manufacturing,Patent attorney,6,25,0,PARTIAL
+Science and research,Pathologist,1,169,0,PARTIAL
+Social care,Patient advice and liaison service officer,9,16,0,PARTIAL
+Manufacturing,Pattern cutter,0,14,0,PARTIAL
+Business and finance,Payroll administrator,242,23,10,ALL_THREE
+Business and finance,Pensions administrator,17,3,1,ALL_THREE
+Sports and leisure,Performance sports scientist,21,246,0,PARTIAL
+Sports and leisure,Personal trainer,4,16,3,ALL_THREE
+Home services,Pest control technician,6,5,0,PARTIAL
+Science and research,Pet behaviour consultant,0,172,0,PARTIAL
+Retail and sales,Pharmacist,18,55,0,PARTIAL
+Science and research,Pharmacologist,6,458,0,PARTIAL
+Retail and sales,Pharmacy assistant,7,29,65,ALL_THREE
+Retail and sales,Pharmacy technician,7,6,12,ALL_THREE
+Healthcare,Phlebotomist,0,2,0,PARTIAL
+Creative and media,Photographer,88,114,0,PARTIAL
+Creative and media,Photographic stylist,0,12,0,PARTIAL
+Creative and media,Photographic technician,0,11,0,PARTIAL
+Healthcare,Physician assistant,0,43,0,PARTIAL
+Science and research,Physicist,21,647,0,PARTIAL
+Healthcare,Physiotherapist,24,152,0,PARTIAL
+Healthcare,Physiotherapy assistant,3,17,0,PARTIAL
+Sports and leisure,Pilates teacher,0,30,0,PARTIAL
+Engineering and maintenance,Pipe fitter,113,2,0,PARTIAL
+Managerial,Planning and development surveyor,24,160,0,PARTIAL
+Construction and trades,Plasterer,101,2,1,ALL_THREE
+Healthcare,Plastic surgeon,0,3,0,PARTIAL
+Social care,Play therapist,0,7,0,PARTIAL
+Teaching and education,Playworker,2,103,6,ALL_THREE
+Engineering and maintenance,Plumber,6,0,0,PARTIAL
+Healthcare,Podiatrist,4,7,0,PARTIAL
+Healthcare,Podiatry assistant,0,21,0,PARTIAL
+Government services,Police community support officer,0,308,2,PARTIAL
+Government services,Police officer,13,20,0,PARTIAL
+Travel and tourism,Port operative,4,55,0,PARTIAL
+Teaching and education,Portage home visitor,4,9,0,PARTIAL
+Retail and sales,Post Office customer service assistant,1,18,0,PARTIAL
+Home services,Postperson,1,0,0,PARTIAL
+Teaching and education,Primary school teacher,15,206,0,PARTIAL
+Creative and media,Print operator,4,90,0,PARTIAL
+Government services,Prison governor,2,0,0,PARTIAL
+Teaching and education,Prison instructor,2,7,0,PARTIAL
+Emergency and uniform services,Prison officer,9,0,0,PARTIAL
+Managerial,Private practice accountant,75,28,0,PARTIAL
+Social care,Probation officer,39,18,0,PARTIAL
+Law and legal,Probation services officer,21,60,0,PARTIAL
+Manufacturing,Product designer,59,505,0,PARTIAL
+Manufacturing,Production manager (manufacturing),20,11,0,PARTIAL
+Manufacturing,Production worker (manufacturing),29,0,0,PARTIAL
+Creative and media,Proofreader,15,1,0,PARTIAL
+Creative and media,Prop maker,0,7,0,PARTIAL
+Healthcare,Prosthetist and orthotist,0,12,0,PARTIAL
+Science and research,Psychiatrist,7,39,0,PARTIAL
+Social care,Psychological wellbeing practitioner,6,218,0,PARTIAL
+Social care,Psychologist,11,668,0,PARTIAL
+Social care,Psychotherapist,6,31,0,PARTIAL
+Business and finance,Public finance accountant,8,237,0,PARTIAL
+Creative and media,Public relations officer,23,124,0,PARTIAL
+Hospitality and food,Publican,2,4,0,PARTIAL
+Managerial,Purchasing manager,49,16,0,PARTIAL
+Manufacturing,Quality control officer,15,34,0,PARTIAL
+Managerial,Quantity surveyor,111,105,24,ALL_THREE
+Science and research,Quarry engineer,3,14,0,PARTIAL
+Manufacturing,Quarry worker,0,0,0,NONE
+Government services,RAF aviator,5,7,0,PARTIAL
+Government services,RAF officer,5,3,0,PARTIAL
+Government services,RAF regiment gunner,2,12,0,PARTIAL
+Teaching and education,RQF assessor,1,163,0,PARTIAL
+Animal Care,RSPCA inspector,0,1,0,PARTIAL
+Sports and leisure,Racehorse trainer,0,4,0,PARTIAL
+Creative and media,Radio broadcast assistant,0,11,0,PARTIAL
+Healthcare,Radiographer,15,103,0,PARTIAL
+Healthcare,Radiography assistant,3,0,0,PARTIAL
+Transport,Rail track maintenance worker,2,11,0,PARTIAL
+Transport,Railway signaller,0,4,0,PARTIAL
+Administration,Receptionist,499,11,24,ALL_THREE
+Administration,Recruitment consultant,453,4,21,ALL_THREE
+Environment and land,Recycling engagement officer,2,65,0,PARTIAL
+Manufacturing,Recycling operative,24,1,0,PARTIAL
+Beauty and wellbeing,Reflexologist,0,4,0,PARTIAL
+Engineering and maintenance,Refrigeration and air-conditioning installer,0,62,0,PARTIAL
+Government services,"Registrar of births, deaths, marriages and civil partnerships",0,1953,0,PARTIAL
+Healthcare,Reiki healer,0,5,0,PARTIAL
+Social care,Religious leader,0,112,0,PARTIAL
+Delivery and storage,Removals worker,3,0,0,PARTIAL
+Science and research,Renewable energy engineer,57,250,0,PARTIAL
+Science and research,Research scientist,81,91,1,ALL_THREE
+Social care,Residential support worker,318,0,5,PARTIAL
+Travel and tourism,Resort representative,8,0,0,PARTIAL
+Hospitality and food,Restaurant manager,8,4,0,PARTIAL
+Retail and sales,Retail buyer,14,0,0,PARTIAL
+Retail and sales,Retail manager,216,8,1,ALL_THREE
+Transport,Road transport manager,9,70,0,PARTIAL
+Engineering and maintenance,Road worker,21,0,0,PARTIAL
+Delivery and storage,Roadie,0,2,0,PARTIAL
+Engineering and maintenance,Roadside assistance technician,19,1,0,PARTIAL
+Science and research,Robotics engineer,15,422,0,PARTIAL
+Transport,Rolling stock engineering technician,7,0,0,PARTIAL
+Construction and trades,Roofer,10,1,8,ALL_THREE
+Manufacturing,Roustabout,0,0,0,NONE
+Government services,Royal Marines commando,0,3,2,PARTIAL
+Government services,Royal Marines officer,0,0,0,NONE
+Government services,Royal Navy officer,1,3,0,PARTIAL
+Government services,Royal Navy rating,0,1,0,PARTIAL
+Managerial,Rural surveyor,5,14,8,ALL_THREE
+Travel and tourism,Sailing instructor,4,30,0,PARTIAL
+Retail and sales,Sales administrator,70,18,29,ALL_THREE
+Retail and sales,Sales assistant,57,0,0,PARTIAL
+Retail and sales,Sales manager,252,5,2,ALL_THREE
+Retail and sales,Sales representative,111,0,4,PARTIAL
+Construction and trades,Scaffolder,52,1,3,ALL_THREE
+Science and research,Scenes of crime officer,1,429,0,PARTIAL
+Teaching and education,School business manager,94,3204,0,PARTIAL
+Teaching and education,School lunchtime supervisor,23,1,0,PARTIAL
+Healthcare,School nurse,0,16,14,PARTIAL
+Teaching and education,School secretary,9,147,0,PARTIAL
+Creative and media,Screenwriter,0,204,0,PARTIAL
+Retail and sales,Search engine optimisation (SEO) specialist,6,30,0,PARTIAL
+Teaching and education,Secondary school teacher,75,232,0,PARTIAL
+Managerial,Security Service personnel,20,245,0,PARTIAL
+Emergency and uniform services,Security manager,81,35,0,PARTIAL
+Emergency and uniform services,Security officer,198,2,3,ALL_THREE
+Engineering and maintenance,Security systems installer,0,4,0,PARTIAL
+Science and research,Seismologist,1,7,0,PARTIAL
+Social care,Senior care worker,21,21,0,PARTIAL
+Creative and media,Set designer,33,44,0,PARTIAL
+Manufacturing,Sewing machinist,8,47,0,PARTIAL
+Construction and trades,Shopfitter,0,0,0,NONE
+Retail and sales,Shopkeeper,0,1,0,PARTIAL
+Manufacturing,Sign maker,0,0,0,NONE
+Transport,Signalling technician,3,4,0,PARTIAL
+Teaching and education,Skills for life teacher,2,6,0,PARTIAL
+Engineering and maintenance,Smart home installer,0,80,0,PARTIAL
+Engineering and maintenance,Smart meter installer,3,0,0,PARTIAL
+Creative and media,Social media influencer,1,396,0,PARTIAL
+"Computing, technology and digital",Social media manager,27,207,0,PARTIAL
+Social care,Social services manager,4,45,0,PARTIAL
+Social care,Social work assistant,2,7,0,PARTIAL
+Social care,Social worker,17,500,0,PARTIAL
+"Computing, technology and digital",Software developer,295,317,2,ALL_THREE
+Engineering and maintenance,Solar panel installer,0,3,0,PARTIAL
+Government services,Soldier,7,3,0,PARTIAL
+Law and legal,Solicitor,95,89,28,ALL_THREE
+"Computing, technology and digital",Solutions architect,24,33,0,PARTIAL
+Healthcare,Sonographer,1,25,0,PARTIAL
+Teaching and education,Special educational needs (SEN) teacher,24,138,0,PARTIAL
+Teaching and education,Special educational needs (SEN) teaching assistant,56,28,0,PARTIAL
+Healthcare,Speech and language therapist,3,65,0,PARTIAL
+Healthcare,Speech and language therapy assistant,0,28,0,PARTIAL
+Sports and leisure,Sport and exercise psychologist,0,736,0,PARTIAL
+Sports and leisure,Sports coach,8,245,20,ALL_THREE
+Sports and leisure,Sports commentator,0,3,0,PARTIAL
+Sports and leisure,Sports development officer,9,928,0,PARTIAL
+Sports and leisure,Sports professional,8,19,0,PARTIAL
+Creative and media,Stage manager,18,193,0,PARTIAL
+Creative and media,Stagehand,1,66,0,PARTIAL
+Engineering and maintenance,Steel erector,1,0,0,PARTIAL
+Engineering and maintenance,Steel fixer,3,0,0,PARTIAL
+Construction and trades,Steeplejack,0,0,0,NONE
+Retail and sales,Stock control assistant,50,0,1,PARTIAL
+Business and finance,Stockbroker,9,6,0,PARTIAL
+Construction and trades,Stonemason,1,8,0,PARTIAL
+Emergency and uniform services,Store detective,1,0,0,PARTIAL
+Engineering and maintenance,Structural engineer,60,131,6,ALL_THREE
+Creative and media,Studio sound engineer,2,60,0,PARTIAL
+Social care,Substance misuse outreach worker,1,6,0,PARTIAL
+Managerial,Supervisor,3869,50,38,ALL_THREE
+Transport,Supply chain manager,81,145,1,ALL_THREE
+Healthcare,Surgeon,8,14,1,ALL_THREE
+Engineering and maintenance,Surveying technician,5,13,0,PARTIAL
+Teaching and education,Swimming teacher,1,2,0,PARTIAL
+"Computing, technology and digital",Systems analyst,29,207,8,ALL_THREE
+Creative and media,TV or film assistant director,0,33,0,PARTIAL
+Creative and media,TV or film assistant production co-ordinator,0,13,0,PARTIAL
+Creative and media,TV or film camera operator,4,33,0,PARTIAL
+Creative and media,TV or film director,0,367,0,PARTIAL
+Managerial,TV or film producer,6,34,0,PARTIAL
+Creative and media,TV or film production manager,0,291,0,PARTIAL
+Creative and media,TV or film production runner,0,7,0,PARTIAL
+Engineering and maintenance,TV or film sound technician,0,18,0,PARTIAL
+Creative and media,TV presenter,0,0,0,NONE
+Home services,Tailor,3203,31,1,ALL_THREE
+Creative and media,Tattooist and body piercer,0,131,0,PARTIAL
+Business and finance,Tax adviser,94,6,1,ALL_THREE
+Managerial,Tax inspector,18,5,0,PARTIAL
+Transport,Taxi driver,0,0,0,NONE
+Teaching and education,Teaching assistant,127,34,67,ALL_THREE
+Managerial,Technical architect,19,671,0,PARTIAL
+Creative and media,Technical author,20,73,0,PARTIAL
+Science and research,Technical brewer,1,8,0,PARTIAL
+Home services,Telecoms engineer,35,7,21,ALL_THREE
+"Computing, technology and digital",Test lead,38,82,0,PARTIAL
+Manufacturing,Textile designer,2,146,0,PARTIAL
+Manufacturing,Textile operative,1,0,1,PARTIAL
+Construction and trades,Thatcher,1,9,0,PARTIAL
+Environment and land,Thermal insulation engineer,1,2,0,PARTIAL
+Construction and trades,Tiler,1,0,1,PARTIAL
+Manufacturing,Toolmaker,10,1,4,ALL_THREE
+Travel and tourism,Tour manager,12,14,0,PARTIAL
+Travel and tourism,Tourist guide,0,5,0,PARTIAL
+Travel and tourism,Tourist information centre assistant,2,2,0,PARTIAL
+Managerial,Town planner,11,47,0,PARTIAL
+Construction and trades,Town planning assistant,3,47,1,ALL_THREE
+Law and legal,Trade mark attorney,0,3,0,PARTIAL
+Teaching and education,Trade union official,0,41,0,PARTIAL
+Law and legal,Trading standards officer,4,117,0,PARTIAL
+Transport,Train conductor,0,4,0,PARTIAL
+Transport,Train driver,0,0,1,PARTIAL
+Transport,Train station worker,6,0,0,PARTIAL
+Teaching and education,Training officer,28,87,10,ALL_THREE
+Transport,Tram driver,1,0,0,PARTIAL
+Creative and media,Translator,428,996,0,PARTIAL
+Transport,Transport planner,20,33,1,ALL_THREE
+Travel and tourism,Travel agent,34,0,0,PARTIAL
+Environment and land,Tree surgeon,2,7,0,PARTIAL
+"Computing, technology and digital",User experience (UX) designer,17,223,0,PARTIAL
+"Computing, technology and digital",User researcher,24,28,0,PARTIAL
+Manufacturing,Vehicle body repairer,14,0,0,PARTIAL
+Science and research,Vet,1586,231,3,ALL_THREE
+Animal Care,Veterinary nurse,61,56,0,PARTIAL
+Animal Care,Veterinary physiotherapist,0,9,0,PARTIAL
+Social care,Victim care officer,0,8,0,PARTIAL
+Creative and media,Video editor,4,11,0,PARTIAL
+Travel and tourism,Visitor attraction general manager,4,0,0,PARTIAL
+Retail and sales,Visual merchandiser,91,14,0,PARTIAL
+Hospitality and food,Waiter,3,0,0,PARTIAL
+Creative and media,Wardrobe assistant,2,0,0,PARTIAL
+Managerial,Warehouse manager,67,1,0,PARTIAL
+Delivery and storage,Warehouse worker,38,0,0,PARTIAL
+Engineering and maintenance,Watch or clock repairer,0,2,0,PARTIAL
+Environment and land,Water network operative,13,22,2,ALL_THREE
+Environment and land,Water treatment worker,2,5,0,PARTIAL
+Creative and media,Web content editor,10,30,0,PARTIAL
+Creative and media,Web designer,7,98,0,PARTIAL
+"Computing, technology and digital",Web developer,26,33,0,PARTIAL
+Managerial,Wedding planner,4,1,0,PARTIAL
+Manufacturing,Welder,79,2,12,ALL_THREE
+Social care,Welfare rights adviser,1,64,0,PARTIAL
+Environment and land,Wind turbine technician,0,5,6,PARTIAL
+Manufacturing,Window fabricator,0,0,0,NONE
+Transport,Windscreen fitter,0,3,0,PARTIAL
+Manufacturing,Wood machinist,1,38,2,ALL_THREE
+Creative and media,Writer,98,470,4,ALL_THREE
+Teaching and education,Yoga teacher,0,10,0,PARTIAL
+Healthcare,Yoga therapist,0,39,0,PARTIAL
+Social care,Youth offending team officer,3,1,0,PARTIAL
+Teaching and education,Youth worker,5,137,1,ALL_THREE
+Animal Care,Zookeeper,7,0,0,PARTIAL
+Science and research,Zoologist,5,446,0,PARTIAL

@@ -1,0 +1,169 @@
+group,category,subcategory,jobs,courses,apprenticeships
+ALL_THREE,Business and finance,Accounting technician,41,827,19
+ALL_THREE,Administration,Admin assistant,615,608,48
+ALL_THREE,Manufacturing,Aerospace engineer,61,432,20
+ALL_THREE,Manufacturing,Agricultural engineer,8,90,4
+NONE,Transport,Air traffic controller,0,0,0
+NONE,Travel and tourism,Airline customer service agent,0,0,0
+ALL_THREE,"Computing, technology and digital",App developer,21,336,3
+ALL_THREE,Creative and media,Architect,112,98,9
+ALL_THREE,"Computing, technology and digital",Artificial intelligence (AI) engineer,97,1821,10
+ALL_THREE,Teaching and education,Audio visual technician,2,46,1
+ALL_THREE,Business and finance,Auditor,532,8,1
+ALL_THREE,Manufacturing,Automotive engineer,16,171,2
+ALL_THREE,Transport,Automotive parts advisor,12,109,11
+ALL_THREE,Hospitality and food,Baker,2,1,5
+ALL_THREE,Managerial,Bank manager,32,233,3
+ALL_THREE,Law and legal,Barrister,17,183,1
+ALL_THREE,Beauty and wellbeing,Beauty therapist,15,18,9
+NONE,Animal Care,Beekeeper,0,0,0
+ALL_THREE,Science and research,Biomedical scientist,69,823,1
+NONE,Home services,Bodyguard,0,0,0
+ALL_THREE,Business and finance,Bookkeeper,70,53,4
+ALL_THREE,Construction and trades,Bricklayer,32,1,9
+ALL_THREE,Manufacturing,Building services engineer,97,124,29
+ALL_THREE,Construction and trades,Building surveyor,56,62,13
+ALL_THREE,Environment and land,Building technician,15,22,16
+ALL_THREE,Retail and sales,Business analyst,157,392,10
+ALL_THREE,Retail and sales,Business development manager,245,1536,1
+ALL_THREE,Managerial,Business project manager,162,960,2
+ALL_THREE,Retail and sales,Butcher,1,14,4
+ALL_THREE,Engineering and maintenance,CAD technician,15,10,4
+ALL_THREE,Manufacturing,CNC machinist,11,3,2
+ALL_THREE,Social care,Care worker,4680,24,81
+ALL_THREE,Home services,Caretaker,98,5,3
+ALL_THREE,Hospitality and food,Chef,36,10,89
+ALL_THREE,Healthcare,Children's nurse,92,350,14
+ALL_THREE,Engineering and maintenance,Civil engineer,461,810,112
+ALL_THREE,Engineering and maintenance,Civil engineering technician,3,47,1
+ALL_THREE,Healthcare,Clinical scientist,55,158,1
+ALL_THREE,Managerial,Construction manager,161,370,6
+NONE,Law and legal,Coroner,0,0,0
+ALL_THREE,Environment and land,Corporate responsibility and sustainability practitioner,22,700,2
+NONE,Law and legal,Court administrative assistant,0,0,0
+ALL_THREE,Law and legal,Credit controller,131,89,1
+NONE,Travel and tourism,Cruise ship steward,0,0,0
+ALL_THREE,Retail and sales,Customer service assistant,335,523,9
+ALL_THREE,Law and legal,Data protection officer,20,173,2
+ALL_THREE,Science and research,Data scientist,155,933,9
+ALL_THREE,Healthcare,Dental nurse,92,19,251
+ALL_THREE,Manufacturing,Design and development engineer,67,391,15
+ALL_THREE,Teaching and education,Early years teacher,21,310,1
+ALL_THREE,Science and research,Ecologist,41,456,2
+ALL_THREE,Science and research,Economist,11,983,1
+ALL_THREE,Creative and media,Editorial assistant,5,5,1
+ALL_THREE,Teaching and education,Education technician,2,74,13
+ALL_THREE,Engineering and maintenance,Electrical engineer,254,814,46
+ALL_THREE,Engineering and maintenance,Electrician,228,29,18
+ALL_THREE,Science and research,Electronics engineer,82,520,6
+NONE,Home services,Embalmer,0,0,0
+ALL_THREE,Manufacturing,Engineering maintenance technician,99,184,68
+ALL_THREE,Manufacturing,Engineering operative,40,9,29
+ALL_THREE,Science and research,Environmental consultant,62,427,2
+ALL_THREE,Retail and sales,Estate agent,9,2,12
+ALL_THREE,Managerial,Estates officer,91,6,2
+ALL_THREE,Managerial,Estimator,639,12,3
+ALL_THREE,Administration,Executive assistant,97,4,2
+ALL_THREE,Managerial,Facilities manager,519,28,2
+ALL_THREE,Business and finance,Financial adviser,29,95,1
+ALL_THREE,Engineering and maintenance,Fire safety engineer,18,29,2
+NONE,Environment and land,Fishing boat deckhand,0,0,0
+NONE,Sports and leisure,Football referee,0,0,0
+NONE,Social care,Foster carer,0,0,0
+NONE,Manufacturing,Foundry moulder,0,0,0
+ALL_THREE,Engineering and maintenance,Furniture maker,4,4,2
+NONE,Creative and media,Furniture restorer,0,0,0
+ALL_THREE,Teaching and education,Further education teacher,17,140,1
+ALL_THREE,Healthcare,GP,16,41,1
+ALL_THREE,Environment and land,Gardener,406,15,5
+NONE,Engineering and maintenance,Gas mains layer,0,0,0
+ALL_THREE,Science and research,Geospatial technician,6,76,2
+ALL_THREE,Creative and media,Graphic designer,71,592,1
+ALL_THREE,Transport,HGV driver,1347,27,4
+ALL_THREE,Healthcare,Healthcare assistant,58,14,8
+ALL_THREE,Engineering and maintenance,Heat pump engineer,25,20,1
+ALL_THREE,Transport,Heavy vehicle technician,39,61,56
+NONE,Transport,Helicopter pilot,0,0,0
+ALL_THREE,Animal Care,Horse groom,6,9,18
+ALL_THREE,Social care,Housing officer,123,14,1
+ALL_THREE,"Computing, technology and digital",IT project manager,14,426,1
+ALL_THREE,"Computing, technology and digital",IT support technician,74,48,27
+ALL_THREE,Business and finance,Insurance broker,52,3,4
+ALL_THREE,Science and research,Intelligence analyst,2,161,2
+NONE,Animal Care,Kennel worker,0,0,0
+ALL_THREE,Science and research,Laboratory technician,10,1,9
+ALL_THREE,Science and research,Land surveyor,8,24,1
+ALL_THREE,Environment and land,Landscaper,304,192,1
+ALL_THREE,Teaching and education,Learning mentor,14,65,1
+ALL_THREE,Teaching and education,Library assistant,2,5,3
+ALL_THREE,Engineering and maintenance,Lift engineer,14,15,12
+NONE,Engineering and maintenance,Locksmith,0,0,0
+ALL_THREE,Managerial,MP,21,60,5
+ALL_THREE,Manufacturing,Manufacturing systems engineer,37,165,17
+ALL_THREE,Science and research,Marine engineer,22,165,7
+NONE,Retail and sales,Market trader,0,0,0
+ALL_THREE,Retail and sales,Marketing executive,42,6,6
+ALL_THREE,Retail and sales,Marketing manager,926,1622,7
+ALL_THREE,Teaching and education,Martial arts instructor,1,5,1
+ALL_THREE,Science and research,Materials engineer,17,237,4
+ALL_THREE,Science and research,Materials technician,5,24,3
+ALL_THREE,Engineering and maintenance,Mechanical engineer,191,736,26
+ALL_THREE,Manufacturing,Mechanical engineering technician,39,43,12
+ALL_THREE,Manufacturing,Motor mechanic,84,2,5
+NONE,Social care,Nanny,0,0,0
+ALL_THREE,"Computing, technology and digital",Network engineer,73,200,40
+ALL_THREE,Science and research,Nuclear engineer,22,57,12
+ALL_THREE,Healthcare,Nurse,149,319,344
+ALL_THREE,Social care,Nursery manager,4,5,1
+ALL_THREE,Construction and trades,Painter and decorator,21,5,3
+ALL_THREE,Law and legal,Paralegal,21,35,5
+ALL_THREE,Business and finance,Paraplanner,4,1,4
+ALL_THREE,Business and finance,Payroll administrator,242,23,10
+ALL_THREE,Business and finance,Pensions administrator,17,3,1
+ALL_THREE,Sports and leisure,Personal trainer,4,16,3
+ALL_THREE,Retail and sales,Pharmacy assistant,7,29,65
+ALL_THREE,Retail and sales,Pharmacy technician,7,6,12
+ALL_THREE,Construction and trades,Plasterer,101,2,1
+ALL_THREE,Teaching and education,Playworker,2,103,6
+ALL_THREE,Managerial,Quantity surveyor,111,105,24
+NONE,Manufacturing,Quarry worker,0,0,0
+ALL_THREE,Administration,Receptionist,499,11,24
+ALL_THREE,Administration,Recruitment consultant,453,4,21
+ALL_THREE,Science and research,Research scientist,81,91,1
+ALL_THREE,Retail and sales,Retail manager,216,8,1
+ALL_THREE,Construction and trades,Roofer,10,1,8
+NONE,Manufacturing,Roustabout,0,0,0
+NONE,Government services,Royal Marines officer,0,0,0
+ALL_THREE,Managerial,Rural surveyor,5,14,8
+ALL_THREE,Retail and sales,Sales administrator,70,18,29
+ALL_THREE,Retail and sales,Sales manager,252,5,2
+ALL_THREE,Construction and trades,Scaffolder,52,1,3
+ALL_THREE,Emergency and uniform services,Security officer,198,2,3
+NONE,Construction and trades,Shopfitter,0,0,0
+NONE,Manufacturing,Sign maker,0,0,0
+ALL_THREE,"Computing, technology and digital",Software developer,295,317,2
+ALL_THREE,Law and legal,Solicitor,95,89,28
+ALL_THREE,Sports and leisure,Sports coach,8,245,20
+NONE,Construction and trades,Steeplejack,0,0,0
+ALL_THREE,Engineering and maintenance,Structural engineer,60,131,6
+ALL_THREE,Managerial,Supervisor,3869,50,38
+ALL_THREE,Transport,Supply chain manager,81,145,1
+ALL_THREE,Healthcare,Surgeon,8,14,1
+ALL_THREE,"Computing, technology and digital",Systems analyst,29,207,8
+NONE,Creative and media,TV presenter,0,0,0
+ALL_THREE,Home services,Tailor,3203,31,1
+ALL_THREE,Business and finance,Tax adviser,94,6,1
+NONE,Transport,Taxi driver,0,0,0
+ALL_THREE,Teaching and education,Teaching assistant,127,34,67
+ALL_THREE,Home services,Telecoms engineer,35,7,21
+ALL_THREE,Manufacturing,Toolmaker,10,1,4
+ALL_THREE,Construction and trades,Town planning assistant,3,47,1
+ALL_THREE,Teaching and education,Training officer,28,87,10
+ALL_THREE,Transport,Transport planner,20,33,1
+ALL_THREE,Science and research,Vet,1586,231,3
+ALL_THREE,Environment and land,Water network operative,13,22,2
+ALL_THREE,Manufacturing,Welder,79,2,12
+NONE,Manufacturing,Window fabricator,0,0,0
+ALL_THREE,Manufacturing,Wood machinist,1,38,2
+ALL_THREE,Creative and media,Writer,98,470,4
+ALL_THREE,Teaching and education,Youth worker,5,137,1
