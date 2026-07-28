@@ -25,6 +25,9 @@ from course.models import NcsCourse
 SITEMAP = "https://www.theuniguide.co.uk/sitemap.xml"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 HDR = {"User-Agent": UA}
+# datacenter IPs are Cloudflare-blocked -> --proxy routes through the WebShare residential proxy
+_PX = "http://dfxmsjhr-gb-rotate:tnwltk3nqxtv@p.webshare.io:80"
+_PROXIES = None  # set to {'http':..,'https':..} by --proxy
 # a real course-detail url: /{uni-slug}-{ukprn}-{code}/courses/{slug}-{hash}
 COURSE_URL_RE = re.compile(r"^https://www\.theuniguide\.co\.uk/[a-z0-9\-]+-\d+-[a-z0-9]+/courses/[a-z0-9\-]+$")
 
@@ -41,7 +44,7 @@ def _clean_md(s):
 def _get(url, retries=4, binary=False):
     for a in range(retries):
         try:
-            r = requests.get(url, headers=HDR, timeout=35)
+            r = requests.get(url, headers=HDR, proxies=_PROXIES, timeout=40)
             if r.status_code == 200:
                 return r.content if binary else r.text
         except Exception:
@@ -127,6 +130,7 @@ class Command(BaseCommand):
         parser.add_argument("--classify", choices=["embed", "keyword", "none"], default="embed")
         parser.add_argument("--verbose-fields", action="store_true")
         parser.add_argument("--skip-existing", action="store_true")
+        parser.add_argument("--proxy", action="store_true", help="Route via WebShare residential proxy (needed on datacenter/server IPs).")
 
     def _urls(self, limit):
         idx = _get(SITEMAP)
@@ -155,6 +159,10 @@ class Command(BaseCommand):
             from scrapers.core.classify import classify as _cl
             classify = lambda t: _cl(t, strategy=strat)
         run_id = uuid.uuid4()
+        if opts["proxy"]:
+            global _PROXIES
+            _PROXIES = {"http": _PX, "https": _PX}
+            self.stdout.write(self.style.WARNING("proxy: ON (WebShare residential)"))
         self.stdout.write(self.style.WARNING(f"mode={'DRY-RUN' if dry else 'WRITE'} run_id={run_id}"))
 
         urls = self._urls(limit)
