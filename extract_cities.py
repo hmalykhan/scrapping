@@ -6,7 +6,7 @@ import psycopg2
 
 
 CATEGORY = "Construction and trades"
-OUTPUT_PATH = "/home/ali/Techorphic/Projects/Pathzi/pathzi/cities.json"
+OUTPUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cities.json")
 
 TABLES = [
     "public.job_dwpjob",
