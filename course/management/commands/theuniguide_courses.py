@@ -86,6 +86,13 @@ def _parse(url):
     qual = _qual(name) or _txt(course.get("educationalLevel"))
     mode = _txt(inst0.get("courseMode"))
     location = _txt(inst0.get("location"))
+    # duration from the URL slug (e.g. ".../bsc-full-time-4-years-2027-<hash>")
+    dm = re.search(r"(\d+)-years?", url) or re.search(r"\b(\d+)\s*years?\b", name, re.I)
+    duration = f"{dm.group(1)} year" + ("s" if dm and dm.group(1) != "1" else "") if dm else ""
+    ftm = re.search(r"(full-time|part-time|distance-learning)", url, re.I)
+    if ftm:
+        duration = (ftm.group(1).replace("-", " ").title() + (", " + duration if duration else "")).strip(", ")
+    start = _txt(inst0.get("startDate"))
     price = offer0.get("price")
     cost = f"£{price}" if price else ""
     return {
@@ -99,6 +106,8 @@ def _parse(url):
         "who_this_course_is_for": _clean_md(course.get("description"))[:5000],
         "learning_method": (mode or "")[:255],
         "attendance_pattern": (mode or "")[:255],
+        "duration": duration[:255],
+        "course_stryd_time": start[:255],
         "cost": cost[:255],
         "cost_description": (f"{cost} per year" if cost else "")[:2000],
         "address": location[:500],
