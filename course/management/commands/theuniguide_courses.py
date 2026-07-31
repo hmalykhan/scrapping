@@ -173,7 +173,9 @@ class Command(BaseCommand):
         existing = set()
         if opts["skip_existing"]:
             existing = set(str(x) for x in NcsCourse.objects.filter(course_url__startswith="https://www.theuniguide.co.uk").values_list("course_id", flat=True))
-            self.stdout.write(self.style.WARNING(f"skip-existing: {len(existing)} known"))
+            before = len(urls)
+            urls = [u for u in urls if str(uuid.uuid5(uuid.NAMESPACE_URL, u)) not in existing]
+            self.stdout.write(self.style.WARNING(f"skip-existing: {len(existing)} already done -> filtered out {before - len(urls)}, {len(urls)} left to fetch"))
 
         n = created = updated = skipped = 0
         with cf.ThreadPoolExecutor(max_workers=workers) as ex:
