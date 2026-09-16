@@ -23,6 +23,7 @@ Undo everything the AI ever wrote for one target:
     python manage.py ai_backfill --target careers_work_style --undo
 """
 import json
+import random
 import time
 from concurrent.futures import ThreadPoolExecutor
 
@@ -192,17 +193,40 @@ class Command(BaseCommand):
             raise CommandError("GEMINI_API_KEY is not set")
         return genai.Client(api_key=key)
 
+    # Gemini returns 503 UNAVAILABLE when it is busy, and a large parallel
+    # run provokes it: the first courses run lost 38% of its items that way.
+    # A transient refusal is not a failure, it is a "try again shortly".
+    RETRYABLE = ("503", "UNAVAILABLE", "429", "RESOURCE_EXHAUSTED",
+                 "500", "INTERNAL", "deadline", "timeout")
+    MAX_ATTEMPTS = 5
+
     def _generate(self, client, model, prompt, schema):
         from google.genai import types
-        r = client.models.generate_content(
-            model=model, contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                response_schema=schema, temperature=0.0,
-            ),
-        )
-        usage = r.usage_metadata
-        return json.loads(r.text), (usage.prompt_token_count or 0), (usage.candidates_token_count or 0)
+
+        last = None
+        for attempt in range(self.MAX_ATTEMPTS):
+            try:
+                r = client.models.generate_content(
+                    model=model, contents=prompt,
+                    config=types.GenerateContentConfig(
+                        response_mime_type="application/json",
+                        response_schema=schema, temperature=0.0,
+                    ),
+                )
+                usage = r.usage_metadata
+                return (json.loads(r.text),
+                        (usage.prompt_token_count or 0),
+                        (usage.candidates_token_count or 0))
+            except Exception as e:
+                last = e
+                text = str(e)
+                if not any(m in text for m in self.RETRYABLE):
+                    raise                      # a real error - do not paper over it
+                if attempt == self.MAX_ATTEMPTS - 1:
+                    break
+                # Back off, with jitter so the workers stop retrying in lockstep.
+                time.sleep((2 ** attempt) + random.uniform(0, 1))
+        raise last
 
     # -- undo ------------------------------------------------------------
     def _undo(self, name, spec):
