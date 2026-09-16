@@ -84,6 +84,14 @@ class DwpJob(models.Model):
     latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
 
+
+    # Provenance for the AI backfill: which fields were generated rather than
+    # scraped, and when. The backfill only ever fills EMPTY fields - real
+    # scraped data is never overwritten - and this is what makes a generated
+    # value identifiable, and removable, afterwards.
+    ai_fields = models.JSONField(blank=True, null=True)
+    ai_generated_at = models.DateTimeField(blank=True, null=True)
+
     class Meta:
         indexes = [
             GinIndex(

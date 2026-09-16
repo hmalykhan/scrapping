@@ -107,5 +107,13 @@ class ApprenticeshipVacancy(models.Model):
     last_scrape_message = models.TextField(blank=True, default="")
     last_scrape_run_id = models.UUIDField(null=True, blank=True, db_index=True)
 
+
+    # Provenance for the AI backfill: which fields were generated rather than
+    # scraped, and when. The backfill only ever fills EMPTY fields - real
+    # scraped data is never overwritten - and this is what makes a generated
+    # value identifiable, and removable, afterwards.
+    ai_fields = models.JSONField(blank=True, null=True)
+    ai_generated_at = models.DateTimeField(blank=True, null=True)
+
     def __str__(self) -> str:
         return f"{self.title} ({self.vacancy_ref})"

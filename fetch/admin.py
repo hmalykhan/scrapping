@@ -25,12 +25,16 @@ class CareerJobAdmin(admin.ModelAdmin):
         "has_embedding",
         "image_open_link",
         "image_preview_thumb",
+        "work_style",
+        "work_location",
+        "ai_source",
         "scraped_at",
         "last_scrape_status",
         "last_checked_at",
     )
     search_fields = ("jobname", "sub_type","normalized_sub_type", "job_slug", "job_url", "image_url", "dg_image_url")
-    list_filter = ("career_type", "sub_type", "normalized_sub_type", "last_scrape_status")
+    list_filter = ("career_type", "sub_type", "normalized_sub_type", "last_scrape_status",
+                   "work_style", "work_location", "work_social", "work_pace")
     readonly_fields = (
         "scraped_at",
         "normalized_sub_type",
@@ -39,6 +43,8 @@ class CareerJobAdmin(admin.ModelAdmin):
         "last_scrape_message",
         "last_scrape_run_id",
         "image_preview_large",
+        "ai_source",
+        "ai_generated_at",
     )
 
     fieldsets = (
@@ -58,6 +64,27 @@ class CareerJobAdmin(admin.ModelAdmin):
             },
         ),
         (
+            "Work style and atmosphere",
+            {
+                "fields": (
+                    "work_style",
+                    "work_location",
+                    "work_social",
+                    "work_pace",
+                    "ai_source",
+                    "ai_generated_at",
+                ),
+                "description": (
+                    "work_style: hands-on / desk-based / mixed &nbsp;|&nbsp; "
+                    "work_location: indoor / outdoor / mixed &nbsp;|&nbsp; "
+                    "work_social: team / independent / customer-facing &nbsp;|&nbsp; "
+                    "work_pace: calm / steady / fast-paced.<br>"
+                    "Editing a value here makes it scraped data - the AI backfill "
+                    "never overwrites a value a human or the scraper has set."
+                ),
+            },
+        ),
+        (
             "Meta",
             {
                 "fields": (
@@ -70,6 +97,16 @@ class CareerJobAdmin(admin.ModelAdmin):
             },
         ),
     )
+
+    def ai_source(self, obj: CareerJob):
+        """Which work-style values were written by AI rather than scraped."""
+        fields = getattr(obj, "ai_fields", None)
+        if not fields:
+            return "scraped"
+        names = ", ".join(sorted(fields)) if isinstance(fields, (list, tuple)) else str(fields)
+        return format_html('<span style="color:#b26a00">AI: {}</span>', names)
+
+    ai_source.short_description = "source"
 
     def _display_image_url(self, obj: CareerJob) -> str:
         dg = (getattr(obj, "dg_image_url", "") or "").strip()

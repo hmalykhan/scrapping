@@ -66,6 +66,28 @@ class CareerJob(models.Model):
     apprenticeship_entry_req = models.TextField(blank=True, default="")  # combined / best-effort
     apprenticeship = models.TextField(blank=True, default="")
 
+    # Work style and atmosphere (BACKEND.md #22). Filled either by the
+    # scraper when a source states it, or by the AI backfill. The API
+    # project reads these read-only (its CareerJob is managed = False).
+    #
+    # Values are constrained to these lists - anything else is a bug in
+    # whatever wrote the row.
+    WORK_STYLE = ("hands-on", "desk-based", "mixed")
+    WORK_LOCATION = ("indoor", "outdoor", "mixed")
+    WORK_SOCIAL = ("team", "independent", "customer-facing")
+    WORK_PACE = ("calm", "steady", "fast-paced")
+
+    work_style = models.CharField(max_length=20, blank=True, null=True)
+    work_location = models.CharField(max_length=20, blank=True, null=True)
+    work_social = models.CharField(max_length=20, blank=True, null=True)
+    work_pace = models.CharField(max_length=20, blank=True, null=True)
+
+    # Which of the fields above were written by AI rather than scraped, so a
+    # generated value can always be told apart from a real one - and undone.
+    # Real scraped data must never be overwritten by the backfill.
+    ai_fields = models.JSONField(blank=True, null=True)
+    ai_generated_at = models.DateTimeField(blank=True, null=True)
+
     scraped_at = models.DateTimeField(auto_now=True)
 
     # ✅ NEW: logging columns (stored in SAME CareerJob table)
