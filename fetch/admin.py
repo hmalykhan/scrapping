@@ -67,6 +67,7 @@ class CareerJobAdmin(admin.ModelAdmin):
             "Work style and atmosphere",
             {
                 "fields": (
+                    "skills",
                     "work_style",
                     "work_location",
                     "work_social",

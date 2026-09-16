@@ -77,6 +77,21 @@ class CareerJob(models.Model):
     WORK_SOCIAL = ("team", "independent", "customer-facing")
     WORK_PACE = ("calm", "steady", "fast-paced")
 
+    # Skills a student needs for this career, chosen from a fixed list so
+    # "find careers needing communication skills" actually works. The real
+    # apprenticeship data has 660 "distinct" skill names that are mostly the
+    # same few with different spelling and capitalisation
+    # ("Team working" / "Team Working" / "Teamworking"), which is exactly
+    # why free text is not used here.
+    SKILL_VOCABULARY = (
+        "Communication", "Team working", "Organisation", "Attention to detail",
+        "Problem solving", "Initiative", "Patience", "Customer care",
+        "Logical thinking", "IT skills", "Creative", "Administrative",
+        "Analytical", "Number skills", "Presentation", "Physical fitness",
+        "Non-judgemental", "Reliable", "Leadership", "Time management",
+    )
+    skills = models.JSONField(blank=True, null=True)
+
     work_style = models.CharField(max_length=20, blank=True, null=True)
     work_location = models.CharField(max_length=20, blank=True, null=True)
     work_social = models.CharField(max_length=20, blank=True, null=True)

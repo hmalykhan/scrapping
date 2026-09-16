@@ -47,6 +47,36 @@ WORK_STYLE_SCHEMA = {
     "required": ["work_style", "work_location", "work_social", "work_pace"],
 }
 
+SKILL_VOCABULARY = [
+    "Communication", "Team working", "Organisation", "Attention to detail",
+    "Problem solving", "Initiative", "Patience", "Customer care",
+    "Logical thinking", "IT skills", "Creative", "Administrative",
+    "Analytical", "Number skills", "Presentation", "Physical fitness",
+    "Non-judgemental", "Reliable", "Leadership", "Time management",
+]
+
+# enum, so the model cannot invent a twenty-first skill or a new spelling.
+SKILLS_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "skills": {
+            "type": "array",
+            "items": {"type": "string", "enum": SKILL_VOCABULARY},
+        },
+    },
+    "required": ["skills"],
+}
+
+SKILLS_PROMPT = """Which skills does this UK job actually need?
+
+Job: {title}
+What they do: {description}
+
+Choose between 4 and 6 from this list, most important first. Choose only
+what the description genuinely supports - do not pad the list out.
+
+{vocabulary}"""
+
 ENTRY_SCHEMA = {
     "type": "object",
     "properties": {"entry_requirements": {"type": "string"}},
@@ -97,6 +127,20 @@ TARGETS = {
         "key": ["job_slug"],
         "fields": ["work_style", "work_location", "work_social", "work_pace"],
         "label": "careers: work style and atmosphere",
+    },
+    "careers_skills": {
+        "table": "fetch_careerjob",
+        "kind": "skills",
+        "select": """
+            select min(id) as id, jobname, coalesce(job_description,''), job_slug
+            from fetch_careerjob
+            where skills is null
+            group by job_slug, jobname, job_description
+        """,
+        "key": ["job_slug"],
+        "fields": ["skills"],
+        "casts": {"skills": "::jsonb"},
+        "label": "careers: skills",
     },
     "careers_entry_college": {
         "table": "fetch_careerjob",
@@ -285,11 +329,18 @@ class Command(BaseCommand):
 
         client = self._client()
         is_style = spec["kind"] == "work_style"
-        schema = WORK_STYLE_SCHEMA if is_style else ENTRY_SCHEMA
+        is_skills = spec["kind"] == "skills"
+        schema = (SKILLS_SCHEMA if is_skills
+                  else WORK_STYLE_SCHEMA if is_style else ENTRY_SCHEMA)
 
         def work(row):
             _id, title, desc = row[0], row[1], (row[2] or "")
-            if is_style:
+            if spec["kind"] == "skills":
+                prompt = SKILLS_PROMPT.format(
+                    title=title, description=desc[:600],
+                    vocabulary="\n".join("- " + s for s in SKILL_VOCABULARY),
+                )
+            elif is_style:
                 prompt = WORK_STYLE_PROMPT.format(title=title, description=desc[:600])
             else:
                 prompt = ENTRY_PROMPT.format(
@@ -318,7 +369,17 @@ class Command(BaseCommand):
                         self.stdout.write(self.style.WARNING("  failed: %s (%s)" % (title, err)))
                     continue
 
-                if is_style:
+                if is_skills:
+                    picked = [s for s in (data.get("skills") or [])
+                              if s in SKILL_VOCABULARY]       # belt and braces
+                    # De-duplicated, order kept: the model was asked for
+                    # most important first.
+                    seen, ordered = set(), []
+                    for s in picked:
+                        if s not in seen:
+                            seen.add(s); ordered.append(s)
+                    values = {"skills": json.dumps(ordered[:6]) if ordered else None}
+                elif is_style:
                     values = {f: data.get(f) for f in spec["fields"]}
                 else:
                     values = {spec["fields"][0]: (data.get("entry_requirements") or "").strip()}
@@ -374,8 +435,13 @@ class Command(BaseCommand):
         key_cols = spec["key"]
         with transaction.atomic():
             with connection.cursor() as c:
+                casts = spec.get("casts") or {}
                 for _id, values, key_vals in pending:
-                    sets = ", ".join("%s = %%s" % f for f in values)
+                    # A jsonb column will not take a plain string parameter,
+                    # so the target says which fields need the cast.
+                    sets = ", ".join(
+                        "%s = %%s%s" % (f, casts.get(f, "")) for f in values
+                    )
                     key_where = " and ".join("%s = %%s" % k for k in key_cols)
                     params = (list(values.values())
                               + [json.dumps(list(values)), now]
