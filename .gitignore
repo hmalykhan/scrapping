@@ -1,4 +1,11 @@
 .env
+.env.*
+# Copies of .env under other names - never commit secrets.
+*_env.txt
+*env*.txt
+*.env.txt
+*secrets*
+app-spec*.yaml
 *.sqlite3
 __pycache__/
 *.py[cod]
