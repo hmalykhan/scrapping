@@ -1,0 +1,2982 @@
+{
+ "3d-printing-technician": {
+  "career": "3D printing technician",
+  "gender": "male"
+ },
+ "accommodation-warden": {
+  "career": "Accommodation warden",
+  "gender": "male"
+ },
+ "accounting-technician": {
+  "career": "Accounting technician",
+  "gender": "male"
+ },
+ "acoustics-consultant": {
+  "career": "Acoustics consultant",
+  "gender": "male"
+ },
+ "actor": {
+  "career": "Actor",
+  "gender": "male"
+ },
+ "actuary": {
+  "career": "Actuary",
+  "gender": "male"
+ },
+ "acupuncturist": {
+  "career": "Acupuncturist",
+  "gender": "male"
+ },
+ "admin-assistant": {
+  "career": "Admin assistant",
+  "gender": "male"
+ },
+ "advertising-account-executive": {
+  "career": "Advertising account executive",
+  "gender": "male"
+ },
+ "advertising-account-planner": {
+  "career": "Advertising account planner",
+  "gender": "male"
+ },
+ "advertising-art-director": {
+  "career": "Advertising art director",
+  "gender": "male"
+ },
+ "advertising-copywriter": {
+  "career": "Advertising copywriter",
+  "gender": "male"
+ },
+ "advertising-media-buyer": {
+  "career": "Advertising media buyer",
+  "gender": "male"
+ },
+ "advertising-media-planner": {
+  "career": "Advertising media planner",
+  "gender": "male"
+ },
+ "aerospace-engineer": {
+  "career": "Aerospace engineer",
+  "gender": "male"
+ },
+ "aerospace-engineering-technician": {
+  "career": "Aerospace engineering technician",
+  "gender": "male"
+ },
+ "agricultural-contractor": {
+  "career": "Agricultural contractor",
+  "gender": "male"
+ },
+ "agricultural-engineer": {
+  "career": "Agricultural engineer",
+  "gender": "male"
+ },
+ "agricultural-engineering-technician": {
+  "career": "Agricultural engineering technician",
+  "gender": "male"
+ },
+ "agricultural-inspector": {
+  "career": "Agricultural inspector",
+  "gender": "male"
+ },
+ "agronomist": {
+  "career": "Agronomist",
+  "gender": "male"
+ },
+ "aid-worker": {
+  "career": "Aid worker",
+  "gender": "male"
+ },
+ "air-accident-investigator": {
+  "career": "Air accident investigator",
+  "gender": "male"
+ },
+ "air-traffic-controller": {
+  "career": "Air traffic controller",
+  "gender": "male"
+ },
+ "airline-customer-service-agent": {
+  "career": "Airline customer service agent",
+  "gender": "male"
+ },
+ "airline-pilot": {
+  "career": "Airline pilot",
+  "gender": "male"
+ },
+ "airport-baggage-handler": {
+  "career": "Airport baggage handler",
+  "gender": "male"
+ },
+ "airport-information-assistant": {
+  "career": "Airport information assistant",
+  "gender": "male"
+ },
+ "ambulance-care-assistant": {
+  "career": "Ambulance care assistant",
+  "gender": "male"
+ },
+ "anaesthetist": {
+  "career": "Anaesthetist",
+  "gender": "male"
+ },
+ "anatomical-pathology-technician": {
+  "career": "Anatomical pathology technician",
+  "gender": "male"
+ },
+ "animal-care-worker": {
+  "career": "Animal care worker",
+  "gender": "male"
+ },
+ "animal-technician": {
+  "career": "Animal technician",
+  "gender": "male"
+ },
+ "animator": {
+  "career": "Animator",
+  "gender": "male"
+ },
+ "antique-dealer": {
+  "career": "Antique dealer",
+  "gender": "male"
+ },
+ "app-developer": {
+  "career": "App developer",
+  "gender": "male"
+ },
+ "arboricultural-officer": {
+  "career": "Arboricultural officer",
+  "gender": "male"
+ },
+ "archaeologist": {
+  "career": "Archaeologist",
+  "gender": "male"
+ },
+ "architect": {
+  "career": "Architect",
+  "gender": "male"
+ },
+ "architectural-technician": {
+  "career": "Architectural technician",
+  "gender": "male"
+ },
+ "architectural-technologist": {
+  "career": "Architectural technologist",
+  "gender": "male"
+ },
+ "archivist": {
+  "career": "Archivist",
+  "gender": "male"
+ },
+ "army-officer": {
+  "career": "Army officer",
+  "gender": "male"
+ },
+ "aromatherapist": {
+  "career": "Aromatherapist",
+  "gender": "female"
+ },
+ "art-editor": {
+  "career": "Art editor",
+  "gender": "male"
+ },
+ "art-therapist": {
+  "career": "Art therapist",
+  "gender": "male"
+ },
+ "art-valuer": {
+  "career": "Art valuer",
+  "gender": "male"
+ },
+ "artificial-intelligence-ai-engineer": {
+  "career": "Artificial intelligence (AI) engineer",
+  "gender": "male"
+ },
+ "arts-administrator": {
+  "career": "Arts administrator",
+  "gender": "male"
+ },
+ "assistance-dog-trainer": {
+  "career": "Assistance dog trainer",
+  "gender": "male"
+ },
+ "assistant-immigration-officer": {
+  "career": "Assistant immigration officer",
+  "gender": "male"
+ },
+ "astronaut": {
+  "career": "Astronaut",
+  "gender": "male"
+ },
+ "astronomer": {
+  "career": "Astronomer",
+  "gender": "male"
+ },
+ "athlete": {
+  "career": "Athlete",
+  "gender": "male"
+ },
+ "audio-visual-technician": {
+  "career": "Audio visual technician",
+  "gender": "male"
+ },
+ "audiologist": {
+  "career": "Audiologist",
+  "gender": "male"
+ },
+ "auditor": {
+  "career": "Auditor",
+  "gender": "male"
+ },
+ "auto-electrician": {
+  "career": "Auto electrician",
+  "gender": "male"
+ },
+ "automotive-engineer": {
+  "career": "Automotive engineer",
+  "gender": "male"
+ },
+ "bailiff": {
+  "career": "Bailiff",
+  "gender": "male"
+ },
+ "baker": {
+  "career": "Baker",
+  "gender": "male"
+ },
+ "bank-manager": {
+  "career": "Bank manager",
+  "gender": "male"
+ },
+ "bar-person": {
+  "career": "Bar person",
+  "gender": "male"
+ },
+ "barista": {
+  "career": "Barista",
+  "gender": "male"
+ },
+ "barrister": {
+  "career": "Barrister",
+  "gender": "male"
+ },
+ "barristers-clerk": {
+  "career": "Barrister's clerk",
+  "gender": "male"
+ },
+ "beauty-consultant": {
+  "career": "Beauty consultant",
+  "gender": "female"
+ },
+ "beauty-therapist": {
+  "career": "Beauty therapist",
+  "gender": "female"
+ },
+ "beekeeper": {
+  "career": "Beekeeper",
+  "gender": "male"
+ },
+ "bid-writer": {
+  "career": "Bid writer",
+  "gender": "male"
+ },
+ "bilingual-secretary": {
+  "career": "Bilingual secretary",
+  "gender": "male"
+ },
+ "bin-worker": {
+  "career": "Bin worker",
+  "gender": "male"
+ },
+ "biochemist": {
+  "career": "Biochemist",
+  "gender": "male"
+ },
+ "biologist": {
+  "career": "Biologist",
+  "gender": "male"
+ },
+ "biomedical-scientist": {
+  "career": "Biomedical scientist",
+  "gender": "male"
+ },
+ "biotechnologist": {
+  "career": "Biotechnologist",
+  "gender": "male"
+ },
+ "blacksmith": {
+  "career": "Blacksmith",
+  "gender": "male"
+ },
+ "boat-builder": {
+  "career": "Boat builder",
+  "gender": "male"
+ },
+ "bodyguard": {
+  "career": "Bodyguard",
+  "gender": "male"
+ },
+ "bookkeeper": {
+  "career": "Bookkeeper",
+  "gender": "male"
+ },
+ "border-force-officer": {
+  "career": "Border Force officer",
+  "gender": "male"
+ },
+ "bricklayer": {
+  "career": "Bricklayer",
+  "gender": "male"
+ },
+ "british-sign-language-interpreter": {
+  "career": "British Sign Language interpreter",
+  "gender": "male"
+ },
+ "british-sign-language-teacher": {
+  "career": "British Sign Language teacher",
+  "gender": "male"
+ },
+ "broadcast-engineer": {
+  "career": "Broadcast engineer",
+  "gender": "male"
+ },
+ "broadcast-journalist": {
+  "career": "Broadcast journalist",
+  "gender": "male"
+ },
+ "builders-merchant": {
+  "career": "Builders' merchant",
+  "gender": "male"
+ },
+ "building-control-officer": {
+  "career": "Building control officer",
+  "gender": "male"
+ },
+ "building-services-engineer": {
+  "career": "Building services engineer",
+  "gender": "male"
+ },
+ "building-site-inspector": {
+  "career": "Building site inspector",
+  "gender": "male"
+ },
+ "building-surveyor": {
+  "career": "Building surveyor",
+  "gender": "male"
+ },
+ "building-technician": {
+  "career": "Building technician",
+  "gender": "male"
+ },
+ "bus-or-coach-driver": {
+  "career": "Bus or coach driver",
+  "gender": "male"
+ },
+ "business-adviser": {
+  "career": "Business adviser",
+  "gender": "male"
+ },
+ "business-analyst": {
+  "career": "Business analyst",
+  "gender": "male"
+ },
+ "business-development-manager": {
+  "career": "Business development manager",
+  "gender": "male"
+ },
+ "business-project-manager": {
+  "career": "Business project manager",
+  "gender": "male"
+ },
+ "butcher": {
+  "career": "Butcher",
+  "gender": "male"
+ },
+ "cabin-crew": {
+  "career": "Cabin crew",
+  "gender": "male"
+ },
+ "cad-technician": {
+  "career": "CAD technician",
+  "gender": "male"
+ },
+ "cake-decorator": {
+  "career": "Cake decorator",
+  "gender": "male"
+ },
+ "car-manufacturing-worker": {
+  "career": "Car manufacturing worker",
+  "gender": "male"
+ },
+ "car-rental-agent": {
+  "career": "Car rental agent",
+  "gender": "male"
+ },
+ "care-escort": {
+  "career": "Care escort",
+  "gender": "female"
+ },
+ "care-home-advocate": {
+  "career": "Advocacy worker",
+  "gender": "male"
+ },
+ "care-home-manager": {
+  "career": "Care home manager",
+  "gender": "female"
+ },
+ "care-worker": {
+  "career": "Care worker",
+  "gender": "female"
+ },
+ "careers-adviser": {
+  "career": "Careers adviser",
+  "gender": "male"
+ },
+ "caretaker": {
+  "career": "Caretaker",
+  "gender": "male"
+ },
+ "carpenter": {
+  "career": "Carpenter",
+  "gender": "male"
+ },
+ "carpet-fitter-and-floor-layer": {
+  "career": "Carpet fitter and floor layer",
+  "gender": "male"
+ },
+ "cartographer": {
+  "career": "Cartographer",
+  "gender": "male"
+ },
+ "catering-manager": {
+  "career": "Catering manager",
+  "gender": "male"
+ },
+ "cavity-insulation-installer": {
+  "career": "Cavity insulation installer",
+  "gender": "male"
+ },
+ "ceiling-fixer": {
+  "career": "Ceiling fixer",
+  "gender": "male"
+ },
+ "celebrant": {
+  "career": "Celebrant",
+  "gender": "male"
+ },
+ "cemetery-worker": {
+  "career": "Cemetery worker",
+  "gender": "male"
+ },
+ "ceramics-designer-maker": {
+  "career": "Ceramics designer-maker",
+  "gender": "male"
+ },
+ "charity-fundraiser": {
+  "career": "Charity fundraiser",
+  "gender": "male"
+ },
+ "chef": {
+  "career": "Chef",
+  "gender": "male"
+ },
+ "chemical-engineer": {
+  "career": "Chemical engineer",
+  "gender": "male"
+ },
+ "chemical-engineering-technician": {
+  "career": "Chemical engineering technician",
+  "gender": "male"
+ },
+ "chemical-plant-process-operator": {
+  "career": "Chemical plant process operator",
+  "gender": "male"
+ },
+ "chemist": {
+  "career": "Chemist",
+  "gender": "male"
+ },
+ "chief-inspector": {
+  "career": "Chief inspector",
+  "gender": "male"
+ },
+ "child-protection-officer": {
+  "career": "Child protection officer",
+  "gender": "male"
+ },
+ "childminder": {
+  "career": "Childminder",
+  "gender": "female"
+ },
+ "childrens-nurse": {
+  "career": "Children's nurse",
+  "gender": "female"
+ },
+ "chiropractor": {
+  "career": "Chiropractor",
+  "gender": "male"
+ },
+ "choreographer": {
+  "career": "Choreographer",
+  "gender": "male"
+ },
+ "cinema-or-theatre-attendant": {
+  "career": "Cinema or theatre attendant",
+  "gender": "male"
+ },
+ "civil-enforcement-officer": {
+  "career": "Civil enforcement officer",
+  "gender": "male"
+ },
+ "civil-engineer": {
+  "career": "Civil engineer",
+  "gender": "male"
+ },
+ "civil-engineering-technician": {
+  "career": "Civil engineering technician",
+  "gender": "male"
+ },
+ "civil-service-administrative-officer": {
+  "career": "Civil Service administrative officer",
+  "gender": "male"
+ },
+ "civil-service-executive-officer": {
+  "career": "Civil Service executive officer",
+  "gender": "male"
+ },
+ "civil-service-manager": {
+  "career": "Civil Service manager",
+  "gender": "male"
+ },
+ "classical-musician": {
+  "career": "Musician",
+  "gender": "male"
+ },
+ "cleaner": {
+  "career": "Cleaner",
+  "gender": "male"
+ },
+ "climate-scientist": {
+  "career": "Climate scientist",
+  "gender": "male"
+ },
+ "clinical-engineer": {
+  "career": "Clinical engineer",
+  "gender": "male"
+ },
+ "clinical-psychologist": {
+  "career": "Clinical psychologist",
+  "gender": "male"
+ },
+ "clinical-scientist": {
+  "career": "Clinical scientist",
+  "gender": "male"
+ },
+ "cnc-machinist": {
+  "career": "CNC machinist",
+  "gender": "male"
+ },
+ "coastguard": {
+  "career": "Coastguard",
+  "gender": "male"
+ },
+ "cognitive-behavioural-therapist": {
+  "career": "Cognitive behavioural therapist",
+  "gender": "male"
+ },
+ "commercial-energy-assessor": {
+  "career": "Commercial energy assessor",
+  "gender": "male"
+ },
+ "communication-support-worker": {
+  "career": "Communication support worker",
+  "gender": "male"
+ },
+ "community-arts-worker": {
+  "career": "Community arts worker",
+  "gender": "male"
+ },
+ "community-development-worker": {
+  "career": "Community development worker",
+  "gender": "male"
+ },
+ "community-education-coordinator": {
+  "career": "Community education co-ordinator",
+  "gender": "male"
+ },
+ "community-matron": {
+  "career": "Community matron",
+  "gender": "female"
+ },
+ "community-transport-driver": {
+  "career": "Community transport driver",
+  "gender": "male"
+ },
+ "company-secretary": {
+  "career": "Company secretary",
+  "gender": "male"
+ },
+ "computer-games-developer": {
+  "career": "Computer games developer",
+  "gender": "male"
+ },
+ "computer-games-tester": {
+  "career": "Computer games tester",
+  "gender": "male"
+ },
+ "conservator": {
+  "career": "Conservator",
+  "gender": "male"
+ },
+ "construction-contracts-manager": {
+  "career": "Construction contracts manager",
+  "gender": "male"
+ },
+ "construction-labourer": {
+  "career": "Construction labourer",
+  "gender": "male"
+ },
+ "construction-manager": {
+  "career": "Construction manager",
+  "gender": "male"
+ },
+ "construction-plant-mechanic": {
+  "career": "Construction plant mechanic",
+  "gender": "male"
+ },
+ "construction-plant-operator": {
+  "career": "Construction plant operator",
+  "gender": "male"
+ },
+ "construction-site-supervisor": {
+  "career": "Construction site supervisor",
+  "gender": "male"
+ },
+ "consumer-scientist": {
+  "career": "Consumer scientist",
+  "gender": "male"
+ },
+ "copy-editor": {
+  "career": "Copy editor",
+  "gender": "male"
+ },
+ "coroner": {
+  "career": "Coroner",
+  "gender": "male"
+ },
+ "corporate-responsibility-and-sustainability-practitioner": {
+  "career": "Corporate responsibility and sustainability practitioner",
+  "gender": "male"
+ },
+ "cosmetic-surgeon": {
+  "career": "Plastic surgeon",
+  "gender": "male"
+ },
+ "costume-designer": {
+  "career": "Costume designer",
+  "gender": "male"
+ },
+ "counsellor": {
+  "career": "Counsellor",
+  "gender": "male"
+ },
+ "counter-service-assistant": {
+  "career": "Counter service assistant",
+  "gender": "male"
+ },
+ "countryside-officer": {
+  "career": "Countryside officer",
+  "gender": "male"
+ },
+ "countryside-ranger": {
+  "career": "Countryside ranger",
+  "gender": "male"
+ },
+ "court-administrative-assistant": {
+  "career": "Court administrative assistant",
+  "gender": "male"
+ },
+ "court-legal-adviser": {
+  "career": "Court legal adviser",
+  "gender": "male"
+ },
+ "court-usher": {
+  "career": "Court usher",
+  "gender": "male"
+ },
+ "crane-driver": {
+  "career": "Crane driver",
+  "gender": "male"
+ },
+ "credit-controller": {
+  "career": "Credit controller",
+  "gender": "male"
+ },
+ "crematorium-technician": {
+  "career": "Crematorium technician",
+  "gender": "male"
+ },
+ "criminal-intelligence-analyst": {
+  "career": "Intelligence analyst",
+  "gender": "male"
+ },
+ "criminologist": {
+  "career": "Criminologist",
+  "gender": "male"
+ },
+ "critical-care-technologist": {
+  "career": "Critical care technologist",
+  "gender": "male"
+ },
+ "crown-prosecutor": {
+  "career": "Crown prosecutor",
+  "gender": "male"
+ },
+ "cruise-ship-steward": {
+  "career": "Cruise ship steward",
+  "gender": "male"
+ },
+ "customer-service-assistant": {
+  "career": "Customer service assistant",
+  "gender": "male"
+ },
+ "customer-services-manager": {
+  "career": "Customer services manager",
+  "gender": "male"
+ },
+ "cyber-intelligence-officer": {
+  "career": "Cyber intelligence officer",
+  "gender": "male"
+ },
+ "cycle-mechanic": {
+  "career": "Cycle mechanic",
+  "gender": "male"
+ },
+ "cycling-coach": {
+  "career": "Cycling coach",
+  "gender": "male"
+ },
+ "dance-movement-psychotherapist": {
+  "career": "Dance movement psychotherapist",
+  "gender": "male"
+ },
+ "dance-teacher": {
+  "career": "Dance teacher",
+  "gender": "male"
+ },
+ "dancer": {
+  "career": "Dancer",
+  "gender": "male"
+ },
+ "data-analyst-statistician": {
+  "career": "Data analyst-statistician",
+  "gender": "male"
+ },
+ "data-protection-officer": {
+  "career": "Data protection officer",
+  "gender": "male"
+ },
+ "data-scientist": {
+  "career": "Data scientist",
+  "gender": "male"
+ },
+ "database-administrator": {
+  "career": "Database administrator",
+  "gender": "male"
+ },
+ "delivery-van-driver": {
+  "career": "Delivery van driver",
+  "gender": "male"
+ },
+ "demolition-operative": {
+  "career": "Demolition operative",
+  "gender": "male"
+ },
+ "dental-hygienist": {
+  "career": "Dental hygienist",
+  "gender": "male"
+ },
+ "dental-nurse": {
+  "career": "Dental nurse",
+  "gender": "female"
+ },
+ "dental-technician": {
+  "career": "Dental technician",
+  "gender": "male"
+ },
+ "dental-therapist": {
+  "career": "Dental therapist",
+  "gender": "male"
+ },
+ "dentist": {
+  "career": "Dentist",
+  "gender": "male"
+ },
+ "design-and-development-engineer": {
+  "career": "Design and development engineer",
+  "gender": "male"
+ },
+ "dietitian": {
+  "career": "Dietitian",
+  "gender": "male"
+ },
+ "digital-delivery-manager": {
+  "career": "Digital delivery manager",
+  "gender": "male"
+ },
+ "digital-product-owner": {
+  "career": "Digital product owner",
+  "gender": "male"
+ },
+ "diplomatic-service-officer": {
+  "career": "Diplomatic Service officer",
+  "gender": "male"
+ },
+ "director-of-photography": {
+  "career": "Director of photography",
+  "gender": "male"
+ },
+ "dispensing-optician": {
+  "career": "Dispensing optician",
+  "gender": "male"
+ },
+ "district-nurse": {
+  "career": "District nurse",
+  "gender": "female"
+ },
+ "diver": {
+  "career": "Diver",
+  "gender": "male"
+ },
+ "dj": {
+  "career": "DJ",
+  "gender": "male"
+ },
+ "dog-groomer": {
+  "career": "Dog groomer",
+  "gender": "female"
+ },
+ "dog-handler": {
+  "career": "Dog handler",
+  "gender": "male"
+ },
+ "domestic-appliance-service-engineer": {
+  "career": "Domestic appliance service engineer",
+  "gender": "male"
+ },
+ "domestic-energy-assessor": {
+  "career": "Domestic energy assessor",
+  "gender": "male"
+ },
+ "door-supervisor": {
+  "career": "Door supervisor",
+  "gender": "male"
+ },
+ "dramatherapist": {
+  "career": "Dramatherapist",
+  "gender": "male"
+ },
+ "dress-maker": {
+  "career": "Dressmaker",
+  "gender": "female"
+ },
+ "driving-instructor": {
+  "career": "Driving instructor",
+  "gender": "male"
+ },
+ "drone-pilot": {
+  "career": "Drone pilot",
+  "gender": "male"
+ },
+ "dry-liner": {
+  "career": "Dryliner",
+  "gender": "male"
+ },
+ "e-commerce-manager": {
+  "career": "E-commerce manager",
+  "gender": "male"
+ },
+ "e-learning-developer": {
+  "career": "E-learning developer",
+  "gender": "male"
+ },
+ "early-years-teacher": {
+  "career": "Early years teacher",
+  "gender": "female"
+ },
+ "ecologist": {
+  "career": "Ecologist",
+  "gender": "male"
+ },
+ "economist": {
+  "career": "Economist",
+  "gender": "male"
+ },
+ "editorial-assistant": {
+  "career": "Editorial assistant",
+  "gender": "male"
+ },
+ "education-technician": {
+  "career": "Education technician",
+  "gender": "male"
+ },
+ "education-welfare-officer": {
+  "career": "Education welfare officer",
+  "gender": "male"
+ },
+ "efl-teacher": {
+  "career": "English as a foreign language (EFL) teacher",
+  "gender": "male"
+ },
+ "electrical-engineer": {
+  "career": "Electrical engineer",
+  "gender": "male"
+ },
+ "electrical-engineering-technician": {
+  "career": "Electrical engineering technician",
+  "gender": "male"
+ },
+ "electrician": {
+  "career": "Electrician",
+  "gender": "male"
+ },
+ "electricity-distribution-worker": {
+  "career": "Electricity distribution worker",
+  "gender": "male"
+ },
+ "electricity-generation-worker": {
+  "career": "Electricity generation worker",
+  "gender": "male"
+ },
+ "electronics-engineer": {
+  "career": "Electronics engineer",
+  "gender": "male"
+ },
+ "electronics-engineering-technician": {
+  "career": "Electronics engineering technician",
+  "gender": "male"
+ },
+ "embalmer": {
+  "career": "Embalmer",
+  "gender": "male"
+ },
+ "emergency-care-assistant": {
+  "career": "Emergency care assistant",
+  "gender": "female"
+ },
+ "emergency-medical-dispatcher": {
+  "career": "Emergency medical dispatcher",
+  "gender": "male"
+ },
+ "energy-engineer": {
+  "career": "Renewable energy engineer",
+  "gender": "male"
+ },
+ "engineering-construction-craftworker": {
+  "career": "Engineering construction craftworker",
+  "gender": "male"
+ },
+ "engineering-construction-technician": {
+  "career": "Engineering construction technician",
+  "gender": "male"
+ },
+ "engineering-maintenance-technician": {
+  "career": "Engineering maintenance technician",
+  "gender": "male"
+ },
+ "engineering-operative": {
+  "career": "Engineering operative",
+  "gender": "male"
+ },
+ "environmental-consultant": {
+  "career": "Environmental consultant",
+  "gender": "male"
+ },
+ "environmental-health-officer": {
+  "career": "Environmental health practitioner",
+  "gender": "male"
+ },
+ "equalities-officer": {
+  "career": "Equalities officer",
+  "gender": "male"
+ },
+ "ergonomist": {
+  "career": "Ergonomist",
+  "gender": "male"
+ },
+ "esports-gamer": {
+  "career": "Esports gamer",
+  "gender": "male"
+ },
+ "estate-agent": {
+  "career": "Estate agent",
+  "gender": "male"
+ },
+ "estates-officer": {
+  "career": "Estates officer",
+  "gender": "male"
+ },
+ "estimator": {
+  "career": "Estimator",
+  "gender": "male"
+ },
+ "events-manager": {
+  "career": "Events manager",
+  "gender": "male"
+ },
+ "exhibition-designer": {
+  "career": "Exhibition designer",
+  "gender": "male"
+ },
+ "facilities-manager": {
+  "career": "Facilities manager",
+  "gender": "male"
+ },
+ "family-mediator": {
+  "career": "Family mediator",
+  "gender": "male"
+ },
+ "family-support-worker": {
+  "career": "Family support worker",
+  "gender": "female"
+ },
+ "farm-secretary": {
+  "career": "Farm secretary",
+  "gender": "female"
+ },
+ "farm-worker": {
+  "career": "Farm worker",
+  "gender": "male"
+ },
+ "farmer": {
+  "career": "Farmer",
+  "gender": "male"
+ },
+ "farrier": {
+  "career": "Farrier",
+  "gender": "male"
+ },
+ "fashion-design-assistant": {
+  "career": "Fashion design assistant",
+  "gender": "male"
+ },
+ "fashion-designer": {
+  "career": "Fashion designer",
+  "gender": "male"
+ },
+ "fashion-model": {
+  "career": "Fashion model",
+  "gender": "female"
+ },
+ "fence-installer": {
+  "career": "Fence installer",
+  "gender": "male"
+ },
+ "film-critic": {
+  "career": "Film critic",
+  "gender": "male"
+ },
+ "finance-officer": {
+  "career": "Finance officer",
+  "gender": "male"
+ },
+ "financial-adviser": {
+  "career": "Financial adviser",
+  "gender": "male"
+ },
+ "financial-services-customer-adviser": {
+  "career": "Financial services customer adviser",
+  "gender": "male"
+ },
+ "fine-artist": {
+  "career": "Fine artist",
+  "gender": "male"
+ },
+ "fingerprint-officer": {
+  "career": "Fingerprint officer",
+  "gender": "male"
+ },
+ "fire-safety-engineer": {
+  "career": "Fire safety engineer",
+  "gender": "male"
+ },
+ "firefighter": {
+  "career": "Firefighter",
+  "gender": "male"
+ },
+ "fish-farmer": {
+  "career": "Fish farmer",
+  "gender": "male"
+ },
+ "fishing-boat-deckhand": {
+  "career": "Fishing boat deckhand",
+  "gender": "male"
+ },
+ "fitness-instructor": {
+  "career": "Fitness instructor",
+  "gender": "male"
+ },
+ "florist": {
+  "career": "Florist",
+  "gender": "female"
+ },
+ "food-factory-worker": {
+  "career": "Food factory worker",
+  "gender": "male"
+ },
+ "food-manufacturing-inspector": {
+  "career": "Food manufacturing inspector",
+  "gender": "male"
+ },
+ "food-packaging-operative": {
+  "career": "Food packaging operative",
+  "gender": "male"
+ },
+ "food-scientist": {
+  "career": "Food scientist",
+  "gender": "male"
+ },
+ "football-coach": {
+  "career": "Football coach",
+  "gender": "male"
+ },
+ "football-referee": {
+  "career": "Football referee",
+  "gender": "male"
+ },
+ "footwear-designer": {
+  "career": "Footwear designer-maker",
+  "gender": "male"
+ },
+ "forensic-computer-analyst": {
+  "career": "Forensic computer analyst",
+  "gender": "male"
+ },
+ "forensic-psychologist": {
+  "career": "Forensic psychologist",
+  "gender": "male"
+ },
+ "forensic-scientist": {
+  "career": "Forensic scientist",
+  "gender": "male"
+ },
+ "forestry-worker": {
+  "career": "Forestry worker",
+  "gender": "male"
+ },
+ "forklift-driver": {
+  "career": "Forklift driver",
+  "gender": "male"
+ },
+ "formworker": {
+  "career": "Formworker",
+  "gender": "male"
+ },
+ "foster-carer": {
+  "career": "Foster carer",
+  "gender": "female"
+ },
+ "foundry-mould-maker": {
+  "career": "Foundry moulder",
+  "gender": "male"
+ },
+ "funeral-director": {
+  "career": "Funeral director",
+  "gender": "male"
+ },
+ "furniture-designer": {
+  "career": "Furniture designer",
+  "gender": "male"
+ },
+ "furniture-maker": {
+  "career": "Furniture maker",
+  "gender": "male"
+ },
+ "furniture-restorer": {
+  "career": "Furniture restorer",
+  "gender": "male"
+ },
+ "further-education-lecturer": {
+  "career": "Further education teacher",
+  "gender": "male"
+ },
+ "gamekeeper": {
+  "career": "Gamekeeper",
+  "gender": "male"
+ },
+ "gardener": {
+  "career": "Gardener",
+  "gender": "male"
+ },
+ "garment-technologist": {
+  "career": "Garment technologist",
+  "gender": "male"
+ },
+ "gas-mains-layer": {
+  "career": "Gas mains layer",
+  "gender": "male"
+ },
+ "gas-service-technician": {
+  "career": "Gas service technician",
+  "gender": "male"
+ },
+ "general-practice-surveyor": {
+  "career": "General practice surveyor",
+  "gender": "male"
+ },
+ "geneticist": {
+  "career": "Geneticist",
+  "gender": "male"
+ },
+ "geoscientist": {
+  "career": "Geoscientist",
+  "gender": "male"
+ },
+ "geospatial-technician": {
+  "career": "Geospatial technician",
+  "gender": "male"
+ },
+ "geotechnician": {
+  "career": "Geotechnician",
+  "gender": "male"
+ },
+ "glassmaker": {
+  "career": "Glassmaker",
+  "gender": "male"
+ },
+ "glazier": {
+  "career": "Glazier",
+  "gender": "male"
+ },
+ "gp": {
+  "career": "GP",
+  "gender": "male"
+ },
+ "gp-practice-manager": {
+  "career": "GP practice manager",
+  "gender": "male"
+ },
+ "graphic-designer": {
+  "career": "Graphic designer",
+  "gender": "male"
+ },
+ "groundsperson": {
+  "career": "Groundsperson",
+  "gender": "male"
+ },
+ "hairdresser": {
+  "career": "Hairdresser",
+  "gender": "female"
+ },
+ "headteacher": {
+  "career": "Headteacher",
+  "gender": "male"
+ },
+ "health-and-safety-adviser": {
+  "career": "Health and safety adviser",
+  "gender": "male"
+ },
+ "health-play-specialist": {
+  "career": "Health play specialist",
+  "gender": "female"
+ },
+ "health-promotion-specialist": {
+  "career": "Health promotion specialist",
+  "gender": "male"
+ },
+ "health-records-clerk": {
+  "career": "Health records clerk",
+  "gender": "male"
+ },
+ "health-service-manager": {
+  "career": "Health service manager",
+  "gender": "male"
+ },
+ "health-trainer": {
+  "career": "Health trainer",
+  "gender": "male"
+ },
+ "health-visitor": {
+  "career": "Health visitor",
+  "gender": "female"
+ },
+ "healthcare-assistant": {
+  "career": "Healthcare assistant",
+  "gender": "female"
+ },
+ "healthcare-science-assistant": {
+  "career": "Healthcare science assistant",
+  "gender": "male"
+ },
+ "heat-pump-engineer": {
+  "career": "Heat pump engineer",
+  "gender": "male"
+ },
+ "heating-and-ventilation-engineer": {
+  "career": "Heating and ventilation engineer",
+  "gender": "male"
+ },
+ "heavy-vehicle-technician": {
+  "career": "Heavy vehicle technician",
+  "gender": "male"
+ },
+ "helicopter-engineer": {
+  "career": "Helicopter engineer",
+  "gender": "male"
+ },
+ "helicopter-pilot": {
+  "career": "Helicopter pilot",
+  "gender": "male"
+ },
+ "heritage-officer": {
+  "career": "Heritage officer",
+  "gender": "male"
+ },
+ "higher-education-lecturer": {
+  "career": "Higher education lecturer",
+  "gender": "male"
+ },
+ "homeopath": {
+  "career": "Homeopath",
+  "gender": "male"
+ },
+ "horse-groom": {
+  "career": "Horse groom",
+  "gender": "male"
+ },
+ "horse-riding-instructor": {
+  "career": "Horse riding instructor",
+  "gender": "male"
+ },
+ "horticultural-manager": {
+  "career": "Horticultural manager",
+  "gender": "male"
+ },
+ "horticultural-therapist": {
+  "career": "Horticultural therapist",
+  "gender": "male"
+ },
+ "horticultural-worker": {
+  "career": "Horticultural worker",
+  "gender": "male"
+ },
+ "hospital-doctor": {
+  "career": "Hospital doctor",
+  "gender": "male"
+ },
+ "hospital-porter": {
+  "career": "Hospital porter",
+  "gender": "male"
+ },
+ "hotel-manager": {
+  "career": "Hotel manager",
+  "gender": "male"
+ },
+ "hotel-porter": {
+  "career": "Hotel porter",
+  "gender": "male"
+ },
+ "housekeeper": {
+  "career": "Hotel housekeeper",
+  "gender": "female"
+ },
+ "housing-officer": {
+  "career": "Housing officer",
+  "gender": "male"
+ },
+ "human-resources-officer": {
+  "career": "Human resources officer",
+  "gender": "male"
+ },
+ "hydrologist": {
+  "career": "Hydrologist",
+  "gender": "male"
+ },
+ "hypnotherapist": {
+  "career": "Hypnotherapist",
+  "gender": "male"
+ },
+ "illustrator": {
+  "career": "Illustrator",
+  "gender": "male"
+ },
+ "immigration-adviser-non-government": {
+  "career": "Immigration adviser (non-government)",
+  "gender": "male"
+ },
+ "immigration-officer": {
+  "career": "Immigration officer",
+  "gender": "male"
+ },
+ "import-export-clerk": {
+  "career": "Import-export clerk",
+  "gender": "male"
+ },
+ "indexer": {
+  "career": "Indexer",
+  "gender": "male"
+ },
+ "industrial-cleaner": {
+  "career": "Industrial cleaner",
+  "gender": "male"
+ },
+ "information-scientist": {
+  "career": "Information scientist",
+  "gender": "male"
+ },
+ "insurance-account-manager": {
+  "career": "Insurance account manager",
+  "gender": "male"
+ },
+ "insurance-broker": {
+  "career": "Insurance broker",
+  "gender": "male"
+ },
+ "insurance-claims-handler": {
+  "career": "Insurance claims handler",
+  "gender": "male"
+ },
+ "insurance-loss-adjuster": {
+  "career": "Insurance loss adjuster",
+  "gender": "male"
+ },
+ "insurance-risk-surveyor": {
+  "career": "Insurance risk surveyor",
+  "gender": "male"
+ },
+ "insurance-technician": {
+  "career": "Insurance technician",
+  "gender": "male"
+ },
+ "insurance-underwriter": {
+  "career": "Insurance underwriter",
+  "gender": "male"
+ },
+ "interior-designer": {
+  "career": "Interior designer",
+  "gender": "male"
+ },
+ "interpreter": {
+  "career": "Interpreter",
+  "gender": "male"
+ },
+ "investment-analyst": {
+  "career": "Investment analyst",
+  "gender": "male"
+ },
+ "it-project-manager": {
+  "career": "IT project manager",
+  "gender": "male"
+ },
+ "it-security-co-ordinator": {
+  "career": "IT security co-ordinator",
+  "gender": "male"
+ },
+ "it-support-technician": {
+  "career": "IT support technician",
+  "gender": "male"
+ },
+ "jewellery-designer-maker": {
+  "career": "Jewellery designer-maker",
+  "gender": "male"
+ },
+ "jockey": {
+  "career": "Jockey",
+  "gender": "male"
+ },
+ "judge": {
+  "career": "Judge",
+  "gender": "male"
+ },
+ "kennel-worker": {
+  "career": "Kennel worker",
+  "gender": "male"
+ },
+ "kitchen-and-bathroom-designer": {
+  "career": "Kitchen and bathroom designer",
+  "gender": "male"
+ },
+ "kitchen-and-bathroom-fitter": {
+  "career": "Kitchen and bathroom fitter",
+  "gender": "male"
+ },
+ "kitchen-assistant": {
+  "career": "Kitchen porter",
+  "gender": "male"
+ },
+ "laboratory-technician": {
+  "career": "Laboratory technician",
+  "gender": "male"
+ },
+ "land-and-property-valuer-and-auctioneer": {
+  "career": "Land and property valuer and auctioneer",
+  "gender": "male"
+ },
+ "land-surveyor": {
+  "career": "Land surveyor",
+  "gender": "male"
+ },
+ "landscape-architect": {
+  "career": "Landscape architect",
+  "gender": "male"
+ },
+ "landscaper": {
+  "career": "Landscaper",
+  "gender": "male"
+ },
+ "large-goods-vehicle-driver": {
+  "career": "HGV driver",
+  "gender": "male"
+ },
+ "laundry-worker": {
+  "career": "Laundry worker",
+  "gender": "male"
+ },
+ "learning-disability-nurse": {
+  "career": "Learning disability nurse",
+  "gender": "female"
+ },
+ "learning-mentor": {
+  "career": "Learning mentor",
+  "gender": "male"
+ },
+ "leather-craftworker": {
+  "career": "Leather craftworker",
+  "gender": "male"
+ },
+ "legal-executive": {
+  "career": "Legal executive",
+  "gender": "male"
+ },
+ "legal-secretary": {
+  "career": "Legal secretary",
+  "gender": "male"
+ },
+ "leisure-centre-assistant": {
+  "career": "Leisure centre assistant",
+  "gender": "male"
+ },
+ "leisure-centre-manager": {
+  "career": "Leisure centre manager",
+  "gender": "male"
+ },
+ "librarian": {
+  "career": "Librarian",
+  "gender": "male"
+ },
+ "library-assistant": {
+  "career": "Library assistant",
+  "gender": "male"
+ },
+ "licensed-conveyancer": {
+  "career": "Licensed conveyancer",
+  "gender": "male"
+ },
+ "life-coach": {
+  "career": "Life coach",
+  "gender": "male"
+ },
+ "lifeguard": {
+  "career": "Lifeguard",
+  "gender": "male"
+ },
+ "lift-engineer": {
+  "career": "Lift engineer",
+  "gender": "male"
+ },
+ "lighting-technician": {
+  "career": "Lighting technician",
+  "gender": "male"
+ },
+ "live-sound-engineer": {
+  "career": "Live sound engineer",
+  "gender": "male"
+ },
+ "local-government-officer": {
+  "career": "Local government officer",
+  "gender": "male"
+ },
+ "local-government-revenues-officer": {
+  "career": "Local government revenues officer",
+  "gender": "male"
+ },
+ "locksmith": {
+  "career": "Locksmith",
+  "gender": "male"
+ },
+ "maintenance-fitter": {
+  "career": "Maintenance fitter",
+  "gender": "male"
+ },
+ "make-up-artist": {
+  "career": "Make-up artist",
+  "gender": "female"
+ },
+ "management-accountant": {
+  "career": "Management accountant",
+  "gender": "male"
+ },
+ "management-consultant": {
+  "career": "Management consultant",
+  "gender": "male"
+ },
+ "manufacturing-systems-engineer": {
+  "career": "Manufacturing systems engineer",
+  "gender": "male"
+ },
+ "marine-engineer": {
+  "career": "Marine engineer",
+  "gender": "male"
+ },
+ "marine-engineering-technician": {
+  "career": "Marine engineering technician",
+  "gender": "male"
+ },
+ "market-research-data-analyst": {
+  "career": "Market research data analyst",
+  "gender": "male"
+ },
+ "market-research-executive": {
+  "career": "Market research executive",
+  "gender": "male"
+ },
+ "market-researcher": {
+  "career": "Market researcher",
+  "gender": "male"
+ },
+ "market-trader": {
+  "career": "Market trader",
+  "gender": "male"
+ },
+ "marketing-executive": {
+  "career": "Marketing executive",
+  "gender": "male"
+ },
+ "marketing-manager": {
+  "career": "Marketing manager",
+  "gender": "male"
+ },
+ "martial-arts-instructor": {
+  "career": "Martial arts instructor",
+  "gender": "male"
+ },
+ "massage-therapist": {
+  "career": "Massage therapist",
+  "gender": "male"
+ },
+ "materials-engineer": {
+  "career": "Materials engineer",
+  "gender": "male"
+ },
+ "materials-technician": {
+  "career": "Materials technician",
+  "gender": "male"
+ },
+ "maternity-support-worker": {
+  "career": "Maternity support worker",
+  "gender": "female"
+ },
+ "mechanical-engineer": {
+  "career": "Mechanical engineer",
+  "gender": "male"
+ },
+ "mechanical-engineering-technician": {
+  "career": "Mechanical engineering technician",
+  "gender": "male"
+ },
+ "media-researcher": {
+  "career": "Media researcher",
+  "gender": "male"
+ },
+ "medical-herbalist": {
+  "career": "Medical herbalist",
+  "gender": "male"
+ },
+ "medical-illustrator": {
+  "career": "Medical illustrator",
+  "gender": "male"
+ },
+ "medical-physicist": {
+  "career": "Medical physicist",
+  "gender": "male"
+ },
+ "medical-secretary": {
+  "career": "Medical secretary",
+  "gender": "male"
+ },
+ "mental-health-nurse": {
+  "career": "Mental health nurse",
+  "gender": "female"
+ },
+ "merchant-navy-deck-officer": {
+  "career": "Merchant Navy deck officer",
+  "gender": "male"
+ },
+ "merchant-navy-engineering-officer": {
+  "career": "Merchant Navy engineering officer",
+  "gender": "male"
+ },
+ "merchant-navy-rating": {
+  "career": "Merchant Navy rating",
+  "gender": "male"
+ },
+ "meteorologist": {
+  "career": "Meteorologist",
+  "gender": "male"
+ },
+ "metrologist": {
+  "career": "Metrologist",
+  "gender": "male"
+ },
+ "microbiologist": {
+  "career": "Microbiologist",
+  "gender": "male"
+ },
+ "midwife": {
+  "career": "Midwife",
+  "gender": "female"
+ },
+ "model-maker": {
+  "career": "Model maker",
+  "gender": "male"
+ },
+ "money-adviser": {
+  "career": "Money adviser",
+  "gender": "male"
+ },
+ "montessori-teacher": {
+  "career": "Montessori teacher",
+  "gender": "male"
+ },
+ "mortgage-adviser": {
+  "career": "Mortgage adviser",
+  "gender": "male"
+ },
+ "motor-mechanic": {
+  "career": "Motor mechanic",
+  "gender": "male"
+ },
+ "motor-vehicle-breakdown-engineer": {
+  "career": "Roadside assistance technician",
+  "gender": "male"
+ },
+ "motor-vehicle-fitter": {
+  "career": "Fast fit technician",
+  "gender": "male"
+ },
+ "motor-vehicle-parts-person": {
+  "career": "Automotive parts advisor",
+  "gender": "male"
+ },
+ "motorcycle-mechanic": {
+  "career": "Motorcycle mechanic",
+  "gender": "male"
+ },
+ "motorsport-engineer": {
+  "career": "Motorsport engineer",
+  "gender": "male"
+ },
+ "mp": {
+  "career": "MP",
+  "gender": "male"
+ },
+ "museum-assistant": {
+  "career": "Museum attendant",
+  "gender": "male"
+ },
+ "museum-curator": {
+  "career": "Museum curator",
+  "gender": "male"
+ },
+ "music-promotions-manager": {
+  "career": "Music promotions manager",
+  "gender": "male"
+ },
+ "music-teacher": {
+  "career": "Music teacher",
+  "gender": "male"
+ },
+ "music-therapist": {
+  "career": "Music therapist",
+  "gender": "male"
+ },
+ "musical-instrument-maker-repairer": {
+  "career": "Musical instrument maker and repairer",
+  "gender": "male"
+ },
+ "nail-technician": {
+  "career": "Nail technician",
+  "gender": "female"
+ },
+ "nanny": {
+  "career": "Nanny",
+  "gender": "female"
+ },
+ "nanotechnologist": {
+  "career": "Nanotechnologist",
+  "gender": "male"
+ },
+ "naturopath": {
+  "career": "Naturopath",
+  "gender": "male"
+ },
+ "naval-architect": {
+  "career": "Naval architect",
+  "gender": "male"
+ },
+ "neighbourhood-warden": {
+  "career": "Neighbourhood warden",
+  "gender": "male"
+ },
+ "network-engineer": {
+  "career": "Network engineer",
+  "gender": "male"
+ },
+ "network-manager": {
+  "career": "Network manager",
+  "gender": "male"
+ },
+ "newspaper-journalist": {
+  "career": "Newspaper or magazine journalist",
+  "gender": "male"
+ },
+ "newspaper-or-magazine-editor": {
+  "career": "Newspaper or magazine editor",
+  "gender": "male"
+ },
+ "non-destructive-testing-technician": {
+  "career": "Non-destructive testing technician",
+  "gender": "male"
+ },
+ "nuclear-engineer": {
+  "career": "Nuclear engineer",
+  "gender": "male"
+ },
+ "nuclear-technician": {
+  "career": "Nuclear technician",
+  "gender": "male"
+ },
+ "nurse": {
+  "career": "Nurse",
+  "gender": "female"
+ },
+ "nursery-manager": {
+  "career": "Nursery manager",
+  "gender": "female"
+ },
+ "nursery-worker": {
+  "career": "Nursery worker",
+  "gender": "female"
+ },
+ "nursing-associate": {
+  "career": "Nursing associate",
+  "gender": "female"
+ },
+ "nutritional-therapist": {
+  "career": "Nutritional therapist",
+  "gender": "male"
+ },
+ "nutritionist": {
+  "career": "Nutritionist",
+  "gender": "male"
+ },
+ "occupational-health-nurse": {
+  "career": "Occupational health nurse",
+  "gender": "female"
+ },
+ "occupational-therapist": {
+  "career": "Occupational therapist",
+  "gender": "male"
+ },
+ "occupational-therapy-support-worker": {
+  "career": "Occupational therapy support worker",
+  "gender": "male"
+ },
+ "oceanographer": {
+  "career": "Oceanographer",
+  "gender": "male"
+ },
+ "office-manager": {
+  "career": "Office manager",
+  "gender": "male"
+ },
+ "offshore-drilling-worker": {
+  "career": "Offshore drilling worker",
+  "gender": "male"
+ },
+ "ofsted-inspector": {
+  "career": "Ofsted inspector",
+  "gender": "male"
+ },
+ "online-tutor": {
+  "career": "Online tutor",
+  "gender": "male"
+ },
+ "operating-department-practitioner": {
+  "career": "Operating department practitioner",
+  "gender": "male"
+ },
+ "operational-researcher": {
+  "career": "Operational researcher",
+  "gender": "male"
+ },
+ "optometrist": {
+  "career": "Optometrist",
+  "gender": "male"
+ },
+ "orthoptist": {
+  "career": "Orthoptist",
+  "gender": "male"
+ },
+ "osteopath": {
+  "career": "Osteopath",
+  "gender": "male"
+ },
+ "outdoor-activities-instructor": {
+  "career": "Outdoor activities instructor",
+  "gender": "male"
+ },
+ "packaging-technologist": {
+  "career": "Packaging technologist",
+  "gender": "male"
+ },
+ "packer": {
+  "career": "Packer",
+  "gender": "male"
+ },
+ "paediatrician": {
+  "career": "Paediatrician",
+  "gender": "male"
+ },
+ "paint-sprayer": {
+  "career": "Paint sprayer",
+  "gender": "male"
+ },
+ "painter-and-decorator": {
+  "career": "Painter and decorator",
+  "gender": "male"
+ },
+ "palaeontologist": {
+  "career": "Palaeontologist",
+  "gender": "male"
+ },
+ "palliative-care-assistant": {
+  "career": "Palliative care assistant",
+  "gender": "female"
+ },
+ "paralegal": {
+  "career": "Paralegal",
+  "gender": "male"
+ },
+ "paramedic": {
+  "career": "Paramedic",
+  "gender": "male"
+ },
+ "paraplanner": {
+  "career": "Paraplanner",
+  "gender": "male"
+ },
+ "pastoral-care-worker": {
+  "career": "Pastoral care worker",
+  "gender": "female"
+ },
+ "patent-attorney": {
+  "career": "Patent attorney",
+  "gender": "male"
+ },
+ "pathologist": {
+  "career": "Pathologist",
+  "gender": "male"
+ },
+ "patient-advice-and-liaison-service-officer": {
+  "career": "Patient advice and liaison service officer",
+  "gender": "female"
+ },
+ "pattern-cutter": {
+  "career": "Pattern cutter",
+  "gender": "male"
+ },
+ "payroll-administrator": {
+  "career": "Payroll administrator",
+  "gender": "male"
+ },
+ "pe-teacher": {
+  "career": "PE teacher",
+  "gender": "male"
+ },
+ "pensions-administrator": {
+  "career": "Pensions administrator",
+  "gender": "male"
+ },
+ "personal-assistant": {
+  "career": "Executive assistant",
+  "gender": "male"
+ },
+ "personal-trainer": {
+  "career": "Personal trainer",
+  "gender": "male"
+ },
+ "pest-control-technician": {
+  "career": "Pest control technician",
+  "gender": "male"
+ },
+ "pet-behaviour-consultant": {
+  "career": "Pet behaviour consultant",
+  "gender": "male"
+ },
+ "pharmacist": {
+  "career": "Pharmacist",
+  "gender": "male"
+ },
+ "pharmacologist": {
+  "career": "Pharmacologist",
+  "gender": "male"
+ },
+ "pharmacy-assistant": {
+  "career": "Pharmacy assistant",
+  "gender": "male"
+ },
+ "pharmacy-technician": {
+  "career": "Pharmacy technician",
+  "gender": "male"
+ },
+ "phlebotomist": {
+  "career": "Phlebotomist",
+  "gender": "male"
+ },
+ "photographer": {
+  "career": "Photographer",
+  "gender": "male"
+ },
+ "photographic-stylist": {
+  "career": "Photographic stylist",
+  "gender": "female"
+ },
+ "photographic-technician": {
+  "career": "Photographic technician",
+  "gender": "male"
+ },
+ "physician-associate": {
+  "career": "Physician assistant",
+  "gender": "male"
+ },
+ "physicist": {
+  "career": "Physicist",
+  "gender": "male"
+ },
+ "physiotherapist": {
+  "career": "Physiotherapist",
+  "gender": "male"
+ },
+ "physiotherapy-assistant": {
+  "career": "Physiotherapy assistant",
+  "gender": "male"
+ },
+ "pilates-teacher": {
+  "career": "Pilates teacher",
+  "gender": "female"
+ },
+ "pipe-fitter": {
+  "career": "Pipe fitter",
+  "gender": "male"
+ },
+ "planning-and-development-surveyor": {
+  "career": "Planning and development surveyor",
+  "gender": "male"
+ },
+ "plasterer": {
+  "career": "Plasterer",
+  "gender": "male"
+ },
+ "play-therapist": {
+  "career": "Play therapist",
+  "gender": "female"
+ },
+ "playworker": {
+  "career": "Playworker",
+  "gender": "female"
+ },
+ "plumber": {
+  "career": "Plumber",
+  "gender": "male"
+ },
+ "podiatrist": {
+  "career": "Podiatrist",
+  "gender": "male"
+ },
+ "podiatry-assistant": {
+  "career": "Podiatry assistant",
+  "gender": "male"
+ },
+ "police-community-support-officer": {
+  "career": "Police community support officer",
+  "gender": "male"
+ },
+ "police-officer": {
+  "career": "Police officer",
+  "gender": "male"
+ },
+ "port-operative": {
+  "career": "Port operative",
+  "gender": "male"
+ },
+ "portage-home-visitor": {
+  "career": "Portage home visitor",
+  "gender": "female"
+ },
+ "post-office-customer-service-assistant": {
+  "career": "Post Office customer service assistant",
+  "gender": "male"
+ },
+ "postman-or-postwoman": {
+  "career": "Postperson",
+  "gender": "male"
+ },
+ "practice-nurse": {
+  "career": "Practice nurse",
+  "gender": "female"
+ },
+ "pre-press-operator": {
+  "career": "Print operator",
+  "gender": "male"
+ },
+ "primary-care-graduate-mental-health-worker": {
+  "career": "Psychological wellbeing practitioner",
+  "gender": "male"
+ },
+ "primary-school-teacher": {
+  "career": "Primary school teacher",
+  "gender": "female"
+ },
+ "prison-governor": {
+  "career": "Prison governor",
+  "gender": "male"
+ },
+ "prison-instructor": {
+  "career": "Prison instructor",
+  "gender": "male"
+ },
+ "prison-officer": {
+  "career": "Prison officer",
+  "gender": "male"
+ },
+ "private-practice-accountant": {
+  "career": "Private practice accountant",
+  "gender": "male"
+ },
+ "probation-officer": {
+  "career": "Probation officer",
+  "gender": "male"
+ },
+ "probation-services-officer": {
+  "career": "Probation services officer",
+  "gender": "male"
+ },
+ "product-designer": {
+  "career": "Product designer",
+  "gender": "male"
+ },
+ "production-manager-manufacturing-": {
+  "career": "Production manager (manufacturing)",
+  "gender": "male"
+ },
+ "production-worker-manufacturing": {
+  "career": "Production worker (manufacturing)",
+  "gender": "male"
+ },
+ "proofreader": {
+  "career": "Proofreader",
+  "gender": "male"
+ },
+ "prop-maker": {
+  "career": "Prop maker",
+  "gender": "male"
+ },
+ "prosthetist-orthotist": {
+  "career": "Prosthetist and orthotist",
+  "gender": "male"
+ },
+ "psychiatrist": {
+  "career": "Psychiatrist",
+  "gender": "male"
+ },
+ "psychologist": {
+  "career": "Psychologist",
+  "gender": "male"
+ },
+ "psychotherapist": {
+  "career": "Psychotherapist",
+  "gender": "male"
+ },
+ "public-finance-accountant": {
+  "career": "Public finance accountant",
+  "gender": "male"
+ },
+ "public-relations-officer": {
+  "career": "Public relations officer",
+  "gender": "male"
+ },
+ "publican": {
+  "career": "Publican",
+  "gender": "male"
+ },
+ "purchasing-manager": {
+  "career": "Purchasing manager",
+  "gender": "male"
+ },
+ "qcf-assessor": {
+  "career": "RQF assessor",
+  "gender": "male"
+ },
+ "quality-control-assistant": {
+  "career": "Quality control officer",
+  "gender": "male"
+ },
+ "quantity-surveyor": {
+  "career": "Quantity surveyor",
+  "gender": "male"
+ },
+ "quarry-engineer": {
+  "career": "Quarry engineer",
+  "gender": "male"
+ },
+ "quarry-worker": {
+  "career": "Quarry worker",
+  "gender": "male"
+ },
+ "racehorse-trainer": {
+  "career": "Racehorse trainer",
+  "gender": "male"
+ },
+ "radio-broadcast-assistant": {
+  "career": "Radio broadcast assistant",
+  "gender": "male"
+ },
+ "radiographer": {
+  "career": "Radiographer",
+  "gender": "male"
+ },
+ "radiography-assistant": {
+  "career": "Radiography assistant",
+  "gender": "male"
+ },
+ "raf-airman-or-airwoman": {
+  "career": "RAF aviator",
+  "gender": "male"
+ },
+ "raf-non-commissioned-aircrew": {
+  "career": "RAF regiment gunner",
+  "gender": "male"
+ },
+ "raf-officer": {
+  "career": "RAF officer",
+  "gender": "male"
+ },
+ "rail-engineering-technician": {
+  "career": "Rolling stock engineering technician",
+  "gender": "male"
+ },
+ "rail-track-maintenance-worker": {
+  "career": "Rail track maintenance worker",
+  "gender": "male"
+ },
+ "railway-signaller": {
+  "career": "Railway signaller",
+  "gender": "male"
+ },
+ "receptionist": {
+  "career": "Receptionist",
+  "gender": "male"
+ },
+ "recruitment-consultant": {
+  "career": "Recruitment consultant",
+  "gender": "male"
+ },
+ "recycling-officer": {
+  "career": "Recycling engagement officer",
+  "gender": "male"
+ },
+ "recycling-operative": {
+  "career": "Recycling operative",
+  "gender": "male"
+ },
+ "reflexologist": {
+  "career": "Reflexologist",
+  "gender": "female"
+ },
+ "refrigeration-and-air-conditioning-installer": {
+  "career": "Refrigeration and air-conditioning installer",
+  "gender": "male"
+ },
+ "registrar-of-births-deaths-marriages-and-civil-partnerships": {
+  "career": "Registrar of births, deaths, marriages and civil partnerships",
+  "gender": "male"
+ },
+ "reiki-healer": {
+  "career": "Reiki healer",
+  "gender": "female"
+ },
+ "religious-leader": {
+  "career": "Religious leader",
+  "gender": "male"
+ },
+ "removals-worker": {
+  "career": "Removals worker",
+  "gender": "male"
+ },
+ "research-scientist": {
+  "career": "Research scientist",
+  "gender": "male"
+ },
+ "residential-support-worker": {
+  "career": "Residential support worker",
+  "gender": "male"
+ },
+ "resort-representative": {
+  "career": "Resort representative",
+  "gender": "male"
+ },
+ "restaurant-manager": {
+  "career": "Restaurant manager",
+  "gender": "male"
+ },
+ "retail-buyer": {
+  "career": "Retail buyer",
+  "gender": "male"
+ },
+ "retail-manager": {
+  "career": "Retail manager",
+  "gender": "male"
+ },
+ "road-traffic-accident-investigator": {
+  "career": "Forensic collision investigator",
+  "gender": "male"
+ },
+ "road-transport-manager": {
+  "career": "Road transport manager",
+  "gender": "male"
+ },
+ "road-worker": {
+  "career": "Road worker",
+  "gender": "male"
+ },
+ "roadie": {
+  "career": "Roadie",
+  "gender": "male"
+ },
+ "robotics-engineer": {
+  "career": "Robotics engineer",
+  "gender": "male"
+ },
+ "roofer": {
+  "career": "Roofer",
+  "gender": "male"
+ },
+ "roustabout": {
+  "career": "Roustabout",
+  "gender": "male"
+ },
+ "royal-marines-commando": {
+  "career": "Royal Marines commando",
+  "gender": "male"
+ },
+ "royal-marines-officer": {
+  "career": "Royal Marines officer",
+  "gender": "male"
+ },
+ "royal-navy-officer": {
+  "career": "Royal Navy officer",
+  "gender": "male"
+ },
+ "royal-navy-rating": {
+  "career": "Royal Navy rating",
+  "gender": "male"
+ },
+ "rspca-inspector": {
+  "career": "RSPCA inspector",
+  "gender": "male"
+ },
+ "rural-surveyor": {
+  "career": "Rural surveyor",
+  "gender": "male"
+ },
+ "sailing-instructor": {
+  "career": "Sailing instructor",
+  "gender": "male"
+ },
+ "sales-administrator": {
+  "career": "Sales administrator",
+  "gender": "male"
+ },
+ "sales-assistant": {
+  "career": "Sales assistant",
+  "gender": "male"
+ },
+ "sales-manager": {
+  "career": "Sales manager",
+  "gender": "male"
+ },
+ "sales-representative": {
+  "career": "Sales representative",
+  "gender": "male"
+ },
+ "scaffolder": {
+  "career": "Scaffolder",
+  "gender": "male"
+ },
+ "scenes-of-crime-officer": {
+  "career": "Scenes of crime officer",
+  "gender": "male"
+ },
+ "school-business-manager": {
+  "career": "School business manager",
+  "gender": "male"
+ },
+ "school-lunchtime-supervisor": {
+  "career": "School lunchtime supervisor",
+  "gender": "female"
+ },
+ "school-nurse": {
+  "career": "School nurse",
+  "gender": "female"
+ },
+ "school-secretary": {
+  "career": "School secretary",
+  "gender": "female"
+ },
+ "screenwriter": {
+  "career": "Screenwriter",
+  "gender": "male"
+ },
+ "search-engine-optimisation-seo-specialist": {
+  "career": "Search engine optimisation (SEO) specialist",
+  "gender": "male"
+ },
+ "secondary-school-teacher": {
+  "career": "Secondary school teacher",
+  "gender": "male"
+ },
+ "security-manager": {
+  "career": "Security manager",
+  "gender": "male"
+ },
+ "security-officer": {
+  "career": "Security officer",
+  "gender": "male"
+ },
+ "security-service-personnel": {
+  "career": "Security Service personnel",
+  "gender": "male"
+ },
+ "security-systems-installer": {
+  "career": "Security systems installer",
+  "gender": "male"
+ },
+ "seismologist": {
+  "career": "Seismologist",
+  "gender": "male"
+ },
+ "senior-care-worker": {
+  "career": "Senior care worker",
+  "gender": "female"
+ },
+ "set-designer": {
+  "career": "Set designer",
+  "gender": "male"
+ },
+ "sewing-machinist": {
+  "career": "Sewing machinist",
+  "gender": "female"
+ },
+ "shopfitter": {
+  "career": "Shopfitter",
+  "gender": "male"
+ },
+ "shopkeeper": {
+  "career": "Shopkeeper",
+  "gender": "male"
+ },
+ "signalling-technician": {
+  "career": "Signalling technician",
+  "gender": "male"
+ },
+ "signmaker": {
+  "career": "Sign maker",
+  "gender": "male"
+ },
+ "skills-for-life-teacher": {
+  "career": "Skills for life teacher",
+  "gender": "male"
+ },
+ "smart-home-installer": {
+  "career": "Smart home installer",
+  "gender": "male"
+ },
+ "smart-meter-installer": {
+  "career": "Smart meter installer",
+  "gender": "male"
+ },
+ "social-media-manager": {
+  "career": "Social media manager",
+  "gender": "male"
+ },
+ "social-services-manager": {
+  "career": "Social services manager",
+  "gender": "male"
+ },
+ "social-work-assistant": {
+  "career": "Social work assistant",
+  "gender": "female"
+ },
+ "social-worker": {
+  "career": "Social worker",
+  "gender": "female"
+ },
+ "software-developer": {
+  "career": "Software developer",
+  "gender": "male"
+ },
+ "solar-panel-installer": {
+  "career": "Solar panel installer",
+  "gender": "male"
+ },
+ "soldier": {
+  "career": "Soldier",
+  "gender": "male"
+ },
+ "solicitor": {
+  "career": "Solicitor",
+  "gender": "male"
+ },
+ "solutions-architect": {
+  "career": "Solutions architect",
+  "gender": "male"
+ },
+ "sonographer": {
+  "career": "Sonographer",
+  "gender": "female"
+ },
+ "special-educational-needs-sen-teacher": {
+  "career": "Special educational needs (SEN) teacher",
+  "gender": "male"
+ },
+ "special-educational-needs-sen-teaching-assistant": {
+  "career": "Special educational needs (SEN) teaching assistant",
+  "gender": "female"
+ },
+ "speech-and-language-therapist": {
+  "career": "Speech and language therapist",
+  "gender": "female"
+ },
+ "speech-and-language-therapy-assistant": {
+  "career": "Speech and language therapy assistant",
+  "gender": "female"
+ },
+ "sport-and-exercise-psychologist": {
+  "career": "Sport and exercise psychologist",
+  "gender": "male"
+ },
+ "sports-coach": {
+  "career": "Sports coach",
+  "gender": "male"
+ },
+ "sports-commentator": {
+  "career": "Sports commentator",
+  "gender": "male"
+ },
+ "sports-development-officer": {
+  "career": "Sports development officer",
+  "gender": "male"
+ },
+ "sports-professional": {
+  "career": "Sports professional",
+  "gender": "male"
+ },
+ "sports-scientist": {
+  "career": "Performance sports scientist",
+  "gender": "male"
+ },
+ "stage-manager": {
+  "career": "Stage manager",
+  "gender": "male"
+ },
+ "stagehand": {
+  "career": "Stagehand",
+  "gender": "male"
+ },
+ "steel-erector": {
+  "career": "Steel erector",
+  "gender": "male"
+ },
+ "steel-fixer": {
+  "career": "Steel fixer",
+  "gender": "male"
+ },
+ "steeplejack": {
+  "career": "Steeplejack",
+  "gender": "male"
+ },
+ "stock-control-assistant": {
+  "career": "Stock control assistant",
+  "gender": "male"
+ },
+ "stockbroker": {
+  "career": "Stockbroker",
+  "gender": "male"
+ },
+ "stonemason": {
+  "career": "Stonemason",
+  "gender": "male"
+ },
+ "store-detective": {
+  "career": "Store detective",
+  "gender": "male"
+ },
+ "structural-engineer": {
+  "career": "Structural engineer",
+  "gender": "male"
+ },
+ "studio-sound-engineer": {
+  "career": "Studio sound engineer",
+  "gender": "male"
+ },
+ "substance-misuse-outreach-worker": {
+  "career": "Substance misuse outreach worker",
+  "gender": "male"
+ },
+ "supervisor": {
+  "career": "Supervisor",
+  "gender": "male"
+ },
+ "supply-chain-manager": {
+  "career": "Supply chain manager",
+  "gender": "male"
+ },
+ "surgeon": {
+  "career": "Surgeon",
+  "gender": "male"
+ },
+ "swimming-teacher": {
+  "career": "Swimming teacher",
+  "gender": "male"
+ },
+ "systems-analyst": {
+  "career": "Systems analyst",
+  "gender": "male"
+ },
+ "tailor": {
+  "career": "Tailor",
+  "gender": "male"
+ },
+ "tattooist-and-body-piercer": {
+  "career": "Tattooist and body piercer",
+  "gender": "male"
+ },
+ "tax-adviser": {
+  "career": "Tax adviser",
+  "gender": "male"
+ },
+ "tax-inspector": {
+  "career": "Tax inspector",
+  "gender": "male"
+ },
+ "taxi-driver": {
+  "career": "Taxi driver",
+  "gender": "male"
+ },
+ "teaching-assistant": {
+  "career": "Teaching assistant",
+  "gender": "female"
+ },
+ "technical-architect": {
+  "career": "Technical architect",
+  "gender": "male"
+ },
+ "technical-author": {
+  "career": "Technical author",
+  "gender": "male"
+ },
+ "technical-brewer": {
+  "career": "Technical brewer",
+  "gender": "male"
+ },
+ "technical-surveyor": {
+  "career": "Surveying technician",
+  "gender": "male"
+ },
+ "telecoms-engineer": {
+  "career": "Telecoms engineer",
+  "gender": "male"
+ },
+ "test-lead": {
+  "career": "Test lead",
+  "gender": "male"
+ },
+ "textile-designer": {
+  "career": "Textile designer",
+  "gender": "male"
+ },
+ "textile-operative": {
+  "career": "Textile operative",
+  "gender": "male"
+ },
+ "thatcher": {
+  "career": "Thatcher",
+  "gender": "male"
+ },
+ "thermal-insulation-engineer": {
+  "career": "Thermal insulation engineer",
+  "gender": "male"
+ },
+ "tiler": {
+  "career": "Tiler",
+  "gender": "male"
+ },
+ "toolmaker": {
+  "career": "Toolmaker",
+  "gender": "male"
+ },
+ "tour-manager": {
+  "career": "Tour manager",
+  "gender": "male"
+ },
+ "tourist-guide": {
+  "career": "Tourist guide",
+  "gender": "male"
+ },
+ "tourist-information-centre-assistant": {
+  "career": "Tourist information centre assistant",
+  "gender": "male"
+ },
+ "town-planner": {
+  "career": "Town planner",
+  "gender": "male"
+ },
+ "town-planning-assistant": {
+  "career": "Town planning assistant",
+  "gender": "male"
+ },
+ "trade-mark-attorney": {
+  "career": "Trade mark attorney",
+  "gender": "male"
+ },
+ "trade-union-official": {
+  "career": "Trade union official",
+  "gender": "male"
+ },
+ "trading-standards-officer": {
+  "career": "Trading standards officer",
+  "gender": "male"
+ },
+ "train-conductor": {
+  "career": "Train conductor",
+  "gender": "male"
+ },
+ "train-driver": {
+  "career": "Train driver",
+  "gender": "male"
+ },
+ "train-station-worker": {
+  "career": "Train station worker",
+  "gender": "male"
+ },
+ "training-officer": {
+  "career": "Training officer",
+  "gender": "male"
+ },
+ "tram-driver": {
+  "career": "Tram driver",
+  "gender": "male"
+ },
+ "translator": {
+  "career": "Translator",
+  "gender": "male"
+ },
+ "transport-planner": {
+  "career": "Transport planner",
+  "gender": "male"
+ },
+ "travel-agent": {
+  "career": "Travel agent",
+  "gender": "male"
+ },
+ "tree-surgeon": {
+  "career": "Tree surgeon",
+  "gender": "male"
+ },
+ "tv-or-film-assistant-director": {
+  "career": "TV or film assistant director",
+  "gender": "male"
+ },
+ "tv-or-film-camera-operator": {
+  "career": "TV or film camera operator",
+  "gender": "male"
+ },
+ "tv-or-film-director": {
+  "career": "TV or film director",
+  "gender": "male"
+ },
+ "tv-or-film-producer": {
+  "career": "TV or film producer",
+  "gender": "male"
+ },
+ "tv-or-film-production-assistant": {
+  "career": "TV or film assistant production co-ordinator",
+  "gender": "male"
+ },
+ "tv-or-film-production-manager": {
+  "career": "TV or film production manager",
+  "gender": "male"
+ },
+ "tv-or-film-production-runner": {
+  "career": "TV or film production runner",
+  "gender": "male"
+ },
+ "tv-or-film-sound-technician": {
+  "career": "TV or film sound technician",
+  "gender": "male"
+ },
+ "tv-presenter": {
+  "career": "TV presenter",
+  "gender": "male"
+ },
+ "user-researcher": {
+  "career": "User researcher",
+  "gender": "male"
+ },
+ "ux-designer": {
+  "career": "User experience (UX) designer",
+  "gender": "male"
+ },
+ "vehicle-body-repairer": {
+  "career": "Vehicle body repairer",
+  "gender": "male"
+ },
+ "vet": {
+  "career": "Vet",
+  "gender": "male"
+ },
+ "veterinary-nurse": {
+  "career": "Veterinary nurse",
+  "gender": "female"
+ },
+ "veterinary-physiotherapist": {
+  "career": "Veterinary physiotherapist",
+  "gender": "female"
+ },
+ "victim-care-officer": {
+  "career": "Victim care officer",
+  "gender": "female"
+ },
+ "video-editor": {
+  "career": "Video editor",
+  "gender": "male"
+ },
+ "visitor-attraction-general-manager": {
+  "career": "Visitor attraction general manager",
+  "gender": "male"
+ },
+ "visual-merchandiser": {
+  "career": "Visual merchandiser",
+  "gender": "male"
+ },
+ "vlogger": {
+  "career": "Social media influencer",
+  "gender": "male"
+ },
+ "waiter": {
+  "career": "Waiter",
+  "gender": "male"
+ },
+ "wardrobe-assistant": {
+  "career": "Wardrobe assistant",
+  "gender": "male"
+ },
+ "warehouse-manager": {
+  "career": "Warehouse manager",
+  "gender": "male"
+ },
+ "warehouse-worker": {
+  "career": "Warehouse worker",
+  "gender": "male"
+ },
+ "watch-or-clock-repairer": {
+  "career": "Watch or clock repairer",
+  "gender": "male"
+ },
+ "water-network-operative": {
+  "career": "Water network operative",
+  "gender": "male"
+ },
+ "water-treatment-worker": {
+  "career": "Water treatment worker",
+  "gender": "male"
+ },
+ "web-content-editor": {
+  "career": "Web content editor",
+  "gender": "male"
+ },
+ "web-designer": {
+  "career": "Web designer",
+  "gender": "male"
+ },
+ "web-developer": {
+  "career": "Web developer",
+  "gender": "male"
+ },
+ "wedding-planner": {
+  "career": "Wedding planner",
+  "gender": "male"
+ },
+ "welder": {
+  "career": "Welder",
+  "gender": "male"
+ },
+ "welfare-rights-officer": {
+  "career": "Welfare rights adviser",
+  "gender": "male"
+ },
+ "wind-turbine-technician": {
+  "career": "Wind turbine technician",
+  "gender": "male"
+ },
+ "window-fabricator": {
+  "career": "Window fabricator",
+  "gender": "male"
+ },
+ "windscreen-fitter": {
+  "career": "Windscreen fitter",
+  "gender": "male"
+ },
+ "wood-machinist": {
+  "career": "Wood machinist",
+  "gender": "male"
+ },
+ "writer": {
+  "career": "Writer",
+  "gender": "male"
+ },
+ "yoga-teacher": {
+  "career": "Yoga teacher",
+  "gender": "male"
+ },
+ "yoga-therapist": {
+  "career": "Yoga therapist",
+  "gender": "male"
+ },
+ "youth-offending-team-officer": {
+  "career": "Youth offending team officer",
+  "gender": "male"
+ },
+ "youth-worker": {
+  "career": "Youth worker",
+  "gender": "male"
+ },
+ "zookeeper": {
+  "career": "Zookeeper",
+  "gender": "male"
+ },
+ "zoologist": {
+  "career": "Zoologist",
+  "gender": "male"
+ }
+}

@@ -1,0 +1,3727 @@
+{
+ "3d-printing-technician": {
+  "career": "3D printing technician",
+  "score": 20,
+  "gender": "male"
+ },
+ "accommodation-warden": {
+  "career": "Accommodation warden",
+  "score": 40,
+  "gender": "male"
+ },
+ "accounting-technician": {
+  "career": "Accounting technician",
+  "score": 55,
+  "gender": "male"
+ },
+ "acoustics-consultant": {
+  "career": "Acoustics consultant",
+  "score": 20,
+  "gender": "male"
+ },
+ "actor": {
+  "career": "Actor",
+  "score": 50,
+  "gender": "male"
+ },
+ "actuary": {
+  "career": "Actuary",
+  "score": 30,
+  "gender": "male"
+ },
+ "acupuncturist": {
+  "career": "Acupuncturist",
+  "score": 65,
+  "gender": "male"
+ },
+ "admin-assistant": {
+  "career": "Admin assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "advertising-account-executive": {
+  "career": "Advertising account executive",
+  "score": 55,
+  "gender": "male"
+ },
+ "advertising-account-planner": {
+  "career": "Advertising account planner",
+  "score": 50,
+  "gender": "male"
+ },
+ "advertising-art-director": {
+  "career": "Advertising art director",
+  "score": 50,
+  "gender": "male"
+ },
+ "advertising-copywriter": {
+  "career": "Advertising copywriter",
+  "score": 50,
+  "gender": "male"
+ },
+ "advertising-media-buyer": {
+  "career": "Advertising media buyer",
+  "score": 50,
+  "gender": "male"
+ },
+ "advertising-media-planner": {
+  "career": "Advertising media planner",
+  "score": 50,
+  "gender": "male"
+ },
+ "aerospace-engineer": {
+  "career": "Aerospace engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "aerospace-engineering-technician": {
+  "career": "Aerospace engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "agricultural-contractor": {
+  "career": "Agricultural contractor",
+  "score": 10,
+  "gender": "male"
+ },
+ "agricultural-engineer": {
+  "career": "Agricultural engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "agricultural-engineering-technician": {
+  "career": "Agricultural engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "agricultural-inspector": {
+  "career": "Agricultural inspector",
+  "score": 30,
+  "gender": "male"
+ },
+ "agronomist": {
+  "career": "Agronomist",
+  "score": 30,
+  "gender": "male"
+ },
+ "aid-worker": {
+  "career": "Aid worker",
+  "score": 60,
+  "gender": "male"
+ },
+ "air-accident-investigator": {
+  "career": "Air accident investigator",
+  "score": 15,
+  "gender": "male"
+ },
+ "air-traffic-controller": {
+  "career": "Air traffic controller",
+  "score": 20,
+  "gender": "male"
+ },
+ "airline-customer-service-agent": {
+  "career": "Airline customer service agent",
+  "score": 70,
+  "gender": "male"
+ },
+ "airline-pilot": {
+  "career": "Airline pilot",
+  "score": 5,
+  "gender": "male"
+ },
+ "airport-baggage-handler": {
+  "career": "Airport baggage handler",
+  "score": 5,
+  "gender": "male"
+ },
+ "airport-information-assistant": {
+  "career": "Airport information assistant",
+  "score": 70,
+  "gender": "male"
+ },
+ "ambulance-care-assistant": {
+  "career": "Ambulance care assistant",
+  "score": 75,
+  "gender": "male"
+ },
+ "anaesthetist": {
+  "career": "Anaesthetist",
+  "score": 60,
+  "gender": "male"
+ },
+ "anatomical-pathology-technician": {
+  "career": "Anatomical pathology technician",
+  "score": 50,
+  "gender": "male"
+ },
+ "animal-care-worker": {
+  "career": "Animal care worker",
+  "score": 80,
+  "gender": "female"
+ },
+ "animal-technician": {
+  "career": "Animal technician",
+  "score": 70,
+  "gender": "male"
+ },
+ "animator": {
+  "career": "Animator",
+  "score": 50,
+  "gender": "male"
+ },
+ "antique-dealer": {
+  "career": "Antique dealer",
+  "score": 50,
+  "gender": "male"
+ },
+ "app-developer": {
+  "career": "App developer",
+  "score": 20,
+  "gender": "male"
+ },
+ "arboricultural-officer": {
+  "career": "Arboricultural officer",
+  "score": 30,
+  "gender": "male"
+ },
+ "archaeologist": {
+  "career": "Archaeologist",
+  "score": 45,
+  "gender": "male"
+ },
+ "architect": {
+  "career": "Architect",
+  "score": 35,
+  "gender": "male"
+ },
+ "architectural-technician": {
+  "career": "Architectural technician",
+  "score": 30,
+  "gender": "male"
+ },
+ "architectural-technologist": {
+  "career": "Architectural technologist",
+  "score": 30,
+  "gender": "male"
+ },
+ "archivist": {
+  "career": "Archivist",
+  "score": 65,
+  "gender": "male"
+ },
+ "army-officer": {
+  "career": "Army officer",
+  "score": 5,
+  "gender": "male"
+ },
+ "aromatherapist": {
+  "career": "Aromatherapist",
+  "score": 90,
+  "gender": "female"
+ },
+ "art-editor": {
+  "career": "Art editor",
+  "score": 50,
+  "gender": "male"
+ },
+ "art-therapist": {
+  "career": "Art therapist",
+  "score": 80,
+  "gender": "female"
+ },
+ "art-valuer": {
+  "career": "Art valuer",
+  "score": 50,
+  "gender": "male"
+ },
+ "artificial-intelligence-ai-engineer": {
+  "career": "Artificial intelligence (AI) engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "arts-administrator": {
+  "career": "Arts administrator",
+  "score": 70,
+  "gender": "male"
+ },
+ "assistance-dog-trainer": {
+  "career": "Assistance dog trainer",
+  "score": 75,
+  "gender": "male"
+ },
+ "assistant-immigration-officer": {
+  "career": "Assistant immigration officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "astronaut": {
+  "career": "Astronaut",
+  "score": 10,
+  "gender": "male"
+ },
+ "astronomer": {
+  "career": "Astronomer",
+  "score": 25,
+  "gender": "male"
+ },
+ "athlete": {
+  "career": "Athlete",
+  "score": 50,
+  "gender": "male"
+ },
+ "audio-visual-technician": {
+  "career": "Audio visual technician",
+  "score": 20,
+  "gender": "male"
+ },
+ "audiologist": {
+  "career": "Audiologist",
+  "score": 70,
+  "gender": "male"
+ },
+ "auditor": {
+  "career": "Auditor",
+  "score": 50,
+  "gender": "male"
+ },
+ "auto-electrician": {
+  "career": "Auto electrician",
+  "score": 5,
+  "gender": "male"
+ },
+ "automotive-engineer": {
+  "career": "Automotive engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "bailiff": {
+  "career": "Bailiff",
+  "score": 10,
+  "gender": "male"
+ },
+ "baker": {
+  "career": "Baker",
+  "score": 50,
+  "gender": "male"
+ },
+ "bank-manager": {
+  "career": "Bank manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "bar-person": {
+  "career": "Bar person",
+  "score": 50,
+  "gender": "male"
+ },
+ "barista": {
+  "career": "Barista",
+  "score": 55,
+  "gender": "male"
+ },
+ "barrister": {
+  "career": "Barrister",
+  "score": 40,
+  "gender": "male"
+ },
+ "barristers-clerk": {
+  "career": "Barrister's clerk",
+  "score": 45,
+  "gender": "male"
+ },
+ "beauty-consultant": {
+  "career": "Beauty consultant",
+  "score": 90,
+  "gender": "female"
+ },
+ "beauty-therapist": {
+  "career": "Beauty therapist",
+  "score": 95,
+  "gender": "female"
+ },
+ "beekeeper": {
+  "career": "Beekeeper",
+  "score": 50,
+  "gender": "male"
+ },
+ "bid-writer": {
+  "career": "Bid writer",
+  "score": 50,
+  "gender": "male"
+ },
+ "bilingual-secretary": {
+  "career": "Bilingual secretary",
+  "score": 70,
+  "gender": "male"
+ },
+ "bin-worker": {
+  "career": "Bin worker",
+  "score": 5,
+  "gender": "male"
+ },
+ "biochemist": {
+  "career": "Biochemist",
+  "score": 45,
+  "gender": "male"
+ },
+ "biologist": {
+  "career": "Biologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "biomedical-scientist": {
+  "career": "Biomedical scientist",
+  "score": 50,
+  "gender": "male"
+ },
+ "biotechnologist": {
+  "career": "Biotechnologist",
+  "score": 45,
+  "gender": "male"
+ },
+ "blacksmith": {
+  "career": "Blacksmith",
+  "score": 5,
+  "gender": "male"
+ },
+ "boat-builder": {
+  "career": "Boat builder",
+  "score": 10,
+  "gender": "male"
+ },
+ "bodyguard": {
+  "career": "Bodyguard",
+  "score": 10,
+  "gender": "male"
+ },
+ "bookkeeper": {
+  "career": "Bookkeeper",
+  "score": 65,
+  "gender": "male"
+ },
+ "border-force-officer": {
+  "career": "Border Force officer",
+  "score": 30,
+  "gender": "male"
+ },
+ "bricklayer": {
+  "career": "Bricklayer",
+  "score": 5,
+  "gender": "male"
+ },
+ "british-sign-language-interpreter": {
+  "career": "British Sign Language interpreter",
+  "score": 70,
+  "gender": "male"
+ },
+ "british-sign-language-teacher": {
+  "career": "British Sign Language teacher",
+  "score": 75,
+  "gender": "male"
+ },
+ "broadcast-engineer": {
+  "career": "Broadcast engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "broadcast-journalist": {
+  "career": "Broadcast journalist",
+  "score": 50,
+  "gender": "male"
+ },
+ "builders-merchant": {
+  "career": "Builders' merchant",
+  "score": 20,
+  "gender": "male"
+ },
+ "building-control-officer": {
+  "career": "Building control officer",
+  "score": 20,
+  "gender": "male"
+ },
+ "building-services-engineer": {
+  "career": "Building services engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "building-site-inspector": {
+  "career": "Building site inspector",
+  "score": 15,
+  "gender": "male"
+ },
+ "building-surveyor": {
+  "career": "Building surveyor",
+  "score": 20,
+  "gender": "male"
+ },
+ "building-technician": {
+  "career": "Building technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "bus-or-coach-driver": {
+  "career": "Bus or coach driver",
+  "score": 30,
+  "gender": "male"
+ },
+ "business-adviser": {
+  "career": "Business adviser",
+  "score": 50,
+  "gender": "male"
+ },
+ "business-analyst": {
+  "career": "Business analyst",
+  "score": 50,
+  "gender": "male"
+ },
+ "business-development-manager": {
+  "career": "Business development manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "business-project-manager": {
+  "career": "Business project manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "butcher": {
+  "career": "Butcher",
+  "score": 15,
+  "gender": "male"
+ },
+ "cabin-crew": {
+  "career": "Cabin crew",
+  "score": 80,
+  "gender": "female"
+ },
+ "cad-technician": {
+  "career": "CAD technician",
+  "score": 35,
+  "gender": "male"
+ },
+ "cake-decorator": {
+  "career": "Cake decorator",
+  "score": 70,
+  "gender": "male"
+ },
+ "car-manufacturing-worker": {
+  "career": "Car manufacturing worker",
+  "score": 10,
+  "gender": "male"
+ },
+ "car-rental-agent": {
+  "career": "Car rental agent",
+  "score": 50,
+  "gender": "male"
+ },
+ "care-escort": {
+  "career": "Care escort",
+  "score": 85,
+  "gender": "female"
+ },
+ "care-home-advocate": {
+  "career": "Advocacy worker",
+  "score": 70,
+  "gender": "male"
+ },
+ "care-home-manager": {
+  "career": "Care home manager",
+  "score": 80,
+  "gender": "female"
+ },
+ "care-worker": {
+  "career": "Care worker",
+  "score": 90,
+  "gender": "female"
+ },
+ "careers-adviser": {
+  "career": "Careers adviser",
+  "score": 70,
+  "gender": "male"
+ },
+ "caretaker": {
+  "career": "Caretaker",
+  "score": 15,
+  "gender": "male"
+ },
+ "carpenter": {
+  "career": "Carpenter",
+  "score": 5,
+  "gender": "male"
+ },
+ "carpet-fitter-and-floor-layer": {
+  "career": "Carpet fitter and floor layer",
+  "score": 5,
+  "gender": "male"
+ },
+ "cartographer": {
+  "career": "Cartographer",
+  "score": 45,
+  "gender": "male"
+ },
+ "catering-manager": {
+  "career": "Catering manager",
+  "score": 55,
+  "gender": "male"
+ },
+ "cavity-insulation-installer": {
+  "career": "Cavity insulation installer",
+  "score": 5,
+  "gender": "male"
+ },
+ "ceiling-fixer": {
+  "career": "Ceiling fixer",
+  "score": 5,
+  "gender": "male"
+ },
+ "celebrant": {
+  "career": "Celebrant",
+  "score": 50,
+  "gender": "male"
+ },
+ "cemetery-worker": {
+  "career": "Cemetery worker",
+  "score": 10,
+  "gender": "male"
+ },
+ "ceramics-designer-maker": {
+  "career": "Ceramics designer-maker",
+  "score": 55,
+  "gender": "male"
+ },
+ "charity-fundraiser": {
+  "career": "Charity fundraiser",
+  "score": 50,
+  "gender": "male"
+ },
+ "chef": {
+  "career": "Chef",
+  "score": 30,
+  "gender": "male"
+ },
+ "chemical-engineer": {
+  "career": "Chemical engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "chemical-engineering-technician": {
+  "career": "Chemical engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "chemical-plant-process-operator": {
+  "career": "Chemical plant process operator",
+  "score": 5,
+  "gender": "male"
+ },
+ "chemist": {
+  "career": "Chemist",
+  "score": 30,
+  "gender": "male"
+ },
+ "chief-inspector": {
+  "career": "Chief inspector",
+  "score": 20,
+  "gender": "male"
+ },
+ "child-protection-officer": {
+  "career": "Child protection officer",
+  "score": 80,
+  "gender": "female"
+ },
+ "childminder": {
+  "career": "Childminder",
+  "score": 95,
+  "gender": "female"
+ },
+ "childrens-nurse": {
+  "career": "Children's nurse",
+  "score": 95,
+  "gender": "female"
+ },
+ "chiropractor": {
+  "career": "Chiropractor",
+  "score": 50,
+  "gender": "male"
+ },
+ "choreographer": {
+  "career": "Choreographer",
+  "score": 60,
+  "gender": "male"
+ },
+ "cinema-or-theatre-attendant": {
+  "career": "Cinema or theatre attendant",
+  "score": 50,
+  "gender": "male"
+ },
+ "civil-enforcement-officer": {
+  "career": "Civil enforcement officer",
+  "score": 30,
+  "gender": "male"
+ },
+ "civil-engineer": {
+  "career": "Civil engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "civil-engineering-technician": {
+  "career": "Civil engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "civil-service-administrative-officer": {
+  "career": "Civil Service administrative officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "civil-service-executive-officer": {
+  "career": "Civil Service executive officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "civil-service-manager": {
+  "career": "Civil Service manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "classical-musician": {
+  "career": "Musician",
+  "score": 50,
+  "gender": "male"
+ },
+ "cleaner": {
+  "career": "Cleaner",
+  "score": 70,
+  "gender": "male"
+ },
+ "climate-scientist": {
+  "career": "Climate scientist",
+  "score": 40,
+  "gender": "male"
+ },
+ "clinical-engineer": {
+  "career": "Clinical engineer",
+  "score": 20,
+  "gender": "male"
+ },
+ "clinical-psychologist": {
+  "career": "Clinical psychologist",
+  "score": 75,
+  "gender": "male"
+ },
+ "clinical-scientist": {
+  "career": "Clinical scientist",
+  "score": 50,
+  "gender": "male"
+ },
+ "cnc-machinist": {
+  "career": "CNC machinist",
+  "score": 10,
+  "gender": "male"
+ },
+ "coastguard": {
+  "career": "Coastguard",
+  "score": 20,
+  "gender": "male"
+ },
+ "cognitive-behavioural-therapist": {
+  "career": "Cognitive behavioural therapist",
+  "score": 80,
+  "gender": "female"
+ },
+ "commercial-energy-assessor": {
+  "career": "Commercial energy assessor",
+  "score": 20,
+  "gender": "male"
+ },
+ "communication-support-worker": {
+  "career": "Communication support worker",
+  "score": 70,
+  "gender": "male"
+ },
+ "community-arts-worker": {
+  "career": "Community arts worker",
+  "score": 65,
+  "gender": "male"
+ },
+ "community-development-worker": {
+  "career": "Community development worker",
+  "score": 70,
+  "gender": "male"
+ },
+ "community-education-coordinator": {
+  "career": "Community education co-ordinator",
+  "score": 75,
+  "gender": "male"
+ },
+ "community-matron": {
+  "career": "Community matron",
+  "score": 90,
+  "gender": "female"
+ },
+ "community-transport-driver": {
+  "career": "Community transport driver",
+  "score": 40,
+  "gender": "male"
+ },
+ "company-secretary": {
+  "career": "Company secretary",
+  "score": 60,
+  "gender": "male"
+ },
+ "computer-games-developer": {
+  "career": "Computer games developer",
+  "score": 10,
+  "gender": "male"
+ },
+ "computer-games-tester": {
+  "career": "Computer games tester",
+  "score": 15,
+  "gender": "male"
+ },
+ "conservator": {
+  "career": "Conservator",
+  "score": 65,
+  "gender": "male"
+ },
+ "construction-contracts-manager": {
+  "career": "Construction contracts manager",
+  "score": 15,
+  "gender": "male"
+ },
+ "construction-labourer": {
+  "career": "Construction labourer",
+  "score": 5,
+  "gender": "male"
+ },
+ "construction-manager": {
+  "career": "Construction manager",
+  "score": 15,
+  "gender": "male"
+ },
+ "construction-plant-mechanic": {
+  "career": "Construction plant mechanic",
+  "score": 5,
+  "gender": "male"
+ },
+ "construction-plant-operator": {
+  "career": "Construction plant operator",
+  "score": 5,
+  "gender": "male"
+ },
+ "construction-site-supervisor": {
+  "career": "Construction site supervisor",
+  "score": 10,
+  "gender": "male"
+ },
+ "consumer-scientist": {
+  "career": "Consumer scientist",
+  "score": 50,
+  "gender": "male"
+ },
+ "copy-editor": {
+  "career": "Copy editor",
+  "score": 65,
+  "gender": "male"
+ },
+ "coroner": {
+  "career": "Coroner",
+  "score": 40,
+  "gender": "male"
+ },
+ "corporate-responsibility-and-sustainability-practitioner": {
+  "career": "Corporate responsibility and sustainability practitioner",
+  "score": 60,
+  "gender": "male"
+ },
+ "cosmetic-surgeon": {
+  "career": "Plastic surgeon",
+  "score": 30,
+  "gender": "male"
+ },
+ "costume-designer": {
+  "career": "Costume designer",
+  "score": 85,
+  "gender": "female"
+ },
+ "counsellor": {
+  "career": "Counsellor",
+  "score": 90,
+  "gender": "female"
+ },
+ "counter-service-assistant": {
+  "career": "Counter service assistant",
+  "score": 50,
+  "gender": "male"
+ },
+ "countryside-officer": {
+  "career": "Countryside officer",
+  "score": 45,
+  "gender": "male"
+ },
+ "countryside-ranger": {
+  "career": "Countryside ranger",
+  "score": 30,
+  "gender": "male"
+ },
+ "court-administrative-assistant": {
+  "career": "Court administrative assistant",
+  "score": 60,
+  "gender": "male"
+ },
+ "court-legal-adviser": {
+  "career": "Court legal adviser",
+  "score": 50,
+  "gender": "male"
+ },
+ "court-usher": {
+  "career": "Court usher",
+  "score": 60,
+  "gender": "male"
+ },
+ "crane-driver": {
+  "career": "Crane driver",
+  "score": 5,
+  "gender": "male"
+ },
+ "credit-controller": {
+  "career": "Credit controller",
+  "score": 50,
+  "gender": "male"
+ },
+ "crematorium-technician": {
+  "career": "Crematorium technician",
+  "score": 40,
+  "gender": "male"
+ },
+ "criminal-intelligence-analyst": {
+  "career": "Intelligence analyst",
+  "score": 45,
+  "gender": "male"
+ },
+ "criminologist": {
+  "career": "Criminologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "critical-care-technologist": {
+  "career": "Critical care technologist",
+  "score": 40,
+  "gender": "male"
+ },
+ "crown-prosecutor": {
+  "career": "Crown prosecutor",
+  "score": 40,
+  "gender": "male"
+ },
+ "cruise-ship-steward": {
+  "career": "Cruise ship steward",
+  "score": 55,
+  "gender": "male"
+ },
+ "customer-service-assistant": {
+  "career": "Customer service assistant",
+  "score": 65,
+  "gender": "male"
+ },
+ "customer-services-manager": {
+  "career": "Customer services manager",
+  "score": 60,
+  "gender": "male"
+ },
+ "cyber-intelligence-officer": {
+  "career": "Cyber intelligence officer",
+  "score": 20,
+  "gender": "male"
+ },
+ "cycle-mechanic": {
+  "career": "Cycle mechanic",
+  "score": 10,
+  "gender": "male"
+ },
+ "cycling-coach": {
+  "career": "Cycling coach",
+  "score": 35,
+  "gender": "male"
+ },
+ "dance-movement-psychotherapist": {
+  "career": "Dance movement psychotherapist",
+  "score": 90,
+  "gender": "female"
+ },
+ "dance-teacher": {
+  "career": "Dance teacher",
+  "score": 85,
+  "gender": "female"
+ },
+ "dancer": {
+  "career": "Dancer",
+  "score": 70,
+  "gender": "male"
+ },
+ "data-analyst-statistician": {
+  "career": "Data analyst-statistician",
+  "score": 30,
+  "gender": "male"
+ },
+ "data-protection-officer": {
+  "career": "Data protection officer",
+  "score": 45,
+  "gender": "male"
+ },
+ "data-scientist": {
+  "career": "Data scientist",
+  "score": 25,
+  "gender": "male"
+ },
+ "database-administrator": {
+  "career": "Database administrator",
+  "score": 20,
+  "gender": "male"
+ },
+ "delivery-van-driver": {
+  "career": "Delivery van driver",
+  "score": 15,
+  "gender": "male"
+ },
+ "demolition-operative": {
+  "career": "Demolition operative",
+  "score": 5,
+  "gender": "male"
+ },
+ "dental-hygienist": {
+  "career": "Dental hygienist",
+  "score": 90,
+  "gender": "female"
+ },
+ "dental-nurse": {
+  "career": "Dental nurse",
+  "score": 95,
+  "gender": "female"
+ },
+ "dental-technician": {
+  "career": "Dental technician",
+  "score": 40,
+  "gender": "male"
+ },
+ "dental-therapist": {
+  "career": "Dental therapist",
+  "score": 85,
+  "gender": "female"
+ },
+ "dentist": {
+  "career": "Dentist",
+  "score": 50,
+  "gender": "male"
+ },
+ "design-and-development-engineer": {
+  "career": "Design and development engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "dietitian": {
+  "career": "Dietitian",
+  "score": 85,
+  "gender": "female"
+ },
+ "digital-delivery-manager": {
+  "career": "Digital delivery manager",
+  "score": 35,
+  "gender": "male"
+ },
+ "digital-product-owner": {
+  "career": "Digital product owner",
+  "score": 35,
+  "gender": "male"
+ },
+ "diplomatic-service-officer": {
+  "career": "Diplomatic Service officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "director-of-photography": {
+  "career": "Director of photography",
+  "score": 20,
+  "gender": "male"
+ },
+ "dispensing-optician": {
+  "career": "Dispensing optician",
+  "score": 60,
+  "gender": "male"
+ },
+ "district-nurse": {
+  "career": "District nurse",
+  "score": 95,
+  "gender": "female"
+ },
+ "diver": {
+  "career": "Diver",
+  "score": 10,
+  "gender": "male"
+ },
+ "dj": {
+  "career": "DJ",
+  "score": 25,
+  "gender": "male"
+ },
+ "dog-groomer": {
+  "career": "Dog groomer",
+  "score": 85,
+  "gender": "female"
+ },
+ "dog-handler": {
+  "career": "Dog handler",
+  "score": 40,
+  "gender": "male"
+ },
+ "domestic-appliance-service-engineer": {
+  "career": "Domestic appliance service engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "domestic-energy-assessor": {
+  "career": "Domestic energy assessor",
+  "score": 20,
+  "gender": "male"
+ },
+ "door-supervisor": {
+  "career": "Door supervisor",
+  "score": 10,
+  "gender": "male"
+ },
+ "dramatherapist": {
+  "career": "Dramatherapist",
+  "score": 90,
+  "gender": "female"
+ },
+ "dress-maker": {
+  "career": "Dressmaker",
+  "score": 95,
+  "gender": "female"
+ },
+ "driving-instructor": {
+  "career": "Driving instructor",
+  "score": 50,
+  "gender": "male"
+ },
+ "drone-pilot": {
+  "career": "Drone pilot",
+  "score": 15,
+  "gender": "male"
+ },
+ "dry-liner": {
+  "career": "Dryliner",
+  "score": 5,
+  "gender": "male"
+ },
+ "e-commerce-manager": {
+  "career": "E-commerce manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "e-learning-developer": {
+  "career": "E-learning developer",
+  "score": 55,
+  "gender": "male"
+ },
+ "early-years-teacher": {
+  "career": "Early years teacher",
+  "score": 95,
+  "gender": "female"
+ },
+ "ecologist": {
+  "career": "Ecologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "economist": {
+  "career": "Economist",
+  "score": 35,
+  "gender": "male"
+ },
+ "editorial-assistant": {
+  "career": "Editorial assistant",
+  "score": 75,
+  "gender": "male"
+ },
+ "education-technician": {
+  "career": "Education technician",
+  "score": 50,
+  "gender": "male"
+ },
+ "education-welfare-officer": {
+  "career": "Education welfare officer",
+  "score": 80,
+  "gender": "female"
+ },
+ "efl-teacher": {
+  "career": "English as a foreign language (EFL) teacher",
+  "score": 60,
+  "gender": "male"
+ },
+ "electrical-engineer": {
+  "career": "Electrical engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "electrical-engineering-technician": {
+  "career": "Electrical engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "electrician": {
+  "career": "Electrician",
+  "score": 5,
+  "gender": "male"
+ },
+ "electricity-distribution-worker": {
+  "career": "Electricity distribution worker",
+  "score": 5,
+  "gender": "male"
+ },
+ "electricity-generation-worker": {
+  "career": "Electricity generation worker",
+  "score": 5,
+  "gender": "male"
+ },
+ "electronics-engineer": {
+  "career": "Electronics engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "electronics-engineering-technician": {
+  "career": "Electronics engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "embalmer": {
+  "career": "Embalmer",
+  "score": 40,
+  "gender": "male"
+ },
+ "emergency-care-assistant": {
+  "career": "Emergency care assistant",
+  "score": 70,
+  "gender": "male"
+ },
+ "emergency-medical-dispatcher": {
+  "career": "Emergency medical dispatcher",
+  "score": 80,
+  "gender": "female"
+ },
+ "energy-engineer": {
+  "career": "Renewable energy engineer",
+  "score": 20,
+  "gender": "male"
+ },
+ "engineering-construction-craftworker": {
+  "career": "Engineering construction craftworker",
+  "score": 5,
+  "gender": "male"
+ },
+ "engineering-construction-technician": {
+  "career": "Engineering construction technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "engineering-maintenance-technician": {
+  "career": "Engineering maintenance technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "engineering-operative": {
+  "career": "Engineering operative",
+  "score": 5,
+  "gender": "male"
+ },
+ "environmental-consultant": {
+  "career": "Environmental consultant",
+  "score": 45,
+  "gender": "male"
+ },
+ "environmental-health-officer": {
+  "career": "Environmental health practitioner",
+  "score": 50,
+  "gender": "male"
+ },
+ "equalities-officer": {
+  "career": "Equalities officer",
+  "score": 65,
+  "gender": "male"
+ },
+ "ergonomist": {
+  "career": "Ergonomist",
+  "score": 40,
+  "gender": "male"
+ },
+ "esports-gamer": {
+  "career": "Esports gamer",
+  "score": 10,
+  "gender": "male"
+ },
+ "estate-agent": {
+  "career": "Estate agent",
+  "score": 40,
+  "gender": "male"
+ },
+ "estates-officer": {
+  "career": "Estates officer",
+  "score": 40,
+  "gender": "male"
+ },
+ "estimator": {
+  "career": "Estimator",
+  "score": 20,
+  "gender": "male"
+ },
+ "events-manager": {
+  "career": "Events manager",
+  "score": 60,
+  "gender": "male"
+ },
+ "exhibition-designer": {
+  "career": "Exhibition designer",
+  "score": 50,
+  "gender": "male"
+ },
+ "facilities-manager": {
+  "career": "Facilities manager",
+  "score": 35,
+  "gender": "male"
+ },
+ "family-mediator": {
+  "career": "Family mediator",
+  "score": 80,
+  "gender": "female"
+ },
+ "family-support-worker": {
+  "career": "Family support worker",
+  "score": 90,
+  "gender": "female"
+ },
+ "farm-secretary": {
+  "career": "Farm secretary",
+  "score": 75,
+  "gender": "male"
+ },
+ "farm-worker": {
+  "career": "Farm worker",
+  "score": 15,
+  "gender": "male"
+ },
+ "farmer": {
+  "career": "Farmer",
+  "score": 10,
+  "gender": "male"
+ },
+ "farrier": {
+  "career": "Farrier",
+  "score": 5,
+  "gender": "male"
+ },
+ "fashion-design-assistant": {
+  "career": "Fashion design assistant",
+  "score": 80,
+  "gender": "female"
+ },
+ "fashion-designer": {
+  "career": "Fashion designer",
+  "score": 85,
+  "gender": "female"
+ },
+ "fashion-model": {
+  "career": "Fashion model",
+  "score": 95,
+  "gender": "female"
+ },
+ "fence-installer": {
+  "career": "Fence installer",
+  "score": 5,
+  "gender": "male"
+ },
+ "film-critic": {
+  "career": "Film critic",
+  "score": 45,
+  "gender": "male"
+ },
+ "finance-officer": {
+  "career": "Finance officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "financial-adviser": {
+  "career": "Financial adviser",
+  "score": 40,
+  "gender": "male"
+ },
+ "financial-services-customer-adviser": {
+  "career": "Financial services customer adviser",
+  "score": 60,
+  "gender": "male"
+ },
+ "fine-artist": {
+  "career": "Fine artist",
+  "score": 50,
+  "gender": "male"
+ },
+ "fingerprint-officer": {
+  "career": "Fingerprint officer",
+  "score": 40,
+  "gender": "male"
+ },
+ "fire-safety-engineer": {
+  "career": "Fire safety engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "firefighter": {
+  "career": "Firefighter",
+  "score": 5,
+  "gender": "male"
+ },
+ "fish-farmer": {
+  "career": "Fish farmer",
+  "score": 10,
+  "gender": "male"
+ },
+ "fishing-boat-deckhand": {
+  "career": "Fishing boat deckhand",
+  "score": 5,
+  "gender": "male"
+ },
+ "fitness-instructor": {
+  "career": "Fitness instructor",
+  "score": 60,
+  "gender": "male"
+ },
+ "florist": {
+  "career": "Florist",
+  "score": 90,
+  "gender": "female"
+ },
+ "food-factory-worker": {
+  "career": "Food factory worker",
+  "score": 40,
+  "gender": "male"
+ },
+ "food-manufacturing-inspector": {
+  "career": "Food manufacturing inspector",
+  "score": 45,
+  "gender": "male"
+ },
+ "food-packaging-operative": {
+  "career": "Food packaging operative",
+  "score": 40,
+  "gender": "male"
+ },
+ "food-scientist": {
+  "career": "Food scientist",
+  "score": 50,
+  "gender": "male"
+ },
+ "football-coach": {
+  "career": "Football coach",
+  "score": 15,
+  "gender": "male"
+ },
+ "football-referee": {
+  "career": "Football referee",
+  "score": 10,
+  "gender": "male"
+ },
+ "footwear-designer": {
+  "career": "Footwear designer-maker",
+  "score": 55,
+  "gender": "male"
+ },
+ "forensic-computer-analyst": {
+  "career": "Forensic computer analyst",
+  "score": 25,
+  "gender": "male"
+ },
+ "forensic-psychologist": {
+  "career": "Forensic psychologist",
+  "score": 75,
+  "gender": "male"
+ },
+ "forensic-scientist": {
+  "career": "Forensic scientist",
+  "score": 55,
+  "gender": "male"
+ },
+ "forestry-worker": {
+  "career": "Forestry worker",
+  "score": 10,
+  "gender": "male"
+ },
+ "forklift-driver": {
+  "career": "Forklift driver",
+  "score": 10,
+  "gender": "male"
+ },
+ "formworker": {
+  "career": "Formworker",
+  "score": 5,
+  "gender": "male"
+ },
+ "foster-carer": {
+  "career": "Foster carer",
+  "score": 95,
+  "gender": "female"
+ },
+ "foundry-mould-maker": {
+  "career": "Foundry moulder",
+  "score": 5,
+  "gender": "male"
+ },
+ "funeral-director": {
+  "career": "Funeral director",
+  "score": 60,
+  "gender": "male"
+ },
+ "furniture-designer": {
+  "career": "Furniture designer",
+  "score": 50,
+  "gender": "male"
+ },
+ "furniture-maker": {
+  "career": "Furniture maker",
+  "score": 20,
+  "gender": "male"
+ },
+ "furniture-restorer": {
+  "career": "Furniture restorer",
+  "score": 40,
+  "gender": "male"
+ },
+ "further-education-lecturer": {
+  "career": "Further education teacher",
+  "score": 70,
+  "gender": "male"
+ },
+ "gamekeeper": {
+  "career": "Gamekeeper",
+  "score": 10,
+  "gender": "male"
+ },
+ "gardener": {
+  "career": "Gardener",
+  "score": 40,
+  "gender": "male"
+ },
+ "garment-technologist": {
+  "career": "Garment technologist",
+  "score": 65,
+  "gender": "male"
+ },
+ "gas-mains-layer": {
+  "career": "Gas mains layer",
+  "score": 5,
+  "gender": "male"
+ },
+ "gas-service-technician": {
+  "career": "Gas service technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "general-practice-surveyor": {
+  "career": "General practice surveyor",
+  "score": 40,
+  "gender": "male"
+ },
+ "geneticist": {
+  "career": "Geneticist",
+  "score": 50,
+  "gender": "male"
+ },
+ "geoscientist": {
+  "career": "Geoscientist",
+  "score": 35,
+  "gender": "male"
+ },
+ "geospatial-technician": {
+  "career": "Geospatial technician",
+  "score": 40,
+  "gender": "male"
+ },
+ "geotechnician": {
+  "career": "Geotechnician",
+  "score": 35,
+  "gender": "male"
+ },
+ "glassmaker": {
+  "career": "Glassmaker",
+  "score": 30,
+  "gender": "male"
+ },
+ "glazier": {
+  "career": "Glazier",
+  "score": 15,
+  "gender": "male"
+ },
+ "gp": {
+  "career": "GP",
+  "score": 50,
+  "gender": "male"
+ },
+ "gp-practice-manager": {
+  "career": "GP practice manager",
+  "score": 55,
+  "gender": "male"
+ },
+ "graphic-designer": {
+  "career": "Graphic designer",
+  "score": 55,
+  "gender": "male"
+ },
+ "groundsperson": {
+  "career": "Groundsperson",
+  "score": 20,
+  "gender": "male"
+ },
+ "hairdresser": {
+  "career": "Hairdresser",
+  "score": 90,
+  "gender": "female"
+ },
+ "headteacher": {
+  "career": "Headteacher",
+  "score": 65,
+  "gender": "male"
+ },
+ "health-and-safety-adviser": {
+  "career": "Health and safety adviser",
+  "score": 45,
+  "gender": "male"
+ },
+ "health-play-specialist": {
+  "career": "Health play specialist",
+  "score": 80,
+  "gender": "female"
+ },
+ "health-promotion-specialist": {
+  "career": "Health promotion specialist",
+  "score": 70,
+  "gender": "male"
+ },
+ "health-records-clerk": {
+  "career": "Health records clerk",
+  "score": 75,
+  "gender": "male"
+ },
+ "health-service-manager": {
+  "career": "Health service manager",
+  "score": 55,
+  "gender": "male"
+ },
+ "health-trainer": {
+  "career": "Health trainer",
+  "score": 60,
+  "gender": "male"
+ },
+ "health-visitor": {
+  "career": "Health visitor",
+  "score": 95,
+  "gender": "female"
+ },
+ "healthcare-assistant": {
+  "career": "Healthcare assistant",
+  "score": 90,
+  "gender": "female"
+ },
+ "healthcare-science-assistant": {
+  "career": "Healthcare science assistant",
+  "score": 60,
+  "gender": "male"
+ },
+ "heat-pump-engineer": {
+  "career": "Heat pump engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "heating-and-ventilation-engineer": {
+  "career": "Heating and ventilation engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "heavy-vehicle-technician": {
+  "career": "Heavy vehicle technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "helicopter-engineer": {
+  "career": "Helicopter engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "helicopter-pilot": {
+  "career": "Helicopter pilot",
+  "score": 10,
+  "gender": "male"
+ },
+ "heritage-officer": {
+  "career": "Heritage officer",
+  "score": 60,
+  "gender": "male"
+ },
+ "higher-education-lecturer": {
+  "career": "Higher education lecturer",
+  "score": 50,
+  "gender": "male"
+ },
+ "homeopath": {
+  "career": "Homeopath",
+  "score": 75,
+  "gender": "male"
+ },
+ "horse-groom": {
+  "career": "Horse groom",
+  "score": 80,
+  "gender": "female"
+ },
+ "horse-riding-instructor": {
+  "career": "Horse riding instructor",
+  "score": 75,
+  "gender": "male"
+ },
+ "horticultural-manager": {
+  "career": "Horticultural manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "horticultural-therapist": {
+  "career": "Horticultural therapist",
+  "score": 85,
+  "gender": "female"
+ },
+ "horticultural-worker": {
+  "career": "Horticultural worker",
+  "score": 40,
+  "gender": "male"
+ },
+ "hospital-doctor": {
+  "career": "Hospital doctor",
+  "score": 50,
+  "gender": "male"
+ },
+ "hospital-porter": {
+  "career": "Hospital porter",
+  "score": 25,
+  "gender": "male"
+ },
+ "hotel-manager": {
+  "career": "Hotel manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "hotel-porter": {
+  "career": "Hotel porter",
+  "score": 20,
+  "gender": "male"
+ },
+ "housekeeper": {
+  "career": "Hotel housekeeper",
+  "score": 90,
+  "gender": "female"
+ },
+ "housing-officer": {
+  "career": "Housing officer",
+  "score": 70,
+  "gender": "male"
+ },
+ "human-resources-officer": {
+  "career": "Human resources officer",
+  "score": 75,
+  "gender": "male"
+ },
+ "hydrologist": {
+  "career": "Hydrologist",
+  "score": 35,
+  "gender": "male"
+ },
+ "hypnotherapist": {
+  "career": "Hypnotherapist",
+  "score": 75,
+  "gender": "male"
+ },
+ "illustrator": {
+  "career": "Illustrator",
+  "score": 60,
+  "gender": "male"
+ },
+ "immigration-adviser-non-government": {
+  "career": "Immigration adviser (non-government)",
+  "score": 55,
+  "gender": "male"
+ },
+ "immigration-officer": {
+  "career": "Immigration officer",
+  "score": 45,
+  "gender": "male"
+ },
+ "import-export-clerk": {
+  "career": "Import-export clerk",
+  "score": 50,
+  "gender": "male"
+ },
+ "indexer": {
+  "career": "Indexer",
+  "score": 70,
+  "gender": "male"
+ },
+ "industrial-cleaner": {
+  "career": "Industrial cleaner",
+  "score": 30,
+  "gender": "male"
+ },
+ "information-scientist": {
+  "career": "Information scientist",
+  "score": 50,
+  "gender": "male"
+ },
+ "insurance-account-manager": {
+  "career": "Insurance account manager",
+  "score": 40,
+  "gender": "male"
+ },
+ "insurance-broker": {
+  "career": "Insurance broker",
+  "score": 40,
+  "gender": "male"
+ },
+ "insurance-claims-handler": {
+  "career": "Insurance claims handler",
+  "score": 55,
+  "gender": "male"
+ },
+ "insurance-loss-adjuster": {
+  "career": "Insurance loss adjuster",
+  "score": 30,
+  "gender": "male"
+ },
+ "insurance-risk-surveyor": {
+  "career": "Insurance risk surveyor",
+  "score": 30,
+  "gender": "male"
+ },
+ "insurance-technician": {
+  "career": "Insurance technician",
+  "score": 50,
+  "gender": "male"
+ },
+ "insurance-underwriter": {
+  "career": "Insurance underwriter",
+  "score": 50,
+  "gender": "male"
+ },
+ "interior-designer": {
+  "career": "Interior designer",
+  "score": 75,
+  "gender": "male"
+ },
+ "interpreter": {
+  "career": "Interpreter",
+  "score": 60,
+  "gender": "male"
+ },
+ "investment-analyst": {
+  "career": "Investment analyst",
+  "score": 30,
+  "gender": "male"
+ },
+ "it-project-manager": {
+  "career": "IT project manager",
+  "score": 40,
+  "gender": "male"
+ },
+ "it-security-co-ordinator": {
+  "career": "IT security co-ordinator",
+  "score": 25,
+  "gender": "male"
+ },
+ "it-support-technician": {
+  "career": "IT support technician",
+  "score": 20,
+  "gender": "male"
+ },
+ "jewellery-designer-maker": {
+  "career": "Jewellery designer-maker",
+  "score": 65,
+  "gender": "male"
+ },
+ "jockey": {
+  "career": "Jockey",
+  "score": 15,
+  "gender": "male"
+ },
+ "judge": {
+  "career": "Judge",
+  "score": 40,
+  "gender": "male"
+ },
+ "kennel-worker": {
+  "career": "Kennel worker",
+  "score": 70,
+  "gender": "male"
+ },
+ "kitchen-and-bathroom-designer": {
+  "career": "Kitchen and bathroom designer",
+  "score": 70,
+  "gender": "male"
+ },
+ "kitchen-and-bathroom-fitter": {
+  "career": "Kitchen and bathroom fitter",
+  "score": 10,
+  "gender": "male"
+ },
+ "kitchen-assistant": {
+  "career": "Kitchen porter",
+  "score": 20,
+  "gender": "male"
+ },
+ "laboratory-technician": {
+  "career": "Laboratory technician",
+  "score": 50,
+  "gender": "male"
+ },
+ "land-and-property-valuer-and-auctioneer": {
+  "career": "Land and property valuer and auctioneer",
+  "score": 30,
+  "gender": "male"
+ },
+ "land-surveyor": {
+  "career": "Land surveyor",
+  "score": 15,
+  "gender": "male"
+ },
+ "landscape-architect": {
+  "career": "Landscape architect",
+  "score": 40,
+  "gender": "male"
+ },
+ "landscaper": {
+  "career": "Landscaper",
+  "score": 10,
+  "gender": "male"
+ },
+ "large-goods-vehicle-driver": {
+  "career": "HGV driver",
+  "score": 10,
+  "gender": "male"
+ },
+ "laundry-worker": {
+  "career": "Laundry worker",
+  "score": 70,
+  "gender": "male"
+ },
+ "learning-disability-nurse": {
+  "career": "Learning disability nurse",
+  "score": 95,
+  "gender": "female"
+ },
+ "learning-mentor": {
+  "career": "Learning mentor",
+  "score": 75,
+  "gender": "male"
+ },
+ "leather-craftworker": {
+  "career": "Leather craftworker",
+  "score": 50,
+  "gender": "male"
+ },
+ "legal-executive": {
+  "career": "Legal executive",
+  "score": 50,
+  "gender": "male"
+ },
+ "legal-secretary": {
+  "career": "Legal secretary",
+  "score": 90,
+  "gender": "female"
+ },
+ "leisure-centre-assistant": {
+  "career": "Leisure centre assistant",
+  "score": 55,
+  "gender": "male"
+ },
+ "leisure-centre-manager": {
+  "career": "Leisure centre manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "librarian": {
+  "career": "Librarian",
+  "score": 85,
+  "gender": "female"
+ },
+ "library-assistant": {
+  "career": "Library assistant",
+  "score": 90,
+  "gender": "female"
+ },
+ "licensed-conveyancer": {
+  "career": "Licensed conveyancer",
+  "score": 55,
+  "gender": "male"
+ },
+ "life-coach": {
+  "career": "Life coach",
+  "score": 70,
+  "gender": "male"
+ },
+ "lifeguard": {
+  "career": "Lifeguard",
+  "score": 45,
+  "gender": "male"
+ },
+ "lift-engineer": {
+  "career": "Lift engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "lighting-technician": {
+  "career": "Lighting technician",
+  "score": 20,
+  "gender": "male"
+ },
+ "live-sound-engineer": {
+  "career": "Live sound engineer",
+  "score": 20,
+  "gender": "male"
+ },
+ "local-government-officer": {
+  "career": "Local government officer",
+  "score": 55,
+  "gender": "male"
+ },
+ "local-government-revenues-officer": {
+  "career": "Local government revenues officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "locksmith": {
+  "career": "Locksmith",
+  "score": 10,
+  "gender": "male"
+ },
+ "maintenance-fitter": {
+  "career": "Maintenance fitter",
+  "score": 10,
+  "gender": "male"
+ },
+ "make-up-artist": {
+  "career": "Make-up artist",
+  "score": 95,
+  "gender": "female"
+ },
+ "management-accountant": {
+  "career": "Management accountant",
+  "score": 45,
+  "gender": "male"
+ },
+ "management-consultant": {
+  "career": "Management consultant",
+  "score": 35,
+  "gender": "male"
+ },
+ "manufacturing-systems-engineer": {
+  "career": "Manufacturing systems engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "marine-engineer": {
+  "career": "Marine engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "marine-engineering-technician": {
+  "career": "Marine engineering technician",
+  "score": 5,
+  "gender": "male"
+ },
+ "market-research-data-analyst": {
+  "career": "Market research data analyst",
+  "score": 50,
+  "gender": "male"
+ },
+ "market-research-executive": {
+  "career": "Market research executive",
+  "score": 50,
+  "gender": "male"
+ },
+ "market-researcher": {
+  "career": "Market researcher",
+  "score": 55,
+  "gender": "male"
+ },
+ "market-trader": {
+  "career": "Market trader",
+  "score": 40,
+  "gender": "male"
+ },
+ "marketing-executive": {
+  "career": "Marketing executive",
+  "score": 60,
+  "gender": "male"
+ },
+ "marketing-manager": {
+  "career": "Marketing manager",
+  "score": 60,
+  "gender": "male"
+ },
+ "martial-arts-instructor": {
+  "career": "Martial arts instructor",
+  "score": 35,
+  "gender": "male"
+ },
+ "massage-therapist": {
+  "career": "Massage therapist",
+  "score": 90,
+  "gender": "female"
+ },
+ "materials-engineer": {
+  "career": "Materials engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "materials-technician": {
+  "career": "Materials technician",
+  "score": 5,
+  "gender": "male"
+ },
+ "maternity-support-worker": {
+  "career": "Maternity support worker",
+  "score": 95,
+  "gender": "female"
+ },
+ "mechanical-engineer": {
+  "career": "Mechanical engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "mechanical-engineering-technician": {
+  "career": "Mechanical engineering technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "media-researcher": {
+  "career": "Media researcher",
+  "score": 50,
+  "gender": "male"
+ },
+ "medical-herbalist": {
+  "career": "Medical herbalist",
+  "score": 70,
+  "gender": "male"
+ },
+ "medical-illustrator": {
+  "career": "Medical illustrator",
+  "score": 50,
+  "gender": "male"
+ },
+ "medical-physicist": {
+  "career": "Medical physicist",
+  "score": 20,
+  "gender": "male"
+ },
+ "medical-secretary": {
+  "career": "Medical secretary",
+  "score": 85,
+  "gender": "female"
+ },
+ "mental-health-nurse": {
+  "career": "Mental health nurse",
+  "score": 90,
+  "gender": "female"
+ },
+ "merchant-navy-deck-officer": {
+  "career": "Merchant Navy deck officer",
+  "score": 10,
+  "gender": "male"
+ },
+ "merchant-navy-engineering-officer": {
+  "career": "Merchant Navy engineering officer",
+  "score": 5,
+  "gender": "male"
+ },
+ "merchant-navy-rating": {
+  "career": "Merchant Navy rating",
+  "score": 10,
+  "gender": "male"
+ },
+ "meteorologist": {
+  "career": "Meteorologist",
+  "score": 40,
+  "gender": "male"
+ },
+ "metrologist": {
+  "career": "Metrologist",
+  "score": 30,
+  "gender": "male"
+ },
+ "microbiologist": {
+  "career": "Microbiologist",
+  "score": 45,
+  "gender": "male"
+ },
+ "midwife": {
+  "career": "Midwife",
+  "score": 100,
+  "gender": "female"
+ },
+ "model-maker": {
+  "career": "Model maker",
+  "score": 35,
+  "gender": "male"
+ },
+ "money-adviser": {
+  "career": "Money adviser",
+  "score": 45,
+  "gender": "male"
+ },
+ "montessori-teacher": {
+  "career": "Montessori teacher",
+  "score": 85,
+  "gender": "female"
+ },
+ "mortgage-adviser": {
+  "career": "Mortgage adviser",
+  "score": 45,
+  "gender": "male"
+ },
+ "motor-mechanic": {
+  "career": "Motor mechanic",
+  "score": 5,
+  "gender": "male"
+ },
+ "motor-vehicle-breakdown-engineer": {
+  "career": "Roadside assistance technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "motor-vehicle-fitter": {
+  "career": "Fast fit technician",
+  "score": 5,
+  "gender": "male"
+ },
+ "motor-vehicle-parts-person": {
+  "career": "Automotive parts advisor",
+  "score": 20,
+  "gender": "male"
+ },
+ "motorcycle-mechanic": {
+  "career": "Motorcycle mechanic",
+  "score": 5,
+  "gender": "male"
+ },
+ "motorsport-engineer": {
+  "career": "Motorsport engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "mp": {
+  "career": "MP",
+  "score": 40,
+  "gender": "male"
+ },
+ "museum-assistant": {
+  "career": "Museum attendant",
+  "score": 50,
+  "gender": "male"
+ },
+ "museum-curator": {
+  "career": "Museum curator",
+  "score": 60,
+  "gender": "male"
+ },
+ "music-promotions-manager": {
+  "career": "Music promotions manager",
+  "score": 55,
+  "gender": "male"
+ },
+ "music-teacher": {
+  "career": "Music teacher",
+  "score": 75,
+  "gender": "male"
+ },
+ "music-therapist": {
+  "career": "Music therapist",
+  "score": 80,
+  "gender": "female"
+ },
+ "musical-instrument-maker-repairer": {
+  "career": "Musical instrument maker and repairer",
+  "score": 30,
+  "gender": "male"
+ },
+ "nail-technician": {
+  "career": "Nail technician",
+  "score": 98,
+  "gender": "female"
+ },
+ "nanny": {
+  "career": "Nanny",
+  "score": 98,
+  "gender": "female"
+ },
+ "nanotechnologist": {
+  "career": "Nanotechnologist",
+  "score": 20,
+  "gender": "male"
+ },
+ "naturopath": {
+  "career": "Naturopath",
+  "score": 70,
+  "gender": "male"
+ },
+ "naval-architect": {
+  "career": "Naval architect",
+  "score": 10,
+  "gender": "male"
+ },
+ "neighbourhood-warden": {
+  "career": "Neighbourhood warden",
+  "score": 40,
+  "gender": "male"
+ },
+ "network-engineer": {
+  "career": "Network engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "network-manager": {
+  "career": "Network manager",
+  "score": 20,
+  "gender": "male"
+ },
+ "newspaper-journalist": {
+  "career": "Newspaper or magazine journalist",
+  "score": 60,
+  "gender": "male"
+ },
+ "newspaper-or-magazine-editor": {
+  "career": "Newspaper or magazine editor",
+  "score": 60,
+  "gender": "male"
+ },
+ "non-destructive-testing-technician": {
+  "career": "Non-destructive testing technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "nuclear-engineer": {
+  "career": "Nuclear engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "nuclear-technician": {
+  "career": "Nuclear technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "nurse": {
+  "career": "Nurse",
+  "score": 98,
+  "gender": "female"
+ },
+ "nursery-manager": {
+  "career": "Nursery manager",
+  "score": 95,
+  "gender": "female"
+ },
+ "nursery-worker": {
+  "career": "Nursery worker",
+  "score": 95,
+  "gender": "female"
+ },
+ "nursing-associate": {
+  "career": "Nursing associate",
+  "score": 95,
+  "gender": "female"
+ },
+ "nutritional-therapist": {
+  "career": "Nutritional therapist",
+  "score": 75,
+  "gender": "male"
+ },
+ "nutritionist": {
+  "career": "Nutritionist",
+  "score": 75,
+  "gender": "male"
+ },
+ "occupational-health-nurse": {
+  "career": "Occupational health nurse",
+  "score": 90,
+  "gender": "female"
+ },
+ "occupational-therapist": {
+  "career": "Occupational therapist",
+  "score": 85,
+  "gender": "female"
+ },
+ "occupational-therapy-support-worker": {
+  "career": "Occupational therapy support worker",
+  "score": 85,
+  "gender": "female"
+ },
+ "oceanographer": {
+  "career": "Oceanographer",
+  "score": 40,
+  "gender": "male"
+ },
+ "office-manager": {
+  "career": "Office manager",
+  "score": 70,
+  "gender": "male"
+ },
+ "offshore-drilling-worker": {
+  "career": "Offshore drilling worker",
+  "score": 5,
+  "gender": "male"
+ },
+ "ofsted-inspector": {
+  "career": "Ofsted inspector",
+  "score": 55,
+  "gender": "male"
+ },
+ "online-tutor": {
+  "career": "Online tutor",
+  "score": 65,
+  "gender": "male"
+ },
+ "operating-department-practitioner": {
+  "career": "Operating department practitioner",
+  "score": 80,
+  "gender": "female"
+ },
+ "operational-researcher": {
+  "career": "Operational researcher",
+  "score": 40,
+  "gender": "male"
+ },
+ "optometrist": {
+  "career": "Optometrist",
+  "score": 70,
+  "gender": "male"
+ },
+ "orthoptist": {
+  "career": "Orthoptist",
+  "score": 75,
+  "gender": "male"
+ },
+ "osteopath": {
+  "career": "Osteopath",
+  "score": 60,
+  "gender": "male"
+ },
+ "outdoor-activities-instructor": {
+  "career": "Outdoor activities instructor",
+  "score": 40,
+  "gender": "male"
+ },
+ "packaging-technologist": {
+  "career": "Packaging technologist",
+  "score": 45,
+  "gender": "male"
+ },
+ "packer": {
+  "career": "Packer",
+  "score": 45,
+  "gender": "male"
+ },
+ "paediatrician": {
+  "career": "Paediatrician",
+  "score": 70,
+  "gender": "male"
+ },
+ "paint-sprayer": {
+  "career": "Paint sprayer",
+  "score": 20,
+  "gender": "male"
+ },
+ "painter-and-decorator": {
+  "career": "Painter and decorator",
+  "score": 25,
+  "gender": "male"
+ },
+ "palaeontologist": {
+  "career": "Palaeontologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "palliative-care-assistant": {
+  "career": "Palliative care assistant",
+  "score": 90,
+  "gender": "female"
+ },
+ "paralegal": {
+  "career": "Paralegal",
+  "score": 70,
+  "gender": "male"
+ },
+ "paramedic": {
+  "career": "Paramedic",
+  "score": 40,
+  "gender": "male"
+ },
+ "paraplanner": {
+  "career": "Paraplanner",
+  "score": 65,
+  "gender": "male"
+ },
+ "pastoral-care-worker": {
+  "career": "Pastoral care worker",
+  "score": 80,
+  "gender": "female"
+ },
+ "patent-attorney": {
+  "career": "Patent attorney",
+  "score": 30,
+  "gender": "male"
+ },
+ "pathologist": {
+  "career": "Pathologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "patient-advice-and-liaison-service-officer": {
+  "career": "Patient advice and liaison service officer",
+  "score": 75,
+  "gender": "male"
+ },
+ "pattern-cutter": {
+  "career": "Pattern cutter",
+  "score": 80,
+  "gender": "female"
+ },
+ "payroll-administrator": {
+  "career": "Payroll administrator",
+  "score": 75,
+  "gender": "male"
+ },
+ "pe-teacher": {
+  "career": "PE teacher",
+  "score": 55,
+  "gender": "male"
+ },
+ "pensions-administrator": {
+  "career": "Pensions administrator",
+  "score": 70,
+  "gender": "male"
+ },
+ "personal-assistant": {
+  "career": "Executive assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "personal-trainer": {
+  "career": "Personal trainer",
+  "score": 45,
+  "gender": "male"
+ },
+ "pest-control-technician": {
+  "career": "Pest control technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "pet-behaviour-consultant": {
+  "career": "Pet behaviour consultant",
+  "score": 85,
+  "gender": "female"
+ },
+ "pharmacist": {
+  "career": "Pharmacist",
+  "score": 70,
+  "gender": "male"
+ },
+ "pharmacologist": {
+  "career": "Pharmacologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "pharmacy-assistant": {
+  "career": "Pharmacy assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "pharmacy-technician": {
+  "career": "Pharmacy technician",
+  "score": 85,
+  "gender": "female"
+ },
+ "phlebotomist": {
+  "career": "Phlebotomist",
+  "score": 90,
+  "gender": "female"
+ },
+ "photographer": {
+  "career": "Photographer",
+  "score": 50,
+  "gender": "male"
+ },
+ "photographic-stylist": {
+  "career": "Photographic stylist",
+  "score": 75,
+  "gender": "male"
+ },
+ "photographic-technician": {
+  "career": "Photographic technician",
+  "score": 40,
+  "gender": "male"
+ },
+ "physician-associate": {
+  "career": "Physician assistant",
+  "score": 70,
+  "gender": "male"
+ },
+ "physicist": {
+  "career": "Physicist",
+  "score": 20,
+  "gender": "male"
+ },
+ "physiotherapist": {
+  "career": "Physiotherapist",
+  "score": 75,
+  "gender": "male"
+ },
+ "physiotherapy-assistant": {
+  "career": "Physiotherapy assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "pilates-teacher": {
+  "career": "Pilates teacher",
+  "score": 95,
+  "gender": "female"
+ },
+ "pipe-fitter": {
+  "career": "Pipe fitter",
+  "score": 10,
+  "gender": "male"
+ },
+ "planning-and-development-surveyor": {
+  "career": "Planning and development surveyor",
+  "score": 25,
+  "gender": "male"
+ },
+ "plasterer": {
+  "career": "Plasterer",
+  "score": 10,
+  "gender": "male"
+ },
+ "play-therapist": {
+  "career": "Play therapist",
+  "score": 90,
+  "gender": "female"
+ },
+ "playworker": {
+  "career": "Playworker",
+  "score": 90,
+  "gender": "female"
+ },
+ "plumber": {
+  "career": "Plumber",
+  "score": 10,
+  "gender": "male"
+ },
+ "podiatrist": {
+  "career": "Podiatrist",
+  "score": 70,
+  "gender": "male"
+ },
+ "podiatry-assistant": {
+  "career": "Podiatry assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "police-community-support-officer": {
+  "career": "Police community support officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "police-officer": {
+  "career": "Police officer",
+  "score": 35,
+  "gender": "male"
+ },
+ "port-operative": {
+  "career": "Port operative",
+  "score": 10,
+  "gender": "male"
+ },
+ "portage-home-visitor": {
+  "career": "Portage home visitor",
+  "score": 90,
+  "gender": "female"
+ },
+ "post-office-customer-service-assistant": {
+  "career": "Post Office customer service assistant",
+  "score": 70,
+  "gender": "male"
+ },
+ "postman-or-postwoman": {
+  "career": "Postperson",
+  "score": 45,
+  "gender": "male"
+ },
+ "practice-nurse": {
+  "career": "Practice nurse",
+  "score": 95,
+  "gender": "female"
+ },
+ "pre-press-operator": {
+  "career": "Print operator",
+  "score": 30,
+  "gender": "male"
+ },
+ "primary-care-graduate-mental-health-worker": {
+  "career": "Psychological wellbeing practitioner",
+  "score": 80,
+  "gender": "female"
+ },
+ "primary-school-teacher": {
+  "career": "Primary school teacher",
+  "score": 90,
+  "gender": "female"
+ },
+ "prison-governor": {
+  "career": "Prison governor",
+  "score": 35,
+  "gender": "male"
+ },
+ "prison-instructor": {
+  "career": "Prison instructor",
+  "score": 40,
+  "gender": "male"
+ },
+ "prison-officer": {
+  "career": "Prison officer",
+  "score": 30,
+  "gender": "male"
+ },
+ "private-practice-accountant": {
+  "career": "Private practice accountant",
+  "score": 50,
+  "gender": "male"
+ },
+ "probation-officer": {
+  "career": "Probation officer",
+  "score": 60,
+  "gender": "male"
+ },
+ "probation-services-officer": {
+  "career": "Probation services officer",
+  "score": 60,
+  "gender": "male"
+ },
+ "product-designer": {
+  "career": "Product designer",
+  "score": 50,
+  "gender": "male"
+ },
+ "production-manager-manufacturing-": {
+  "career": "Production manager (manufacturing)",
+  "score": 30,
+  "gender": "male"
+ },
+ "production-worker-manufacturing": {
+  "career": "Production worker (manufacturing)",
+  "score": 20,
+  "gender": "male"
+ },
+ "proofreader": {
+  "career": "Proofreader",
+  "score": 70,
+  "gender": "male"
+ },
+ "prop-maker": {
+  "career": "Prop maker",
+  "score": 50,
+  "gender": "male"
+ },
+ "prosthetist-orthotist": {
+  "career": "Prosthetist and orthotist",
+  "score": 70,
+  "gender": "male"
+ },
+ "psychiatrist": {
+  "career": "Psychiatrist",
+  "score": 60,
+  "gender": "male"
+ },
+ "psychologist": {
+  "career": "Psychologist",
+  "score": 80,
+  "gender": "female"
+ },
+ "psychotherapist": {
+  "career": "Psychotherapist",
+  "score": 85,
+  "gender": "female"
+ },
+ "public-finance-accountant": {
+  "career": "Public finance accountant",
+  "score": 45,
+  "gender": "male"
+ },
+ "public-relations-officer": {
+  "career": "Public relations officer",
+  "score": 75,
+  "gender": "male"
+ },
+ "publican": {
+  "career": "Publican",
+  "score": 40,
+  "gender": "male"
+ },
+ "purchasing-manager": {
+  "career": "Purchasing manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "qcf-assessor": {
+  "career": "RQF assessor",
+  "score": 50,
+  "gender": "male"
+ },
+ "quality-control-assistant": {
+  "career": "Quality control officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "quantity-surveyor": {
+  "career": "Quantity surveyor",
+  "score": 20,
+  "gender": "male"
+ },
+ "quarry-engineer": {
+  "career": "Quarry engineer",
+  "score": 10,
+  "gender": "male"
+ },
+ "quarry-worker": {
+  "career": "Quarry worker",
+  "score": 5,
+  "gender": "male"
+ },
+ "racehorse-trainer": {
+  "career": "Racehorse trainer",
+  "score": 40,
+  "gender": "male"
+ },
+ "radio-broadcast-assistant": {
+  "career": "Radio broadcast assistant",
+  "score": 60,
+  "gender": "male"
+ },
+ "radiographer": {
+  "career": "Radiographer",
+  "score": 75,
+  "gender": "male"
+ },
+ "radiography-assistant": {
+  "career": "Radiography assistant",
+  "score": 80,
+  "gender": "female"
+ },
+ "raf-airman-or-airwoman": {
+  "career": "RAF aviator",
+  "score": 10,
+  "gender": "male"
+ },
+ "raf-non-commissioned-aircrew": {
+  "career": "RAF regiment gunner",
+  "score": 5,
+  "gender": "male"
+ },
+ "raf-officer": {
+  "career": "RAF officer",
+  "score": 15,
+  "gender": "male"
+ },
+ "rail-engineering-technician": {
+  "career": "Rolling stock engineering technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "rail-track-maintenance-worker": {
+  "career": "Rail track maintenance worker",
+  "score": 10,
+  "gender": "male"
+ },
+ "railway-signaller": {
+  "career": "Railway signaller",
+  "score": 30,
+  "gender": "male"
+ },
+ "receptionist": {
+  "career": "Receptionist",
+  "score": 90,
+  "gender": "female"
+ },
+ "recruitment-consultant": {
+  "career": "Recruitment consultant",
+  "score": 70,
+  "gender": "male"
+ },
+ "recycling-officer": {
+  "career": "Recycling engagement officer",
+  "score": 60,
+  "gender": "male"
+ },
+ "recycling-operative": {
+  "career": "Recycling operative",
+  "score": 20,
+  "gender": "male"
+ },
+ "reflexologist": {
+  "career": "Reflexologist",
+  "score": 95,
+  "gender": "female"
+ },
+ "refrigeration-and-air-conditioning-installer": {
+  "career": "Refrigeration and air-conditioning installer",
+  "score": 10,
+  "gender": "male"
+ },
+ "registrar-of-births-deaths-marriages-and-civil-partnerships": {
+  "career": "Registrar of births, deaths, marriages and civil partnerships",
+  "score": 80,
+  "gender": "female"
+ },
+ "reiki-healer": {
+  "career": "Reiki healer",
+  "score": 95,
+  "gender": "female"
+ },
+ "religious-leader": {
+  "career": "Religious leader",
+  "score": 30,
+  "gender": "male"
+ },
+ "removals-worker": {
+  "career": "Removals worker",
+  "score": 10,
+  "gender": "male"
+ },
+ "research-scientist": {
+  "career": "Research scientist",
+  "score": 40,
+  "gender": "male"
+ },
+ "residential-support-worker": {
+  "career": "Residential support worker",
+  "score": 85,
+  "gender": "female"
+ },
+ "resort-representative": {
+  "career": "Resort representative",
+  "score": 70,
+  "gender": "male"
+ },
+ "restaurant-manager": {
+  "career": "Restaurant manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "retail-buyer": {
+  "career": "Retail buyer",
+  "score": 65,
+  "gender": "male"
+ },
+ "retail-manager": {
+  "career": "Retail manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "road-traffic-accident-investigator": {
+  "career": "Forensic collision investigator",
+  "score": 20,
+  "gender": "male"
+ },
+ "road-transport-manager": {
+  "career": "Road transport manager",
+  "score": 30,
+  "gender": "male"
+ },
+ "road-worker": {
+  "career": "Road worker",
+  "score": 10,
+  "gender": "male"
+ },
+ "roadie": {
+  "career": "Roadie",
+  "score": 20,
+  "gender": "male"
+ },
+ "robotics-engineer": {
+  "career": "Robotics engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "roofer": {
+  "career": "Roofer",
+  "score": 5,
+  "gender": "male"
+ },
+ "roustabout": {
+  "career": "Roustabout",
+  "score": 5,
+  "gender": "male"
+ },
+ "royal-marines-commando": {
+  "career": "Royal Marines commando",
+  "score": 5,
+  "gender": "male"
+ },
+ "royal-marines-officer": {
+  "career": "Royal Marines officer",
+  "score": 10,
+  "gender": "male"
+ },
+ "royal-navy-officer": {
+  "career": "Royal Navy officer",
+  "score": 15,
+  "gender": "male"
+ },
+ "royal-navy-rating": {
+  "career": "Royal Navy rating",
+  "score": 15,
+  "gender": "male"
+ },
+ "rspca-inspector": {
+  "career": "RSPCA inspector",
+  "score": 60,
+  "gender": "male"
+ },
+ "rural-surveyor": {
+  "career": "Rural surveyor",
+  "score": 20,
+  "gender": "male"
+ },
+ "sailing-instructor": {
+  "career": "Sailing instructor",
+  "score": 40,
+  "gender": "male"
+ },
+ "sales-administrator": {
+  "career": "Sales administrator",
+  "score": 60,
+  "gender": "male"
+ },
+ "sales-assistant": {
+  "career": "Sales assistant",
+  "score": 55,
+  "gender": "male"
+ },
+ "sales-manager": {
+  "career": "Sales manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "sales-representative": {
+  "career": "Sales representative",
+  "score": 50,
+  "gender": "male"
+ },
+ "scaffolder": {
+  "career": "Scaffolder",
+  "score": 5,
+  "gender": "male"
+ },
+ "scenes-of-crime-officer": {
+  "career": "Scenes of crime officer",
+  "score": 50,
+  "gender": "male"
+ },
+ "school-business-manager": {
+  "career": "School business manager",
+  "score": 65,
+  "gender": "male"
+ },
+ "school-lunchtime-supervisor": {
+  "career": "School lunchtime supervisor",
+  "score": 85,
+  "gender": "female"
+ },
+ "school-nurse": {
+  "career": "School nurse",
+  "score": 90,
+  "gender": "female"
+ },
+ "school-secretary": {
+  "career": "School secretary",
+  "score": 85,
+  "gender": "female"
+ },
+ "screenwriter": {
+  "career": "Screenwriter",
+  "score": 50,
+  "gender": "male"
+ },
+ "search-engine-optimisation-seo-specialist": {
+  "career": "Search engine optimisation (SEO) specialist",
+  "score": 50,
+  "gender": "male"
+ },
+ "secondary-school-teacher": {
+  "career": "Secondary school teacher",
+  "score": 65,
+  "gender": "male"
+ },
+ "security-manager": {
+  "career": "Security manager",
+  "score": 35,
+  "gender": "male"
+ },
+ "security-officer": {
+  "career": "Security officer",
+  "score": 25,
+  "gender": "male"
+ },
+ "security-service-personnel": {
+  "career": "Security Service personnel",
+  "score": 30,
+  "gender": "male"
+ },
+ "security-systems-installer": {
+  "career": "Security systems installer",
+  "score": 15,
+  "gender": "male"
+ },
+ "seismologist": {
+  "career": "Seismologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "senior-care-worker": {
+  "career": "Senior care worker",
+  "score": 90,
+  "gender": "female"
+ },
+ "set-designer": {
+  "career": "Set designer",
+  "score": 50,
+  "gender": "male"
+ },
+ "sewing-machinist": {
+  "career": "Sewing machinist",
+  "score": 80,
+  "gender": "female"
+ },
+ "shopfitter": {
+  "career": "Shopfitter",
+  "score": 10,
+  "gender": "male"
+ },
+ "shopkeeper": {
+  "career": "Shopkeeper",
+  "score": 50,
+  "gender": "male"
+ },
+ "signalling-technician": {
+  "career": "Signalling technician",
+  "score": 20,
+  "gender": "male"
+ },
+ "signmaker": {
+  "career": "Sign maker",
+  "score": 45,
+  "gender": "male"
+ },
+ "skills-for-life-teacher": {
+  "career": "Skills for life teacher",
+  "score": 70,
+  "gender": "male"
+ },
+ "smart-home-installer": {
+  "career": "Smart home installer",
+  "score": 15,
+  "gender": "male"
+ },
+ "smart-meter-installer": {
+  "career": "Smart meter installer",
+  "score": 15,
+  "gender": "male"
+ },
+ "social-media-manager": {
+  "career": "Social media manager",
+  "score": 60,
+  "gender": "male"
+ },
+ "social-services-manager": {
+  "career": "Social services manager",
+  "score": 80,
+  "gender": "female"
+ },
+ "social-work-assistant": {
+  "career": "Social work assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "social-worker": {
+  "career": "Social worker",
+  "score": 90,
+  "gender": "female"
+ },
+ "software-developer": {
+  "career": "Software developer",
+  "score": 30,
+  "gender": "male"
+ },
+ "solar-panel-installer": {
+  "career": "Solar panel installer",
+  "score": 10,
+  "gender": "male"
+ },
+ "soldier": {
+  "career": "Soldier",
+  "score": 0,
+  "gender": "male"
+ },
+ "solicitor": {
+  "career": "Solicitor",
+  "score": 50,
+  "gender": "male"
+ },
+ "solutions-architect": {
+  "career": "Solutions architect",
+  "score": 25,
+  "gender": "male"
+ },
+ "sonographer": {
+  "career": "Sonographer",
+  "score": 90,
+  "gender": "female"
+ },
+ "special-educational-needs-sen-teacher": {
+  "career": "Special educational needs (SEN) teacher",
+  "score": 85,
+  "gender": "female"
+ },
+ "special-educational-needs-sen-teaching-assistant": {
+  "career": "Special educational needs (SEN) teaching assistant",
+  "score": 90,
+  "gender": "female"
+ },
+ "speech-and-language-therapist": {
+  "career": "Speech and language therapist",
+  "score": 95,
+  "gender": "female"
+ },
+ "speech-and-language-therapy-assistant": {
+  "career": "Speech and language therapy assistant",
+  "score": 95,
+  "gender": "female"
+ },
+ "sport-and-exercise-psychologist": {
+  "career": "Sport and exercise psychologist",
+  "score": 50,
+  "gender": "male"
+ },
+ "sports-coach": {
+  "career": "Sports coach",
+  "score": 45,
+  "gender": "male"
+ },
+ "sports-commentator": {
+  "career": "Sports commentator",
+  "score": 30,
+  "gender": "male"
+ },
+ "sports-development-officer": {
+  "career": "Sports development officer",
+  "score": 45,
+  "gender": "male"
+ },
+ "sports-professional": {
+  "career": "Sports professional",
+  "score": 50,
+  "gender": "male"
+ },
+ "sports-scientist": {
+  "career": "Performance sports scientist",
+  "score": 35,
+  "gender": "male"
+ },
+ "stage-manager": {
+  "career": "Stage manager",
+  "score": 50,
+  "gender": "male"
+ },
+ "stagehand": {
+  "career": "Stagehand",
+  "score": 15,
+  "gender": "male"
+ },
+ "steel-erector": {
+  "career": "Steel erector",
+  "score": 5,
+  "gender": "male"
+ },
+ "steel-fixer": {
+  "career": "Steel fixer",
+  "score": 5,
+  "gender": "male"
+ },
+ "steeplejack": {
+  "career": "Steeplejack",
+  "score": 5,
+  "gender": "male"
+ },
+ "stock-control-assistant": {
+  "career": "Stock control assistant",
+  "score": 60,
+  "gender": "male"
+ },
+ "stockbroker": {
+  "career": "Stockbroker",
+  "score": 20,
+  "gender": "male"
+ },
+ "stonemason": {
+  "career": "Stonemason",
+  "score": 10,
+  "gender": "male"
+ },
+ "store-detective": {
+  "career": "Store detective",
+  "score": 40,
+  "gender": "male"
+ },
+ "structural-engineer": {
+  "career": "Structural engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "studio-sound-engineer": {
+  "career": "Studio sound engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "substance-misuse-outreach-worker": {
+  "career": "Substance misuse outreach worker",
+  "score": 65,
+  "gender": "male"
+ },
+ "supervisor": {
+  "career": "Supervisor",
+  "score": 45,
+  "gender": "male"
+ },
+ "supply-chain-manager": {
+  "career": "Supply chain manager",
+  "score": 35,
+  "gender": "male"
+ },
+ "surgeon": {
+  "career": "Surgeon",
+  "score": 35,
+  "gender": "male"
+ },
+ "swimming-teacher": {
+  "career": "Swimming teacher",
+  "score": 65,
+  "gender": "male"
+ },
+ "systems-analyst": {
+  "career": "Systems analyst",
+  "score": 25,
+  "gender": "male"
+ },
+ "tailor": {
+  "career": "Tailor",
+  "score": 55,
+  "gender": "male"
+ },
+ "tattooist-and-body-piercer": {
+  "career": "Tattooist and body piercer",
+  "score": 55,
+  "gender": "male"
+ },
+ "tax-adviser": {
+  "career": "Tax adviser",
+  "score": 45,
+  "gender": "male"
+ },
+ "tax-inspector": {
+  "career": "Tax inspector",
+  "score": 45,
+  "gender": "male"
+ },
+ "taxi-driver": {
+  "career": "Taxi driver",
+  "score": 25,
+  "gender": "male"
+ },
+ "teaching-assistant": {
+  "career": "Teaching assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "technical-architect": {
+  "career": "Technical architect",
+  "score": 15,
+  "gender": "male"
+ },
+ "technical-author": {
+  "career": "Technical author",
+  "score": 55,
+  "gender": "male"
+ },
+ "technical-brewer": {
+  "career": "Technical brewer",
+  "score": 15,
+  "gender": "male"
+ },
+ "technical-surveyor": {
+  "career": "Surveying technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "telecoms-engineer": {
+  "career": "Telecoms engineer",
+  "score": 15,
+  "gender": "male"
+ },
+ "test-lead": {
+  "career": "Test lead",
+  "score": 35,
+  "gender": "male"
+ },
+ "textile-designer": {
+  "career": "Textile designer",
+  "score": 75,
+  "gender": "male"
+ },
+ "textile-operative": {
+  "career": "Textile operative",
+  "score": 35,
+  "gender": "male"
+ },
+ "thatcher": {
+  "career": "Thatcher",
+  "score": 5,
+  "gender": "male"
+ },
+ "thermal-insulation-engineer": {
+  "career": "Thermal insulation engineer",
+  "score": 5,
+  "gender": "male"
+ },
+ "tiler": {
+  "career": "Tiler",
+  "score": 5,
+  "gender": "male"
+ },
+ "toolmaker": {
+  "career": "Toolmaker",
+  "score": 5,
+  "gender": "male"
+ },
+ "tour-manager": {
+  "career": "Tour manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "tourist-guide": {
+  "career": "Tourist guide",
+  "score": 65,
+  "gender": "male"
+ },
+ "tourist-information-centre-assistant": {
+  "career": "Tourist information centre assistant",
+  "score": 75,
+  "gender": "male"
+ },
+ "town-planner": {
+  "career": "Town planner",
+  "score": 45,
+  "gender": "male"
+ },
+ "town-planning-assistant": {
+  "career": "Town planning assistant",
+  "score": 55,
+  "gender": "male"
+ },
+ "trade-mark-attorney": {
+  "career": "Trade mark attorney",
+  "score": 45,
+  "gender": "male"
+ },
+ "trade-union-official": {
+  "career": "Trade union official",
+  "score": 45,
+  "gender": "male"
+ },
+ "trading-standards-officer": {
+  "career": "Trading standards officer",
+  "score": 45,
+  "gender": "male"
+ },
+ "train-conductor": {
+  "career": "Train conductor",
+  "score": 35,
+  "gender": "male"
+ },
+ "train-driver": {
+  "career": "Train driver",
+  "score": 5,
+  "gender": "male"
+ },
+ "train-station-worker": {
+  "career": "Train station worker",
+  "score": 45,
+  "gender": "male"
+ },
+ "training-officer": {
+  "career": "Training officer",
+  "score": 65,
+  "gender": "male"
+ },
+ "tram-driver": {
+  "career": "Tram driver",
+  "score": 5,
+  "gender": "male"
+ },
+ "translator": {
+  "career": "Translator",
+  "score": 75,
+  "gender": "male"
+ },
+ "transport-planner": {
+  "career": "Transport planner",
+  "score": 35,
+  "gender": "male"
+ },
+ "travel-agent": {
+  "career": "Travel agent",
+  "score": 75,
+  "gender": "male"
+ },
+ "tree-surgeon": {
+  "career": "Tree surgeon",
+  "score": 5,
+  "gender": "male"
+ },
+ "tv-or-film-assistant-director": {
+  "career": "TV or film assistant director",
+  "score": 35,
+  "gender": "male"
+ },
+ "tv-or-film-camera-operator": {
+  "career": "TV or film camera operator",
+  "score": 15,
+  "gender": "male"
+ },
+ "tv-or-film-director": {
+  "career": "TV or film director",
+  "score": 35,
+  "gender": "male"
+ },
+ "tv-or-film-producer": {
+  "career": "TV or film producer",
+  "score": 35,
+  "gender": "male"
+ },
+ "tv-or-film-production-assistant": {
+  "career": "TV or film assistant production co-ordinator",
+  "score": 55,
+  "gender": "male"
+ },
+ "tv-or-film-production-manager": {
+  "career": "TV or film production manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "tv-or-film-production-runner": {
+  "career": "TV or film production runner",
+  "score": 55,
+  "gender": "male"
+ },
+ "tv-or-film-sound-technician": {
+  "career": "TV or film sound technician",
+  "score": 15,
+  "gender": "male"
+ },
+ "tv-presenter": {
+  "career": "TV presenter",
+  "score": 55,
+  "gender": "male"
+ },
+ "user-researcher": {
+  "career": "User researcher",
+  "score": 65,
+  "gender": "male"
+ },
+ "ux-designer": {
+  "career": "User experience (UX) designer",
+  "score": 55,
+  "gender": "male"
+ },
+ "vehicle-body-repairer": {
+  "career": "Vehicle body repairer",
+  "score": 5,
+  "gender": "male"
+ },
+ "vet": {
+  "career": "Vet",
+  "score": 75,
+  "gender": "male"
+ },
+ "veterinary-nurse": {
+  "career": "Veterinary nurse",
+  "score": 95,
+  "gender": "female"
+ },
+ "veterinary-physiotherapist": {
+  "career": "Veterinary physiotherapist",
+  "score": 85,
+  "gender": "female"
+ },
+ "victim-care-officer": {
+  "career": "Victim care officer",
+  "score": 85,
+  "gender": "female"
+ },
+ "video-editor": {
+  "career": "Video editor",
+  "score": 45,
+  "gender": "male"
+ },
+ "visitor-attraction-general-manager": {
+  "career": "Visitor attraction general manager",
+  "score": 45,
+  "gender": "male"
+ },
+ "visual-merchandiser": {
+  "career": "Visual merchandiser",
+  "score": 70,
+  "gender": "male"
+ },
+ "vlogger": {
+  "career": "Social media influencer",
+  "score": 70,
+  "gender": "male"
+ },
+ "waiter": {
+  "career": "Waiter",
+  "score": 50,
+  "gender": "male"
+ },
+ "wardrobe-assistant": {
+  "career": "Wardrobe assistant",
+  "score": 85,
+  "gender": "female"
+ },
+ "warehouse-manager": {
+  "career": "Warehouse manager",
+  "score": 20,
+  "gender": "male"
+ },
+ "warehouse-worker": {
+  "career": "Warehouse worker",
+  "score": 15,
+  "gender": "male"
+ },
+ "watch-or-clock-repairer": {
+  "career": "Watch or clock repairer",
+  "score": 25,
+  "gender": "male"
+ },
+ "water-network-operative": {
+  "career": "Water network operative",
+  "score": 10,
+  "gender": "male"
+ },
+ "water-treatment-worker": {
+  "career": "Water treatment worker",
+  "score": 15,
+  "gender": "male"
+ },
+ "web-content-editor": {
+  "career": "Web content editor",
+  "score": 70,
+  "gender": "male"
+ },
+ "web-designer": {
+  "career": "Web designer",
+  "score": 55,
+  "gender": "male"
+ },
+ "web-developer": {
+  "career": "Web developer",
+  "score": 20,
+  "gender": "male"
+ },
+ "wedding-planner": {
+  "career": "Wedding planner",
+  "score": 95,
+  "gender": "female"
+ },
+ "welder": {
+  "career": "Welder",
+  "score": 5,
+  "gender": "male"
+ },
+ "welfare-rights-officer": {
+  "career": "Welfare rights adviser",
+  "score": 75,
+  "gender": "male"
+ },
+ "wind-turbine-technician": {
+  "career": "Wind turbine technician",
+  "score": 10,
+  "gender": "male"
+ },
+ "window-fabricator": {
+  "career": "Window fabricator",
+  "score": 15,
+  "gender": "male"
+ },
+ "windscreen-fitter": {
+  "career": "Windscreen fitter",
+  "score": 15,
+  "gender": "male"
+ },
+ "wood-machinist": {
+  "career": "Wood machinist",
+  "score": 15,
+  "gender": "male"
+ },
+ "writer": {
+  "career": "Writer",
+  "score": 60,
+  "gender": "male"
+ },
+ "yoga-teacher": {
+  "career": "Yoga teacher",
+  "score": 90,
+  "gender": "female"
+ },
+ "yoga-therapist": {
+  "career": "Yoga therapist",
+  "score": 90,
+  "gender": "female"
+ },
+ "youth-offending-team-officer": {
+  "career": "Youth offending team officer",
+  "score": 65,
+  "gender": "male"
+ },
+ "youth-worker": {
+  "career": "Youth worker",
+  "score": 75,
+  "gender": "male"
+ },
+ "zookeeper": {
+  "career": "Zookeeper",
+  "score": 65,
+  "gender": "male"
+ },
+ "zoologist": {
+  "career": "Zoologist",
+  "score": 50,
+  "gender": "male"
+ }
+}

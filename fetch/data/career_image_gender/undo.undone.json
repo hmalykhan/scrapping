@@ -1,0 +1,73 @@
+{
+ "accommodation-warden": {
+  "career": "Accommodation warden",
+  "gender": "male",
+  "new_url": "https://pathzi.lon1.cdn.pathzi/digitaloceanspaces.com/career-images-v2/accommodation-warden.png",
+  "rows": [
+   {
+    "id": 3870,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767530509/ncs_careers/fetch_6202afda2a98424e.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/sector/Catering_and_Hospitality/accommodation-warden_3870.png"
+   },
+   {
+    "id": 3113,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767523867/ncs_careers/fetch_c3870fe0d69becfc.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/category/Home_services/accommodation-warden_3113.png"
+   },
+   {
+    "id": 3815,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767530034/ncs_careers/fetch_2dc793a99f243345.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/sector/Care_services/accommodation-warden_3815.png"
+   },
+   {
+    "id": 3448,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767526818/ncs_careers/fetch_baf2bccf750902c0.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/category/Social_care/accommodation-warden_3448.png"
+   }
+  ]
+ },
+ "actor": {
+  "career": "Actor",
+  "gender": "male",
+  "new_url": "https://pathzi.lon1.cdn.pathzi/digitaloceanspaces.com/career-images-v2/actor.png",
+  "rows": [
+   {
+    "id": 2612,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767519375/ncs_careers/fetch_bccb0ba73c284520.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/category/Creative_and_media/actor_2612.png"
+   },
+   {
+    "id": 3983,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767531490/ncs_careers/fetch_35920c72bc0def3b.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/sector/Creative_and_Design/actor_3983.png"
+   }
+  ]
+ },
+ "accounting-technician": {
+  "career": "Accounting technician",
+  "gender": "male",
+  "new_url": "https://pathzi.lon1.cdn.pathzi/digitaloceanspaces.com/career-images-v2/accounting-technician.png",
+  "rows": [
+   {
+    "id": 3717,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767529218/ncs_careers/fetch_7ceffc5e5941cecc.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/sector/Business_and_administration/accounting-technician_3717.png"
+   },
+   {
+    "id": 4514,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767774027/ncs_careers/fetch_0d3e4c654dffff21.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/sector/Legal,_finance_and_accounting/accounting-technician_4514.png"
+   },
+   {
+    "id": 2442,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767517847/ncs_careers/fetch_61f35a64f8e67287.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/category/Business_and_finance/accounting-technician_2442.png"
+   },
+   {
+    "id": 2336,
+    "image_url": "https://res.cloudinary.com/dh89yrz7d/image/upload/v1767516866/ncs_careers/fetch_5a52b0a73291b009.png",
+    "dg_image_url": "https://pathzi.lon1.cdn.digitaloceanspaces.com/pathzi/career-images/category/Administration/accounting-technician_2336.png"
+   }
+  ]
+ }
+}
